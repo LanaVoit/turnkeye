@@ -1,0 +1,17 @@
+		    <class name="home.Newsletter_empty"/>
+		    <class name="home.Newsletter_invalid"/>
+		    <class name="home.Newsletter_valid"/>
+		    <class name="home.Banner"/>
+		    
+		    <class name="about.Tabs"/>
+		    <class name="about.Contact_us"/>
+		    
+		    <class name="clients.Website"/>
+		    <class name="clients.Details"/>
+		    <class name="clients.Details_elements"/>
+		    <class name="clients.Navigation"/>
+		    
+		    <class name="services.Page"/>
+		    
+		    <class name="contact.Form_invalid"/>
+		    <class name="contact.Form_empty"/>

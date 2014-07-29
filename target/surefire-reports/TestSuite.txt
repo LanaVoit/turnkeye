@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.055 sec <<< FAILURE! - in TestSuite
+testUntitled6(contact.Form_valid)  Time elapsed: 0.008 sec  <<< FAILURE!
+java.lang.Error: Unresolved compilation problems: 
+	Actions cannot be resolved to a type
+	Actions cannot be resolved to a type
+
+	at contact.Form_valid.testUntitled6(Form_valid.java:65)
+
