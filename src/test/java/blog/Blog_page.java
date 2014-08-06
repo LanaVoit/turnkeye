@@ -31,7 +31,6 @@ public class Blog_page extends turnkeye.pages.TestBase {
     assertEquals("Tags", driver.findElement(By.cssSelector("div.block-tags > div.block-title > span")).getText());
     assertEquals("Blog Authors", driver.findElement(By.cssSelector("div.block-blog-authors > div.block-title")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento developers\"]")).getText());
-    assertEquals("Older Entries »", driver.findElement(By.linkText("Older Entries »")).getText());
    // driver.quit();
   }
 
