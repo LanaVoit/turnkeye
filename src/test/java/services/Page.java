@@ -2,11 +2,15 @@ package services;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,6 +20,8 @@ public class Page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
+    	//final WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
     driver.get(baseUrl + "/services/magento_site_from_scratch.html");
     assertEquals("Magento Site from Scratch", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("MAGENTO SITE FROM SCRATCH", driver.findElement(By.cssSelector("li.active > span")).getText());
@@ -35,7 +41,7 @@ public class Page extends turnkeye.pages.TestBase {
     assertEquals("MAGENTO & SERVER OPTIMIZATION", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[7]")).getText());
     assertEquals("FURTHER SUPPORT", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[8]")).getText());
     
-    driver.quit();
+   // driver.quit();
   }
 
    private boolean isElementPresent(By by) {

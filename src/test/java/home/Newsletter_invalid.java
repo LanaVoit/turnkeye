@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -19,13 +20,15 @@ public class Newsletter_invalid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
+  //  	final WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
     driver.get(baseUrl);
     driver.findElement(By.id("container")).click();
     driver.findElement(By.id("newsletter")).clear();
     driver.findElement(By.id("newsletter")).sendKeys("test");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     assertEquals("", driver.findElement(By.className("error")).getText());
-    driver.quit();
+  //  driver.quit();
   }
 
    private boolean isElementPresent(By by) {

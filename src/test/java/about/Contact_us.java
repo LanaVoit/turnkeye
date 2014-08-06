@@ -2,11 +2,15 @@ package about;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,6 +20,8 @@ public class Contact_us extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled6() throws Exception {
+   // final WebDriver driver = new ChromeDriver();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "/about");
     assertEquals("CONTACT US", driver.findElement(By.cssSelector("a.see-more")).getText());
     
@@ -27,7 +33,7 @@ public class Contact_us extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("comment")).getText());
     assertEquals("SEND MESSAGE", driver.findElement(By.cssSelector("button.button")).getText());
     
-    driver.quit();
+  //  driver.quit();
   }
 
    private boolean isElementPresent(By by) {

@@ -2,11 +2,15 @@ package contact;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,6 +20,8 @@ public class Form_invalid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled3() throws Exception {
+    //	final WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
     driver.get(baseUrl + "/contact_us.html");
     driver.findElement(By.id("name")).clear();
     driver.findElement(By.id("name")).sendKeys("<script>alert();</script>");
@@ -25,7 +31,7 @@ public class Form_invalid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("email")).sendKeys("<script>alert();</script>");
     driver.findElement(By.cssSelector("button.button")).click();
     assertEquals("Please enter a valid email address", driver.findElement(By.cssSelector("label.error")).getText());
-    driver.quit();
+   // driver.quit();
   }
 
    private boolean isElementPresent(By by) {

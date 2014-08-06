@@ -4,10 +4,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.ScreenshotException;
 import org.testng.ITestResult;
@@ -36,6 +39,7 @@ public class TestBase {
 	protected String baseUrl;
 
 	protected Browser browser;
+	
 
 	@BeforeClass
 	public void init() {

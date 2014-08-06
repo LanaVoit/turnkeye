@@ -2,11 +2,15 @@ package clients;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,6 +20,8 @@ public class Details extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled8() throws Exception {
+    //	final WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
     driver.get(baseUrl + "/portfolio");
     assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
     driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).click();
@@ -24,7 +30,7 @@ public class Details extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Slide 1\"]")).getText());
     assertEquals("Since 1999, Pinup Clothing, has been specializing in the highest quality vintage inspired fashion, shoes and accessories for women.", driver.findElement(By.cssSelector("div.project-details > p")).getText());
     
-    driver.quit();
+   // driver.quit();
   }
 
    private boolean isElementPresent(By by) {

@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -19,6 +20,8 @@ public class Navigation extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled10() throws Exception {
+    //	final WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
     driver.get(baseUrl + "/portfolio");
     assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
     
@@ -36,7 +39,7 @@ public class Navigation extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector(".prev-project")).click();
     assertEquals("Golden Edibles", driver.findElement(By.cssSelector("h1")).getText());
     
-    driver.quit();
+  //  driver.quit();
   }
 
    private boolean isElementPresent(By by) {

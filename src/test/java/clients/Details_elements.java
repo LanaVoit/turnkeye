@@ -2,11 +2,15 @@ package clients;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -16,6 +20,8 @@ public class Details_elements extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled9() throws Exception {
+    //	final WebDriver driver = new ChromeDriver();
+    	driver.manage().window().maximize();
     driver.get(baseUrl + "/portfolio");
     assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
     
@@ -38,7 +44,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
     assertEquals("This project was delivered by own in-house\nteam of Magento experts", driver.findElement(By.cssSelector("div.team-behind > h4")).getText());
     assertEquals("What clients say about our work", driver.findElement(By.linkText("What clients say about our work")).getText());
     
-    driver.quit();
+  //  driver.quit();
   }
 
    private boolean isElementPresent(By by) {
