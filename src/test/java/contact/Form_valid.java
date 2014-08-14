@@ -67,7 +67,7 @@ public class Form_valid extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("button.button")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.", driver.findElement(By.cssSelector("li > span")).getText());
-    TimeUnit.SECONDS.sleep(7);
+    TimeUnit.SECONDS.sleep(10);
     	driver.get(baseUrl + "/contact_us.html");
     	class MailAuthenticator extends Authenticator {
    		 

@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Tests">
-              <span class="suite-name border-passed">Tests</span>
+              <span class="suite-name border-failed">Tests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">29 methods,   29 passed</span>
+                    <span class="method-stats">30 methods, 1 failed,   29 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Tests" class="hide-methods failed suite-Tests"> (hide)</a> <!-- hide-methods failed suite-Tests -->
+                      <a href="#" panel-name="suite-Tests" class="show-methods failed suite-Tests"> (show)</a> <!-- show-methods failed suite-Tests -->
+                    </span>
+                    <div class="method-list-content failed suite-Tests">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Tests -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,11 +135,6 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="blog.Blog_page" hash-for-method="testUntitled2">testUntitled2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.Newsletter_invalid" hash-for-method="testUntitled2">testUntitled2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -141,12 +150,17 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.Newsletter_valid" hash-for-method="testUntitled3">testUntitled3</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="blog.Blog_page" hash-for-method="testUntitled2">testUntitled2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Form_invalid" hash-for-method="testUntitled3">testUntitled3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="blog.Captche_enable" hash-for-method="testUntitled3">testUntitled3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -161,32 +175,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="blog.Comment" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="clients.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Form_empty" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.Banner" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.Newsletter_valid" hash-for-method="testUntitled3">testUntitled3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -197,6 +186,31 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Tests" title="services.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="blog.Comment" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="home.Banner" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Form_empty" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="clients.JS_error" hash-for-method="testUntitled4">testUntitled4</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -216,7 +230,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Contact_email_change" hash-for-method="testUntitled6">testUntitled6</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Form_valid" hash-for-method="testUntitled6">testUntitled6</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -226,7 +240,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Form_valid" hash-for-method="testUntitled6">testUntitled6</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="contact.Contact_email_change" hash-for-method="testUntitled6">testUntitled6</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -256,70 +270,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Tests" class="panel Tests">
-          <div class="suite-Tests-class-passed">
+          <div class="suite-Tests-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">about.Contact_us</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled6">
-                  </a> <!-- testUntitled6 -->
-                  <span class="method-name">testUntitled6</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">about.Tabs</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled5">
-                  </a> <!-- testUntitled5 -->
-                  <span class="method-name">testUntitled5</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">contact.Form_valid</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled6">
-                  </a> <!-- testUntitled6 -->
-                  <span class="method-name">testUntitled6</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">clients.Website</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled7">
-                  </a> <!-- testUntitled7 -->
-                  <span class="method-name">testUntitled7</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">clients.JS_error</span>
+              <img src="failed.png"/>
+              <span class="class-name">home.JS_error</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -327,179 +281,30 @@
                   <a name="testUntitled4">
                   </a> <!-- testUntitled4 -->
                   <span class="method-name">testUntitled4</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: result was not received in 10 seconds
+  (Session info: chrome=36.0.1985.125)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 19.99 seconds
+Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;
+System info: host: &apos;Lana-laptop&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_45&apos;
+Session ID: 795b3bbdc5f8a31c1ea89e48bdebfc00
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{platform=WIN8, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir7700_11784}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:803)
+	at home.JS_error.testUntitled4(JS_error.java:31)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">blog.Captcha_disable</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled3">
-                  </a> <!-- testUntitled3 -->
-                  <span class="method-name">testUntitled3</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">contact.Contact_email_change</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled6">
-                  </a> <!-- testUntitled6 -->
-                  <span class="method-name">testUntitled6</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">contact.JS_error</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">services.Page</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled2">
-                  </a> <!-- testUntitled2 -->
-                  <span class="method-name">testUntitled2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">home.Newsletter_empty</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled">
-                  </a> <!-- testUntitled -->
-                  <span class="method-name">testUntitled</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">blog.Captcha_invalid</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled2">
-                  </a> <!-- testUntitled2 -->
-                  <span class="method-name">testUntitled2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">clients.Details</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled8">
-                  </a> <!-- testUntitled8 -->
-                  <span class="method-name">testUntitled8</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">blog.JS_error_blog</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">home.Banner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
+          </div> <!-- suite-Tests-class-failed -->
           <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">blog.JS_error_post</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">blog.Captcha_empty</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled">
-                  </a> <!-- testUntitled -->
-                  <span class="method-name">testUntitled</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">contact.Form_empty</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -529,14 +334,14 @@
           <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">clients.Details_elements</span>
+              <span class="class-name">blog.Search</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testUntitled9">
-                  </a> <!-- testUntitled9 -->
-                  <span class="method-name">testUntitled9</span>
+                  <a name="testUntitled3">
+                  </a> <!-- testUntitled3 -->
+                  <span class="method-name">testUntitled3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -552,6 +357,171 @@
                   <a name="testUntitled2">
                   </a> <!-- testUntitled2 -->
                   <span class="method-name">testUntitled2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">services.Page</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled2">
+                  </a> <!-- testUntitled2 -->
+                  <span class="method-name">testUntitled2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">clients.Details</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled8">
+                  </a> <!-- testUntitled8 -->
+                  <span class="method-name">testUntitled8</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">about.Tabs</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled5">
+                  </a> <!-- testUntitled5 -->
+                  <span class="method-name">testUntitled5</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">about.JS_error</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">contact.Form_valid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled6">
+                  </a> <!-- testUntitled6 -->
+                  <span class="method-name">testUntitled6</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">blog.Captche_enable</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled3">
+                  </a> <!-- testUntitled3 -->
+                  <span class="method-name">testUntitled3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">clients.Details_elements</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled9">
+                  </a> <!-- testUntitled9 -->
+                  <span class="method-name">testUntitled9</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">blog.JS_error_blog</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">blog.Details_page</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled">
+                  </a> <!-- testUntitled -->
+                  <span class="method-name">testUntitled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">about.Contact_us</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled6">
+                  </a> <!-- testUntitled6 -->
+                  <span class="method-name">testUntitled6</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">contact.JS_error</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -589,51 +559,6 @@
           <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">about.JS_error</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">blog.Search</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled3">
-                  </a> <!-- testUntitled3 -->
-                  <span class="method-name">testUntitled3</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">blog.Details_page</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled">
-                  </a> <!-- testUntitled -->
-                  <span class="method-name">testUntitled</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">blog.Blog_page</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -649,37 +574,157 @@
           <div class="suite-Tests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">services.JS_error</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">home.JS_error</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUntitled4">
-                  </a> <!-- testUntitled4 -->
-                  <span class="method-name">testUntitled4</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Tests-class-passed -->
-          <div class="suite-Tests-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">blog.Comment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">contact.Contact_email_change</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled6">
+                  </a> <!-- testUntitled6 -->
+                  <span class="method-name">testUntitled6</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">contact.Form_empty</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">home.Banner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">blog.Captcha_invalid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled2">
+                  </a> <!-- testUntitled2 -->
+                  <span class="method-name">testUntitled2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">clients.JS_error</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled4">
+                  </a> <!-- testUntitled4 -->
+                  <span class="method-name">testUntitled4</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">blog.Captcha_disable</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled3">
+                  </a> <!-- testUntitled3 -->
+                  <span class="method-name">testUntitled3</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">home.Newsletter_empty</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled">
+                  </a> <!-- testUntitled -->
+                  <span class="method-name">testUntitled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">blog.Captcha_empty</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled">
+                  </a> <!-- testUntitled -->
+                  <span class="method-name">testUntitled</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">clients.Website</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUntitled7">
+                  </a> <!-- testUntitled7 -->
+                  <span class="method-name">testUntitled7</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-passed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">services.JS_error</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -730,6 +775,7 @@
       &lt;class name=&quot;blog.Captcha_invalid&quot;/&gt;
       &lt;class name=&quot;blog.Captcha_disable&quot;/&gt;
       &lt;class name=&quot;blog.Comment&quot;/&gt;
+      &lt;class name=&quot;blog.Captche_enable&quot;/&gt;
       &lt;class name=&quot;blog.Details_page&quot;/&gt;
       &lt;class name=&quot;blog.Blog_page&quot;/&gt;
       &lt;class name=&quot;blog.Search&quot;/&gt;
@@ -746,7 +792,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (29 classes)</span>
+                <span class="test-name">Test1 (30 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -772,128 +818,132 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(29);
+data.addRows(30);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testUntitled6')
-data.setCell(0, 2, 'contact.Form_valid')
-data.setCell(0, 3, 32961);
+data.setCell(0, 1, 'testUntitled4')
+data.setCell(0, 2, 'blog.Comment')
+data.setCell(0, 3, 95187);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testUntitled4')
-data.setCell(1, 2, 'blog.Comment')
-data.setCell(1, 3, 27432);
+data.setCell(1, 1, 'testUntitled6')
+data.setCell(1, 2, 'contact.Form_valid')
+data.setCell(1, 3, 46222);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testUntitled3')
-data.setCell(2, 2, 'blog.Captcha_disable')
-data.setCell(2, 3, 14137);
+data.setCell(2, 1, 'testUntitled4')
+data.setCell(2, 2, 'home.JS_error')
+data.setCell(2, 3, 20330);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testUntitled')
-data.setCell(3, 2, 'blog.Captcha_empty')
-data.setCell(3, 3, 8113);
+data.setCell(3, 1, 'testUntitled4')
+data.setCell(3, 2, 'about.JS_error')
+data.setCell(3, 3, 17999);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testUntitled2')
-data.setCell(4, 2, 'blog.Captcha_invalid')
-data.setCell(4, 3, 7476);
+data.setCell(4, 1, 'testUntitled')
+data.setCell(4, 2, 'blog.Captcha_empty')
+data.setCell(4, 3, 17582);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testUntitled4')
-data.setCell(5, 2, 'home.Banner')
-data.setCell(5, 3, 5661);
+data.setCell(5, 1, 'testUntitled5')
+data.setCell(5, 2, 'about.Tabs')
+data.setCell(5, 3, 17089);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testUntitled10')
-data.setCell(6, 2, 'clients.Navigation')
-data.setCell(6, 3, 5458);
+data.setCell(6, 1, 'testUntitled3')
+data.setCell(6, 2, 'blog.Captcha_disable')
+data.setCell(6, 3, 16876);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testUntitled4')
-data.setCell(7, 2, 'home.JS_error')
-data.setCell(7, 3, 4781);
+data.setCell(7, 2, 'clients.JS_error')
+data.setCell(7, 3, 16633);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testUntitled6')
-data.setCell(8, 2, 'contact.Contact_email_change')
-data.setCell(8, 3, 3672);
+data.setCell(8, 1, 'testUntitled3')
+data.setCell(8, 2, 'blog.Captche_enable')
+data.setCell(8, 3, 14756);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'testUntitled7')
 data.setCell(9, 2, 'clients.Website')
-data.setCell(9, 3, 3570);
+data.setCell(9, 3, 12985);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testUntitled5')
-data.setCell(10, 2, 'about.Tabs')
-data.setCell(10, 3, 3388);
+data.setCell(10, 1, 'testUntitled10')
+data.setCell(10, 2, 'clients.Navigation')
+data.setCell(10, 3, 11016);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testUntitled4')
-data.setCell(11, 2, 'blog.JS_error_blog')
-data.setCell(11, 3, 2929);
+data.setCell(11, 1, 'testUntitled')
+data.setCell(11, 2, 'home.Newsletter_empty')
+data.setCell(11, 3, 10857);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testUntitled4')
-data.setCell(12, 2, 'clients.JS_error')
-data.setCell(12, 3, 2711);
+data.setCell(12, 1, 'testUntitled8')
+data.setCell(12, 2, 'clients.Details')
+data.setCell(12, 3, 9853);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testUntitled8')
-data.setCell(13, 2, 'clients.Details')
-data.setCell(13, 3, 2480);
+data.setCell(13, 1, 'testUntitled2')
+data.setCell(13, 2, 'blog.Captcha_invalid')
+data.setCell(13, 3, 9556);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testUntitled')
-data.setCell(14, 2, 'blog.Details_page')
-data.setCell(14, 3, 2211);
+data.setCell(14, 1, 'testUntitled6')
+data.setCell(14, 2, 'contact.Contact_email_change')
+data.setCell(14, 3, 9369);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testUntitled3')
-data.setCell(15, 2, 'home.Newsletter_valid')
-data.setCell(15, 3, 2119);
+data.setCell(15, 1, 'testUntitled4')
+data.setCell(15, 2, 'blog.JS_error_blog')
+data.setCell(15, 3, 8535);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testUntitled3')
-data.setCell(16, 2, 'blog.Search')
-data.setCell(16, 3, 2029);
+data.setCell(16, 1, 'testUntitled4')
+data.setCell(16, 2, 'home.Banner')
+data.setCell(16, 3, 6509);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'testUntitled4')
-data.setCell(17, 2, 'about.JS_error')
-data.setCell(17, 3, 1744);
+data.setCell(17, 1, 'testUntitled3')
+data.setCell(17, 2, 'contact.Form_invalid')
+data.setCell(17, 3, 4558);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'testUntitled9')
-data.setCell(18, 2, 'clients.Details_elements')
-data.setCell(18, 3, 1279);
+data.setCell(18, 1, 'testUntitled3')
+data.setCell(18, 2, 'blog.Search')
+data.setCell(18, 3, 3365);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'testUntitled4')
-data.setCell(19, 2, 'blog.JS_error_post')
-data.setCell(19, 3, 1256);
+data.setCell(19, 1, 'testUntitled2')
+data.setCell(19, 2, 'services.Page')
+data.setCell(19, 3, 2679);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'testUntitled6')
-data.setCell(20, 2, 'about.Contact_us')
-data.setCell(20, 3, 1233);
+data.setCell(20, 1, 'testUntitled')
+data.setCell(20, 2, 'blog.Details_page')
+data.setCell(20, 3, 2677);
 data.setCell(21, 0, 21)
 data.setCell(21, 1, 'testUntitled3')
-data.setCell(21, 2, 'contact.Form_invalid')
-data.setCell(21, 3, 1159);
+data.setCell(21, 2, 'home.Newsletter_valid')
+data.setCell(21, 3, 2449);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'testUntitled2')
-data.setCell(22, 2, 'services.Page')
-data.setCell(22, 3, 1028);
+data.setCell(22, 1, 'testUntitled9')
+data.setCell(22, 2, 'clients.Details_elements')
+data.setCell(22, 3, 2428);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'testUntitled')
-data.setCell(23, 2, 'home.Newsletter_empty')
-data.setCell(23, 3, 867);
+data.setCell(23, 1, 'testUntitled6')
+data.setCell(23, 2, 'about.Contact_us')
+data.setCell(23, 3, 2088);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'testUntitled2')
-data.setCell(24, 2, 'blog.Blog_page')
-data.setCell(24, 3, 831);
+data.setCell(24, 1, 'testUntitled4')
+data.setCell(24, 2, 'services.JS_error')
+data.setCell(24, 3, 1411);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'testUntitled2')
-data.setCell(25, 2, 'home.Newsletter_invalid')
-data.setCell(25, 3, 789);
+data.setCell(25, 1, 'testUntitled4')
+data.setCell(25, 2, 'contact.JS_error')
+data.setCell(25, 3, 1357);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'testUntitled4')
-data.setCell(26, 2, 'contact.JS_error')
-data.setCell(26, 3, 697);
+data.setCell(26, 1, 'testUntitled2')
+data.setCell(26, 2, 'home.Newsletter_invalid')
+data.setCell(26, 3, 1267);
 data.setCell(27, 0, 27)
 data.setCell(27, 1, 'testUntitled4')
-data.setCell(27, 2, 'services.JS_error')
-data.setCell(27, 3, 694);
+data.setCell(27, 2, 'blog.JS_error_post')
+data.setCell(27, 3, 1047);
 data.setCell(28, 0, 28)
 data.setCell(28, 1, 'testUntitled4')
 data.setCell(28, 2, 'contact.Form_empty')
-data.setCell(28, 3, 565);
+data.setCell(28, 3, 943);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testUntitled2')
+data.setCell(29, 2, 'blog.Blog_page')
+data.setCell(29, 3, 751);
 window.suiteTableData['Tests']= { tableData: data, tableDiv: 'times-div-Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Tests">
               </div> <!-- times-div-Tests -->
             </div> <!-- times-div -->
@@ -908,9 +958,121 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Tests" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">28 ignored methods</span>
+            <span class="header-content">29 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">blog.Search</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">home.Newsletter_invalid</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">services.Page</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">clients.Details</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">home.JS_error</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">about.JS_error</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">clients.Details_elements</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">blog.Details_page</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">contact.JS_error</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">contact.Form_empty</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">home.Banner</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">clients.JS_error</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">home.Newsletter_empty</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">clients.Website</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">services.JS_error</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">blog.JS_error_post</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">about.Tabs</span>
               <div class="ignored-methods-div">
@@ -926,63 +1088,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">clients.Website</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">clients.JS_error</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.Captcha_disable</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">contact.Contact_email_change</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">contact.JS_error</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">services.Page</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">home.Newsletter_empty</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">clients.Details</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.Captcha_invalid</span>
+              <span class="ignored-class-name">blog.Captche_enable</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
@@ -996,49 +1102,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">home.Banner</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">contact.Form_empty</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.JS_error_post</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.Captcha_empty</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">home.Newsletter_valid</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">clients.Details_elements</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">home.Newsletter_invalid</span>
+              <span class="ignored-class-name">about.Contact_us</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
@@ -1052,13 +1116,6 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">about.JS_error</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
               <span class="ignored-class-name">contact.Form_invalid</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
@@ -1066,14 +1123,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.Search</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.Details_page</span>
+              <span class="ignored-class-name">blog.Comment</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
@@ -1087,21 +1137,28 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">services.JS_error</span>
+              <span class="ignored-class-name">contact.Contact_email_change</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">home.JS_error</span>
+              <span class="ignored-class-name">blog.Captcha_invalid</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">blog.Comment</span>
+              <span class="ignored-class-name">blog.Captcha_disable</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">blog.Captcha_empty</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
@@ -1121,323 +1178,336 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">2539 ms</span>
+                <span class="method-start">37203 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">about.JS_error</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">7323 ms</span>
+                <span class="method-start">57867 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">7331 ms</span>
+                <span class="method-start">57873 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">clients.JS_error</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">9076 ms</span>
+                <span class="method-start">75874 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">9080 ms</span>
+                <span class="method-start">75880 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">services.JS_error</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">11792 ms</span>
+                <span class="method-start">92514 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">11799 ms</span>
+                <span class="method-start">92527 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">contact.JS_error</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">12494 ms</span>
+                <span class="method-start">93939 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">12506 ms</span>
+                <span class="method-start">93955 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.JS_error_blog</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">13203 ms</span>
+                <span class="method-start">95313 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">13216 ms</span>
+                <span class="method-start">95333 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.JS_error_post</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">16145 ms</span>
+                <span class="method-start">103868 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">16153 ms</span>
+                <span class="method-start">103874 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">home.Newsletter_empty</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">17410 ms</span>
+                <span class="method-start">104922 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled</span>
-                <span class="method-start">17430 ms</span>
+                <span class="method-start">104929 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">home.Newsletter_invalid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">18297 ms</span>
+                <span class="method-start">115786 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled2</span>
-                <span class="method-start">18302 ms</span>
+                <span class="method-start">115791 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">home.Newsletter_valid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">19092 ms</span>
+                <span class="method-start">117059 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled3</span>
-                <span class="method-start">19096 ms</span>
+                <span class="method-start">117062 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">home.Banner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">21215 ms</span>
+                <span class="method-start">119513 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">21220 ms</span>
+                <span class="method-start">119525 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">about.Tabs</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">26882 ms</span>
+                <span class="method-start">126035 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled5</span>
-                <span class="method-start">26890 ms</span>
+                <span class="method-start">126085 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">about.Contact_us</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">30278 ms</span>
+                <span class="method-start">143175 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled6</span>
-                <span class="method-start">30282 ms</span>
+                <span class="method-start">143182 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">clients.Details</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">31516 ms</span>
+                <span class="method-start">145271 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled8</span>
-                <span class="method-start">31523 ms</span>
+                <span class="method-start">145275 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">clients.Details_elements</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">34004 ms</span>
+                <span class="method-start">155128 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled9</span>
-                <span class="method-start">34008 ms</span>
+                <span class="method-start">155133 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">clients.Navigation</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">35288 ms</span>
+                <span class="method-start">157562 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled10</span>
-                <span class="method-start">35292 ms</span>
+                <span class="method-start">157567 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">clients.Website</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">40750 ms</span>
+                <span class="method-start">168583 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled7</span>
-                <span class="method-start">40754 ms</span>
+                <span class="method-start">168587 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">services.Page</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">44324 ms</span>
+                <span class="method-start">181573 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled2</span>
-                <span class="method-start">44330 ms</span>
+                <span class="method-start">182773 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">contact.Form_invalid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">45358 ms</span>
+                <span class="method-start">185453 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled3</span>
-                <span class="method-start">45363 ms</span>
+                <span class="method-start">185457 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">contact.Form_empty</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">46522 ms</span>
+                <span class="method-start">190015 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">46527 ms</span>
+                <span class="method-start">190019 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">contact.Form_valid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">47093 ms</span>
+                <span class="method-start">190962 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled6</span>
-                <span class="method-start">47097 ms</span>
+                <span class="method-start">190966 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">contact.Contact_email_change</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">80058 ms</span>
+                <span class="method-start">237188 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled6</span>
-                <span class="method-start">80066 ms</span>
+                <span class="method-start">237193 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Captcha_empty</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">83738 ms</span>
+                <span class="method-start">246563 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled</span>
-                <span class="method-start">83743 ms</span>
+                <span class="method-start">246567 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Captcha_invalid</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">91856 ms</span>
+                <span class="method-start">264150 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled2</span>
-                <span class="method-start">91860 ms</span>
+                <span class="method-start">264158 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Captcha_disable</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">99336 ms</span>
+                <span class="method-start">273715 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled3</span>
-                <span class="method-start">99340 ms</span>
+                <span class="method-start">273719 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Comment</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">113478 ms</span>
+                <span class="method-start">290596 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled4</span>
-                <span class="method-start">113482 ms</span>
+                <span class="method-start">290600 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">blog.Captche_enable</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">init</span>
+                <span class="method-start">385787 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testUntitled3</span>
+                <span class="method-start">385793 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Details_page</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">140914 ms</span>
+                <span class="method-start">400549 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled</span>
-                <span class="method-start">140919 ms</span>
+                <span class="method-start">400553 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Blog_page</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">143130 ms</span>
+                <span class="method-start">403230 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled2</span>
-                <span class="method-start">143135 ms</span>
+                <span class="method-start">403235 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">blog.Search</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
-                <span class="method-start">143966 ms</span>
+                <span class="method-start">403986 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testUntitled3</span>
-                <span class="method-start">143970 ms</span>
+                <span class="method-start">403990 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">about.Contact_us</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">home.Newsletter_valid</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">146035 ms</span>
+                <span class="method-start">408184 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
