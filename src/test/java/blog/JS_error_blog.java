@@ -21,7 +21,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.Logs;
 
-import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
+//import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
 public class JS_error_blog extends turnkeye.pages.TestBase {
 	

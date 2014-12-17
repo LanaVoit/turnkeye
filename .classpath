@@ -62,6 +62,6 @@
 	<classpathentry kind="var" path="M2_REPO/javamail/lib/pop3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javamail/lib/gimap.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javamail/lib/imap.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lana/Downloads/JSErrorCollector-0.5.jar"/>
+	<classpathentry kind="var" path="M2_REPO/jserrorcollector/JSErrorCollector-0.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
