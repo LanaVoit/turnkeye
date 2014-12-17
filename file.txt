@@ -32,7 +32,19 @@
 			<class name="blog.Blog_page"/>	
 			<class name="blog.Search"/>	
 			<class name="blog.JS_error_blog"/>	
-			<class name="blog.JS_error_post"/>	
+			<class name="blog.JS_error_post"/>
+			
+			
+			<dependency>
+      <groupId>javamail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+    <dependency>
+		<groupId>net.jsourcerer.webdriver</groupId>
+	    <artifactId>JSErrorCollector</artifactId>
+	    <version>0.5</version>	    	    
+	</dependency>	
 			
 			
 			
