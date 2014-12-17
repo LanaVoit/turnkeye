@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/test/java/blog/Blog_page.java=UTF-8
 encoding//src/test/java/blog/Details_page.java=UTF-8
+encoding//src/test/java/clients/Details.java=UTF-8
+encoding//src/test/java/clients/Details_elements.java=UTF-8
+encoding//src/test/java/clients/Website.java=UTF-8

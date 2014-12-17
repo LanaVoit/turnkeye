@@ -22,13 +22,14 @@ public class Website extends turnkeye.pages.TestBase {
   public void testUntitled7() throws Exception {
     //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
-    driver.get(baseUrl + "/portfolio");
-    assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
-    assertEquals("VISIT WEBSITE", driver.findElement(By.xpath("(//a[contains(text(),'Visit Website')])[2]")).getText());
+    driver.get(baseUrl + "/clients/pinup-girl-clothing");
+    assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
+    
     
     
     String parentHandle = driver.getWindowHandle();
-    driver.findElement(By.xpath("(//a[contains(text(),'Visit Website')])[2]")).click();
+    driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[2]/p/a")).click();
     for (String winHandle : driver.getWindowHandles()) {
         driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
     }

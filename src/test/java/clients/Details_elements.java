@@ -22,27 +22,31 @@ public class Details_elements extends turnkeye.pages.TestBase {
   public void testUntitled9() throws Exception {
     //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
-    driver.get(baseUrl + "/portfolio");
-    assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
+    driver.get(baseUrl + "/clients/pinup-girl-clothing");
+    assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("http://turnkeye.com/media/wysiwyg/portfolio/PinupClothing/xtop-banner.jpg.pagespeed.ic.aR8LmQqed2.webp", driver.findElement(By.cssSelector("img.shadows-image")).getAttribute("src"));
+    assertEquals("http://turnkeye.com/media/wysiwyg/portfolio/PinupClothing/xtop-mobile.png.pagespeed.ic.xUAJzyVDP3.png", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/img[2]")).getAttribute("src"));
+    assertEquals("Project review", driver.findElement(By.cssSelector("h3")).getText());
+    assertEquals("About the Pinup Girl Clothing project", driver.findElement(By.cssSelector("div.block-about-project > h3")).getText());
+    assertEquals("Examples of implementation", driver.findElement(By.cssSelector("div.block-have-done > h3")).getText());
+    assertEquals("Responsive design", driver.findElement(By.cssSelector("h4")).getText());
+    assertEquals("Social login", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[2]/div/div/h4")).getText());
+    assertEquals("Social activity block", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[3]/div/div/h4")).getText());
+    assertEquals("Amazon Wish List", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[4]/div/div/h4")).getText());
+    assertEquals("Shop the Look: hints to choose complementary products.", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[5]/div/div/h4")).getText());
+    assertEquals("Love it", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[6]/div/div/h4")).getText());
+    assertEquals("Look Book", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[7]/div/div/h4")).getText());
+    assertEquals("CUSTOMER FEEDBACK", driver.findElement(By.cssSelector("h3 > span")).getText());
+    assertEquals("ABOUT OUR WORK:", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[7]/h3/span[2]/span")).getText());
+    assertEquals("Contacts Us", driver.findElement(By.linkText("Contacts Us")).getText());
+    assertEquals("EMAIL US", driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[9]/div/a[2]")).getText());
+    assertEquals("Skype", driver.findElement(By.cssSelector("a.block-skype > span")).getText());
+    driver.findElement(By.cssSelector("span.icon-right-open")).click();
+    assertEquals("Personalised Gifts Shop", driver.findElement(By.cssSelector("h1")).getText());    
+    driver.findElement(By.cssSelector("span.icon-left-open")).click();
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
     
-    driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).click();
-    assertEquals("Pinup Clothing", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Visit Website >", driver.findElement(By.linkText("Visit Website >")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Pinup Clothing\"]")).getText());
-    assertEquals("GOLDEN EDIBLES >", driver.findElement(By.cssSelector(".next-project")).getText());
-    assertEquals("< BUY WHOLE FOODS ONLINE", driver.findElement(By.cssSelector(".prev-project")).getText());
-    assertEquals("3,000 products", driver.findElement(By.cssSelector("ul.key-options.cols-4 > li > span")).getText());
-    assertEquals("545K fans on Facebook", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/ul/li[2]/span")).getText());
-    assertEquals("Founded in 1999", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/ul/li[3]")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Slide 1\"]")).getText());
-    assertEquals("FULL RANGE OF SERVICES", driver.findElement(By.cssSelector("h3")).getText());
-    assertEquals("Our team provided Pinup Clothing company\nwith full range of services, including", driver.findElement(By.cssSelector("div.full-range-services > h4")).getText());
-    assertEquals("Since 1999, Pinup Clothing, has been specializing in the highest quality vintage inspired fashion, shoes and accessories for women.", driver.findElement(By.cssSelector("div.project-details > p")).getText());
-    assertEquals("Our designs can be found in thousands of boutiques across the globe, but online, we are the exclusive manufacturer and retailer of vintage inspired clothing lines Pinup Couture, Deadly Dames by Micheline Pitt, Dixiefried by Melanie Komenkul, Little Foxes by Davida Sullivan, and Eldorado Club Jewelry by Joe DeBlois.", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/p[2]")).getText());
-    assertEquals("CHOOSE A RELIABLE DEVELOPMENT PARTNER\nAND GET A BUG-FREE, UPGRADABLE, BRIGHT FUTURE\nFOR YOUR ECOMMERCE PROJECTS.", driver.findElement(By.cssSelector("h2.choose-partner")).getText());
-    assertEquals("TEAM BEHIND THE PROJECT", driver.findElement(By.cssSelector("div.team-behind > h3")).getText());
-    assertEquals("This project was delivered by own in-house\nteam of Magento experts", driver.findElement(By.cssSelector("div.team-behind > h4")).getText());
-    assertEquals("What clients say about our work", driver.findElement(By.linkText("What clients say about our work")).getText());
     
   //  driver.quit();
   }

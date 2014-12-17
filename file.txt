@@ -8,7 +8,8 @@
 		    <class name="about.Contact_us"/>
 		    <class name="about.JS_error"/>	
 		    
-		   <class name="clients.JS_error"/>			
+		   <class name="clients.JS_error"/>	
+		   <class name="clients.JS_error_detail"/>		
 		    <class name="clients.Details"/>
 		    <class name="clients.Details_elements"/>
 		    <class name="clients.Navigation"/>

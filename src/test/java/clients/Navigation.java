@@ -12,6 +12,7 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Navigation extends turnkeye.pages.TestBase {
@@ -22,24 +23,37 @@ public class Navigation extends turnkeye.pages.TestBase {
   public void testUntitled10() throws Exception {
     //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
-    driver.get(baseUrl + "/portfolio");
-    assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
-    
-    driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).click();
-    assertEquals("GOLDEN EDIBLES >", driver.findElement(By.cssSelector(".next-project")).getText());
-    assertEquals("< BUY WHOLE FOODS ONLINE", driver.findElement(By.cssSelector(".prev-project")).getText());
-    
-    driver.findElement(By.cssSelector(".next-project")).click();
-    assertEquals("Golden Edibles", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("LETHAL PERFORMANCE >", driver.findElement(By.cssSelector(".next-project")).getText());
-    
-    driver.findElement(By.cssSelector(".next-project")).click();
-    assertEquals("Lethal Performance", driver.findElement(By.cssSelector("h1")).getText());
-    
-    driver.findElement(By.cssSelector(".prev-project")).click();
-    assertEquals("Golden Edibles", driver.findElement(By.cssSelector("h1")).getText());
-    
-  //  driver.quit();
+    	
+    	/*driver.manage().window().maximize();
+    	Actions actions = new Actions(driver);
+        driver.get(baseUrl + "index.php/secretzone51");
+       driver.findElement(By.id("username")).clear();
+        driver.findElement(By.id("username")).sendKeys("admin");
+        driver.findElement(By.id("login")).clear();
+        driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
+        driver.findElement(By.cssSelector("input.form-button")).click();
+        actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[8]/a/span"))).build().perform();
+        driver.findElement(By.xpath("//ul[@id='nav']/li[8]/ul/li/a/span")).click();
+        TimeUnit.SECONDS.sleep(5);
+        driver.findElement(By.cssSelector("a[name=\"position\"] > span.sort-title")).click();
+        TimeUnit.SECONDS.sleep(5);
+        driver.findElement(By.xpath("//table[@id='portfolio_set_id_table']/tbody/tr/td[2]")).click();
+        driver.findElement(By.cssSelector("#portfolio_tabs_filter > span")).click();
+        assertEquals("Magento Enterprise", driver.findElement(By.cssSelector("#filter_filter_magento > option[value=\"1\"]")).getText());   */
+        
+    driver.get(baseUrl + "clients");
+    driver.findElement(By.xpath("(//a[contains(text(),'Magento Enterprise')])[2]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("div.portfolio-item > img")).getAttribute("alt"));    
+    driver.findElement(By.cssSelector("a[href=\"#magentocommunity\"]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("div.isotope-hidden > img")).getAttribute("alt"));    
+   // assertFalse(isElementPresent(By.cssSelector("div.portfolio-item > img[alt=\"Pinup Girl Clothing\"]")));
+    driver.findElement(By.xpath("(//a[contains(text(),'Migration to Magento')])[2]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    //assertFalse(isElementPresent(By.cssSelector("div.portfolio-item > img[alt=\"Pinup Girl Clothing\"]")));
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("div.isotope-hidden > img")).getAttribute("alt"));  
+  //  driver.quit(); 
   }
 
    private boolean isElementPresent(By by) {

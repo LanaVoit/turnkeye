@@ -39,20 +39,20 @@ public class Form_valid extends turnkeye.pages.TestBase {
     	driver.manage().window().maximize();
     Actions actions = new Actions(driver);
     driver.get(baseUrl + "index.php/secretzone51");
-    driver.findElement(By.id("username")).clear();
+    /*driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
-    driver.findElement(By.cssSelector("input.form-button")).click();
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[10]/a/span"))).build().perform();    
-    driver.findElement(By.xpath("//ul[@id='nav']/li[10]/ul/li[15]/a/span")).click();
+    driver.findElement(By.cssSelector("input.form-button")).click();*/
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
+    driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[15]/a/span")).click();
     driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li/dl/dd[6]/a/span")).click();
     driver.findElement(By.id("contacts_email_recipient_email")).clear();
     driver.findElement(By.id("contacts_email_recipient_email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[10]/a/span"))).build().perform();    
-    driver.findElement(By.xpath("//ul[@id='nav']/li[10]/ul/li[11]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
+    driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[11]/a/span")).click();
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());

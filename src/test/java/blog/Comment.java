@@ -30,8 +30,8 @@ public class Comment extends turnkeye.pages.TestBase {
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
     driver.findElement(By.cssSelector("input.form-button")).click();*/
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[8]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[8]/ul/li[4]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[9]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[9]/ul/li[4]/a/span")).click();
     driver.findElement(By.cssSelector("span.sort-title")).click();
     driver.findElement(By.cssSelector("span.sort-title")).click();
     
@@ -41,8 +41,8 @@ public class Comment extends turnkeye.pages.TestBase {
     new Select(driver.findElement(By.id("status"))).selectByVisibleText("Approved");
     driver.findElement(By.cssSelector("button[title=\"Save Comment\"]")).click();
     assertEquals("Comment was successfully saved", driver.findElement(By.cssSelector("li > span")).getText());
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[10]/a/span"))).build().perform();    
-    driver.findElement(By.xpath("//ul[@id='nav']/li[10]/ul/li[11]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
+    driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[11]/a/span")).click();
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());
@@ -50,18 +50,17 @@ public class Comment extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
     assertEquals("test comment", driver.findElement(By.cssSelector("div.comment-content")).getText());
     driver.get(baseUrl + "index.php/secretzone51/"); 
-    TimeUnit.SECONDS.sleep(5);
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[8]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[8]/ul/li[4]/a/span")).click();
-    
-    driver.findElement(By.cssSelector("td.a-left")).click();
-    
+    TimeUnit.SECONDS.sleep(7);
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[9]/a/span"))).build().perform();
+    TimeUnit.SECONDS.sleep(3);
+    driver.findElement(By.xpath("//ul[@id='nav']/li[9]/ul/li[4]/a/span")).click();    
+    driver.findElement(By.cssSelector("td.a-left")).click();    
     driver.findElement(By.cssSelector("button[title=\"Delete Comment\"]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to do this[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(3);
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[10]/a/span"))).build().perform();    
-    driver.findElement(By.xpath("//ul[@id='nav']/li[10]/ul/li[11]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
+    driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[11]/a/span")).click();
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());

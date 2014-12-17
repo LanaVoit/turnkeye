@@ -12,6 +12,7 @@ import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Details extends turnkeye.pages.TestBase {
@@ -20,17 +21,29 @@ public class Details extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled8() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
-    driver.get(baseUrl + "/portfolio");
-    assertEquals("PINUP GIRL CLOTHING", driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).getText());
-    driver.findElement(By.xpath("//div[@id='content']/div[3]/div[3]/ul/li[2]/div/p")).click();
-   
-    assertEquals("Pinup Clothing", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Slide 1\"]")).getText());
-    assertEquals("Since 1999, Pinup Clothing, has been specializing in the highest quality vintage inspired fashion, shoes and accessories for women.", driver.findElement(By.cssSelector("div.project-details > p")).getText());
-    
-   // driver.quit();
+	driver.manage().window().maximize();
+	Actions actions = new Actions(driver);
+    driver.get(baseUrl + "index.php/secretzone51");
+   driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).sendKeys("admin");
+    driver.findElement(By.id("login")).clear();
+    driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
+    driver.findElement(By.cssSelector("input.form-button")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[8]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[8]/ul/li/a/span")).click();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.cssSelector("a[name=\"position\"] > span.sort-title")).click();
+    TimeUnit.SECONDS.sleep(5);
+    String client = driver.findElement(By.xpath("//table[@id='portfolio_set_id_table']/tbody/tr/td[2]")).getText();
+        
+    driver.get(baseUrl + "clients");
+    TimeUnit.SECONDS.sleep(5);
+    String client_test = driver.findElement(By.cssSelector("div.portfolio-item > img")).getAttribute("alt");
+    assertEquals(client, client_test);
+    actions.moveToElement(driver.findElement(By.cssSelector("div.portfolio-item  > img"))).build().perform();
+    driver.findElement(By.linkText("Discover")).click();
+    TimeUnit.SECONDS.sleep(5);
+       // driver.quit();
   }
 
    private boolean isElementPresent(By by) {

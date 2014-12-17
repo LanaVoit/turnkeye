@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="368.706" tests="30" errors="0" skipped="0" failures="1">
+<testsuite name="TestSuite" time="239.438" tests="31" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\bin"/>
-    <property name="java.vm.version" value="24.45-b08"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin"/>
+    <property name="java.vm.version" value="25.25-b02"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
@@ -16,9 +16,9 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\temp\turnkeye\turnkeye"/>
-    <property name="java.runtime.version" value="1.7.0_45-b18"/>
+    <property name="java.runtime.version" value="1.8.0_25-b18"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\Lana\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
@@ -27,94 +27,80 @@
     <property name="os.name" value="Windows 8"/>
     <property name="classworlds.conf" value="C:\Program Files\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;%M2_HOME%\bin;C:\Program Files (x86)\Git\cmd;C:\Tools;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Python27\sqlmap-dev\Python27;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Tools\Selenium;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.7.0_45\bin;C:\Users\Lana\AppData\Roaming\npm;C:\Tools;C:\Tools\apache-maven-3.2.1\bin;C:\Python27\sqlmap-dev\Python27;C:\Tools\Selenium;C:\Tools\apache-jmeter-2.11\lib;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;%M2_HOME%\bin;C:\Program Files (x86)\Git\cmd;C:\Tools;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Python27\sqlmap-dev\Python27;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Tools\Selenium;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Users\Lana\AppData\Roaming\npm;C:\Tools;C:\Tools\apache-maven-3.2.1\bin;C:\Python27\sqlmap-dev\Python27;C:\Tools\Selenium;C:\Tools\apache-jmeter-2.11\lib;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="51.0"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="6.2"/>
     <property name="user.home" value="C:\Users\Lana"/>
     <property name="user.timezone" value="Europe/Moscow"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="java.specification.version" value="1.7"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1251"/>
     <property name="user.name" value="Lana"/>
     <property name="java.class.path" value="C:\Program Files\maven\boot\plexus-classworlds-2.5.1.jar"/>
     <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
-    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_45\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_25\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.7.0_45"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_45\jre\classes"/>
+    <property name="java.version" value="1.8.0_25"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_25\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="C:\Program Files\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testUntitled4" classname="home.JS_error" time="20.699">
-    <failure message="unknown error: result was not received in 10 seconds&#10;  (Session info: chrome=36.0.1985.125)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 19.99 seconds&#10;Build info: version: &apos;2.40.0&apos;, revision: &apos;4c5c0568b004f67810ee41c459549aa4b09c651e&apos;, time: &apos;2014-02-19 11:13:01&apos;&#10;System info: host: &apos;Lana-laptop&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.7.0_45&apos;&#10;Session ID: 795b3bbdc5f8a31c1ea89e48bdebfc00&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{platform=WIN8, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir7700_11784}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: result was not received in 10 seconds
-  (Session info: chrome=36.0.1985.125)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 19.99 seconds
-Build info: version: '2.40.0', revision: '4c5c0568b004f67810ee41c459549aa4b09c651e', time: '2014-02-19 11:13:01'
-System info: host: 'Lana-laptop', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.7.0_45'
-Session ID: 795b3bbdc5f8a31c1ea89e48bdebfc00
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{platform=WIN8, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir7700_11784}, rotatable=false, locationContextEnabled=true, version=36.0.1985.125, takesHeapSnapshot=true, cssSelectorsEnabled=true, databaseEnabled=false, handlesAlerts=true, browserConnectionEnabled=false, nativeEvents=true, webStorageEnabled=true, applicationCacheEnabled=false, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:803)
-	at home.JS_error.testUntitled4(JS_error.java:31)
-</failure>
-    <system-out><![CDATA[...
-... TestNG 6.8.9beta by C?dric Beust (cedric@beust.com)
-...
-
+  <testcase name="testUntitled4" classname="home.JS_error" time="19.044"/>
+  <testcase name="testUntitled4" classname="about.JS_error" time="3.068"/>
+  <testcase name="testUntitled4" classname="clients.JS_error" time="9.889"/>
+  <testcase name="testUntitled4" classname="services.JS_error" time="0.524"/>
+  <testcase name="testUntitled4" classname="contact.JS_error" time="0.464"/>
+  <testcase name="testUntitled4" classname="clients.JS_error_detail" time="1.476"/>
+  <testcase name="testUntitled4" classname="blog.JS_error_blog" time="3.976">
+    <failure message="expected:&lt;[]&gt; but was:&lt;[[2014-12-17T18:36:42+0400] [SEVERE] http://www.google.com/uds/?file=ads&amp;v=3&amp;packages=search&amp;async=2 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)]&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<[]> but was:<[[2014-12-17T18:36:42+0400] [SEVERE] http://www.google.com/uds/?file=ads&v=3&packages=search&async=2 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at blog.JS_error_blog.testUntitled4(JS_error_blog.java:41)
+]]></failure>
+    <system-out><![CDATA[http://www.google.com/uds/?file=ads&v=3&packages=search&async=2 0:0 Failed to load resource: the server responded with a status of 404 (Not Found)
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver (v2.9.248315) on port 2586
-]]></system-err>
   </testcase>
-  <testcase name="testUntitled4" classname="about.JS_error" time="17.966"/>
-  <testcase name="testUntitled4" classname="clients.JS_error" time="16.632"/>
-  <testcase name="testUntitled4" classname="services.JS_error" time="1.413"/>
-  <testcase name="testUntitled4" classname="contact.JS_error" time="1.356"/>
-  <testcase name="testUntitled4" classname="blog.JS_error_blog" time="8.534"/>
-  <testcase name="testUntitled4" classname="blog.JS_error_post" time="1.048"/>
-  <testcase name="testUntitled" classname="home.Newsletter_empty" time="10.857"/>
-  <testcase name="testUntitled2" classname="home.Newsletter_invalid" time="1.267"/>
-  <testcase name="testUntitled3" classname="home.Newsletter_valid" time="2.449"/>
-  <testcase name="testUntitled4" classname="home.Banner" time="6.51"/>
-  <testcase name="testUntitled5" classname="about.Tabs" time="17.088"/>
-  <testcase name="testUntitled6" classname="about.Contact_us" time="2.088"/>
-  <testcase name="testUntitled8" classname="clients.Details" time="9.854"/>
-  <testcase name="testUntitled9" classname="clients.Details_elements" time="2.427"/>
-  <testcase name="testUntitled10" classname="clients.Navigation" time="11.016"/>
-  <testcase name="testUntitled7" classname="clients.Website" time="12.985"/>
-  <testcase name="testUntitled2" classname="services.Page" time="2.679"/>
-  <testcase name="testUntitled3" classname="contact.Form_invalid" time="4.558"/>
-  <testcase name="testUntitled4" classname="contact.Form_empty" time="0.942"/>
-  <testcase name="testUntitled6" classname="contact.Form_valid" time="46.222"/>
-  <testcase name="testUntitled6" classname="contact.Contact_email_change" time="9.368"/>
-  <testcase name="testUntitled" classname="blog.Captcha_empty" time="17.583"/>
-  <testcase name="testUntitled2" classname="blog.Captcha_invalid" time="9.553"/>
-  <testcase name="testUntitled3" classname="blog.Captcha_disable" time="16.877"/>
-  <testcase name="testUntitled4" classname="blog.Comment" time="95.187"/>
-  <testcase name="testUntitled3" classname="blog.Captche_enable" time="14.756"/>
-  <testcase name="testUntitled" classname="blog.Details_page" time="2.677"/>
-  <testcase name="testUntitled2" classname="blog.Blog_page" time="0.75"/>
-  <testcase name="testUntitled3" classname="blog.Search" time="3.365"/>
+  <testcase name="testUntitled4" classname="blog.JS_error_post" time="1.752"/>
+  <testcase name="testUntitled" classname="home.Newsletter_empty" time="5.39"/>
+  <testcase name="testUntitled2" classname="home.Newsletter_invalid" time="0.76"/>
+  <testcase name="testUntitled3" classname="home.Newsletter_valid" time="1.94"/>
+  <testcase name="testUntitled4" classname="home.Banner" time="5.54"/>
+  <testcase name="testUntitled5" classname="about.Tabs" time="3.461"/>
+  <testcase name="testUntitled6" classname="about.Contact_us" time="1.048"/>
+  <testcase name="testUntitled8" classname="clients.Details" time="24.884"/>
+  <testcase name="testUntitled9" classname="clients.Details_elements" time="3.036"/>
+  <testcase name="testUntitled10" classname="clients.Navigation" time="15.758"/>
+  <testcase name="testUntitled7" classname="clients.Website" time="2.044"/>
+  <testcase name="testUntitled2" classname="services.Page" time="0.945"/>
+  <testcase name="testUntitled3" classname="contact.Form_invalid" time="1.084"/>
+  <testcase name="testUntitled4" classname="contact.Form_empty" time="0.756"/>
+  <testcase name="testUntitled6" classname="contact.Form_valid" time="33.777"/>
+  <testcase name="testUntitled6" classname="contact.Contact_email_change" time="15.155"/>
+  <testcase name="testUntitled" classname="blog.Captcha_empty" time="8.764"/>
+  <testcase name="testUntitled2" classname="blog.Captcha_invalid" time="7.705"/>
+  <testcase name="testUntitled3" classname="blog.Captcha_disable" time="13.397"/>
+  <testcase name="testUntitled4" classname="blog.Comment" time="31.55"/>
+  <testcase name="testUntitled3" classname="blog.Captche_enable" time="12.915"/>
+  <testcase name="testUntitled" classname="blog.Details_page" time="2.068"/>
+  <testcase name="testUntitled2" classname="blog.Blog_page" time="5.3"/>
+  <testcase name="testUntitled3" classname="blog.Search" time="1.968"/>
 </testsuite>

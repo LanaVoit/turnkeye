@@ -30,14 +30,14 @@ public class Captche_enable extends turnkeye.pages.TestBase {
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
     driver.findElement(By.cssSelector("input.form-button")).click();*/
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[8]/a/span"))).build().perform(); 
-    driver.findElement(By.xpath("//ul[@id='nav']/li[8]/ul/li[6]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[9]/a/span"))).build().perform(); 
+    driver.findElement(By.xpath("//ul[@id='nav']/li[9]/ul/li[6]/a/span")).click();
     new Select(driver.findElement(By.id("blog_recaptcha_enabled"))).selectByVisibleText("Yes");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
     
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[10]/a/span"))).build().perform();    
-    driver.findElement(By.xpath("//ul[@id='nav']/li[10]/ul/li[11]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
+    driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[11]/a/span")).click();
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());

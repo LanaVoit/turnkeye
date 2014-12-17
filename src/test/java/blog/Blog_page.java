@@ -23,6 +23,7 @@ public class Blog_page extends turnkeye.pages.TestBase {
     	//final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
     driver.get(baseUrl + "blog/");
+    TimeUnit.SECONDS.sleep(5);
     assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
     assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());

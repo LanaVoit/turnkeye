@@ -23,6 +23,7 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
     //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
     driver.get(baseUrl);
+    TimeUnit.SECONDS.sleep(5);
     assertEquals("", driver.findElement(By.id("newsletter")).getText());
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     assertEquals("", driver.findElement(By.className("error")).getText());

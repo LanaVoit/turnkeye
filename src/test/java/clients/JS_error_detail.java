@@ -23,13 +23,13 @@ import org.openqa.selenium.logging.Logs;
 
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
-public class JS_error extends turnkeye.pages.TestBase {
+public class JS_error_detail extends turnkeye.pages.TestBase {
 	
     @Test
   public void testUntitled4() throws Exception { 
     //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
-    	driver.get(baseUrl + "/clients");
+    	driver.get(baseUrl + "/clients/pinup-girl-clothing");
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();    
         List<String> list = new ArrayList<String>();
