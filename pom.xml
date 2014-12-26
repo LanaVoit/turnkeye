@@ -16,12 +16,7 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-    </dependency>
-    <dependency>
-      <groupId>javamail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.7</version>
-    </dependency>
+    </dependency>    
     <dependency>
 		<groupId>net.jsourcerer.webdriver</groupId>
 	    <artifactId>JSErrorCollector</artifactId>
