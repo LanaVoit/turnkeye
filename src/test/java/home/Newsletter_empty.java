@@ -18,11 +18,16 @@ import com.saucelabs.common.SauceOnDemandAuthentication;
 import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
 
+
+
+
+
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -34,7 +39,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static org.testng.Assert.assertEquals;
-
 
 @Listeners({SauceOnDemandTestListener.class})
 public class Newsletter_empty extends turnkeye.pages.TestBase {
@@ -48,7 +52,7 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
           capabilities.setCapability(CapabilityType.VERSION, version);
       }
       capabilities.setCapability(CapabilityType.PLATFORM, os);
-      capabilities.setCapability("name", "Newsletter_empty");
+      capabilities.setCapability("name", "Only_firstname");
       capabilities.setCapability("passed", "true");
       webDriver.set(new RemoteWebDriver(
               new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
@@ -69,6 +73,11 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
   //  driver.quit();
   }
 
+  @AfterSuite
+	public void tearDown() {
+      driver.quit();
+  }
+  
    private boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
@@ -77,20 +86,6 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
       return false;
     }
   }
-
   
-  private String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
-  }
+  
 }

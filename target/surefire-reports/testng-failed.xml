@@ -5,17 +5,13 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="home.JS_error">
+      <class name="home.Newsletter_empty">
         <methods>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- home.JS_error -->
-      <class name="home.JS_error$Email">
-        <methods>
+          <include name="setUp"/>
+          <include name="testUntitled"/>
           <include name="init"/>
-          <include name="testUntitled2" invocation-numbers="0"/>
         </methods>
-      </class> <!-- home.JS_error$Email -->
+      </class> <!-- home.Newsletter_empty -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->
