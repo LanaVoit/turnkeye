@@ -93,7 +93,7 @@ public class TestBase {
 		
 		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
 				password);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("qatestingtestqa", "7d7d449c-27c0-45c7-9339-3aad563a5cc0");
