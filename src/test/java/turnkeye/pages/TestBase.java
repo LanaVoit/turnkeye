@@ -2,36 +2,62 @@ package turnkeye.pages;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
-
-import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.ScreenshotException;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Optional;
 
-import turnkeye.util.PropertyLoader;
-import turnkeye.util.Browser;
-import turnkeye.webdriver.WebDriverFactory;
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
 
+import org.testng.*;
+import org.testng.annotations.*;
 
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import com.saucelabs.testng.SauceOnDemandTestListener;
 import com.saucelabs.common.SauceOnDemandAuthentication;
 import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
 import com.saucelabs.testng.SauceOnDemandTestListener;
+
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static org.testng.Assert.assertEquals;
+
 import com.saucelabs.common.SauceOnDemandAuthentication;
+
+import turnkeye.util.PropertyLoader;
+import turnkeye.util.Browser;
+import turnkeye.webdriver.WebDriverFactory;
 
 /*
  * Base class for all the test classes
@@ -65,19 +91,11 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 		
-		
 		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
 				password);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@AfterSuite(alwaysRun = true)
-	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}
-	
 	public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("qatestingtestqa", "7d7d449c-27c0-45c7-9339-3aad563a5cc0");
 	public ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
 	  public ThreadLocal<String> sessionId = new ThreadLocal<String>();
@@ -86,10 +104,31 @@ public class TestBase {
 	      return new Object[][]{
 	             // new Object[]{"internet explorer", "11", "Windows 8.1"},
 	             // new Object[]{"safari", "6", "OSX 10.8"},
-	              new Object[]{"chrome", "39", "Windows 7"},
+	              new Object[]{"firefox", "30", "Windows 8.1"},
 	      };
 	  }
 	  
+	  
+	public WebDriver getWebDriver() {
+	      System.out.println("WebDriver" + webDriver.get());
+	      return webDriver.get();
+	  }
+	  
+	  public String getSessionId() {
+	      return sessionId.get();
+	  }
+	  
+	  
+	  public SauceOnDemandAuthentication getAuthentication() {
+	      return authentication;
+	  }
+	  
+	@AfterSuite(alwaysRun = true)
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 
 //	@AfterMethod
 //	public void setScreenshot(ITestResult result) {
@@ -111,4 +150,5 @@ public class TestBase {
 //			}
 //		}
 //	}
+	
 }
