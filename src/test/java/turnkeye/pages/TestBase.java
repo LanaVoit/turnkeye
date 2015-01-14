@@ -1,5 +1,6 @@
 package turnkeye.pages;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -104,7 +105,7 @@ public class TestBase {
 	      return new Object[][]{
 	             // new Object[]{"internet explorer", "11", "Windows 8.1"},
 	             // new Object[]{"safari", "6", "OSX 10.8"},
-	              new Object[]{"firefox", "30", "Windows 8.1"},
+	              new Object[]{"firefox", "35", "Windows 8.1"},
 	      };
 	  }
 	  

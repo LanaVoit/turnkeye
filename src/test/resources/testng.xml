@@ -4,8 +4,9 @@
 	<test name="Test1">
 		<parameter name="path" value="/"/>
 		<classes>
-			<class name="home.JS_error"/>
-					
+		
+			<class name="home.Newsletter_empty"/>
+		    		
 		</classes>
 	</test>  
 </suite>
