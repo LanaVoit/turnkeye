@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.junit.Before;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -77,9 +78,10 @@ public class TestBase {
 
 	protected Browser browser;
 	
+	 
 
 	@BeforeClass
-	public void init() {
+	public void init() throws MalformedURLException {
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
@@ -91,9 +93,13 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 		
-		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
-				password);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		 DesiredCapabilities capabillities = DesiredCapabilities.chrome();
+	        capabillities.setCapability("version", "39.0");
+	        capabillities.setCapability("platform", Platform.WINDOWS);
+	        driver = new RemoteWebDriver(
+	                    new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
+	                    capabillities);
+
 	}  
 	  
 	

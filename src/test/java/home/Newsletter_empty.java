@@ -9,6 +9,7 @@ import org.testng.annotations.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
+import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -17,6 +18,7 @@ import com.saucelabs.testng.SauceOnDemandTestListener;
 import com.saucelabs.common.SauceOnDemandAuthentication;
 import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
+
 
 
 
@@ -45,8 +47,6 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
   
-
-
   @Test
   public void testUntitled5() throws Exception {
 	driver.get(baseUrl);

@@ -7,9 +7,9 @@
     <classes>
       <class name="home.Newsletter_empty">
         <methods>
-          <include name="setUp"/>
-          <include name="testUntitled"/>
+          <include name="tearDown"/>
           <include name="init"/>
+          <include name="testUntitled5"/>
         </methods>
       </class> <!-- home.Newsletter_empty -->
     </classes>
