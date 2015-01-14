@@ -93,7 +93,7 @@ public class TestBase {
 		
 		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
 				password);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}  
 	  
 	
