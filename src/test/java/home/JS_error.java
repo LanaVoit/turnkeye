@@ -33,9 +33,9 @@ import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
 
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
-public class JS_error extends turnkeye.pages.TestBase {
-	@Listeners({SauceOnDemandTestListener.class})
-	public class Email extends turnkeye.pages.TestBase {
+
+@Listeners({SauceOnDemandTestListener.class})
+public class JS_error extends turnkeye.pages.TestBase {	
 	  private boolean acceptNextAlert = true;
 	  private StringBuffer verificationErrors = new StringBuffer();
 	  public WebDriver createDriver(String browser, String version, String os) throws MalformedURLException {
@@ -73,7 +73,6 @@ public class JS_error extends turnkeye.pages.TestBase {
 		  //  driver.quit();
   	    }    
 
-	  }
-}
+ }
 
 
