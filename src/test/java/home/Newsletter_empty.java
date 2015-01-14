@@ -52,17 +52,13 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
 	driver.get(baseUrl);
     driver.manage().window().maximize();    
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("", driver.findElement(By.id("newsletter111")).getText());
+    assertEquals("", driver.findElement(By.id("newsletter")).getText());
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     assertEquals("", driver.findElement(By.className("error")).getText());
   //  driver.quit();
   }
 
-  @AfterSuite
-	public void tearDown() {
-      driver.quit();
-  }
-  
+
    private boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
