@@ -27,6 +27,9 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.Logs;
 
 import com.saucelabs.testng.SauceOnDemandTestListener;
+import com.saucelabs.common.SauceOnDemandAuthentication;
+import com.saucelabs.common.SauceOnDemandSessionIdProvider;
+import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
 
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
@@ -69,6 +72,8 @@ public class JS_error extends turnkeye.pages.TestBase {
 		    assertEquals(list, logsEntries);
 		  //  driver.quit();
   	    }    
+
+	  }
 }
-}
+
 
