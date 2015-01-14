@@ -2,6 +2,7 @@ package turnkeye.pages;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.concurrent.TimeUnit;
 
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
@@ -17,10 +18,20 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 
 import turnkeye.util.PropertyLoader;
 import turnkeye.util.Browser;
 import turnkeye.webdriver.WebDriverFactory;
+
+
+
+import com.saucelabs.testng.SauceOnDemandTestListener;
+import com.saucelabs.common.SauceOnDemandAuthentication;
+import com.saucelabs.common.SauceOnDemandSessionIdProvider;
+import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
+import com.saucelabs.testng.SauceOnDemandTestListener;
+import com.saucelabs.common.SauceOnDemandAuthentication;
 
 /*
  * Base class for all the test classes
@@ -66,6 +77,19 @@ public class TestBase {
 			driver.quit();
 		}
 	}
+	
+	public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("qatestingtestqa", "7d7d449c-27c0-45c7-9339-3aad563a5cc0");
+	public ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
+	  public ThreadLocal<String> sessionId = new ThreadLocal<String>();
+	  @DataProvider(name = "hardCodedBrowsers", parallel = true)
+	  public static Object[][] sauceBrowserDataProvider(Method testMethod) {
+	      return new Object[][]{
+	             // new Object[]{"internet explorer", "11", "Windows 8.1"},
+	             // new Object[]{"safari", "6", "OSX 10.8"},
+	              new Object[]{"chrome", "39", "Windows 7"},
+	      };
+	  }
+	  
 
 //	@AfterMethod
 //	public void setScreenshot(ITestResult result) {
