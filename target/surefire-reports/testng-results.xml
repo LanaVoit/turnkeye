@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="3450" started-at="2015-01-14T09:10:26Z" finished-at="2015-01-14T09:10:29Z">
+  <suite name="Tests" duration-ms="3990" started-at="2015-01-14T09:19:35Z" finished-at="2015-01-14T09:19:39Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="3450" started-at="2015-01-14T09:10:26Z" finished-at="2015-01-14T09:10:29Z">
+    <test name="Test1" duration-ms="3990" started-at="2015-01-14T09:19:35Z" finished-at="2015-01-14T09:19:39Z">
       <class name="home.JS_error$Email">
-        <test-method status="PASS" signature="init()[pri:0, instance:home.JS_error$Email@6b143ee9]" name="init" is-config="true" duration-ms="3065" started-at="2015-01-14T13:10:26Z" finished-at="2015-01-14T13:10:29Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.JS_error$Email@6b143ee9]" name="init" is-config="true" duration-ms="3916" started-at="2015-01-14T13:19:35Z" finished-at="2015-01-14T13:19:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled2(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:home.JS_error$Email@6b143ee9]" name="testUntitled2" duration-ms="347" started-at="2015-01-14T13:10:29Z" data-provider="hardCodedBrowsers" finished-at="2015-01-14T13:10:29Z">
+        <test-method status="FAIL" signature="testUntitled2(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:home.JS_error$Email@6b143ee9]" name="testUntitled2" duration-ms="8" started-at="2015-01-14T13:19:39Z" data-provider="hardCodedBrowsers" finished-at="2015-01-14T13:19:39Z">
           <params>
             <param index="0">
               <value>
@@ -38,8 +38,8 @@
 	at java.lang.Enum.valueOf(Enum.java:238)
 	at org.openqa.selenium.Platform.valueOf(Platform.java:1)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:168)
-	at home.JS_error$Email.createDriver(JS_error.java:45)
-	at home.JS_error$Email.testUntitled2(JS_error.java:57)
+	at home.JS_error$Email.createDriver(JS_error.java:48)
+	at home.JS_error$Email.testUntitled2(JS_error.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,7 +63,7 @@
         </test-method> <!-- testUntitled2 -->
       </class> <!-- home.JS_error$Email -->
       <class name="home.JS_error">
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:home.JS_error@614c5515]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-01-14T13:10:29Z" finished-at="2015-01-14T13:10:29Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:home.JS_error@614c5515]" name="tearDown" is-config="true" duration-ms="1" started-at="2015-01-14T13:19:39Z" finished-at="2015-01-14T13:19:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

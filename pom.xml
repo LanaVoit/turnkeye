@@ -6,6 +6,11 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
+<name>sauce_quickstart</name>
+    <description>A sample Maven project that demonstrates how to integrate Sauce OnDemand with WebDriver tests
+        that run using TestNG
+    </description>
+    
   <dependencies>
     <dependency>
       <groupId>org.testng</groupId>
@@ -46,14 +51,13 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-remote-driver</artifactId>
             <version>2.44.0</version>
-     </dependency>
-     <dependency>
+     </dependency>  
+   <dependency>
          <groupId>com.saucelabs</groupId>
          <artifactId>sauce_testng</artifactId>
          <version>[1.0.0,)</version>
          <scope>test</scope>
      </dependency>
-   
     <dependency>
       <groupId>com.opera</groupId>
       <artifactId>operadriver</artifactId>
@@ -102,15 +106,15 @@
   </build>
   <!-- profiles -->
   <profiles>
-    <profile>
-      <id>local</id>
+     <profile>
+      <id>firefox</id>
       <properties>
-        <env>local</env>
+        <env>firefox</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://turnkeye.com/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -119,27 +123,14 @@
       </activation>
     </profile>
     <profile>
-      <id>dev</id>
+      <id>chrome</id>
       <properties>
-        <env>dev</env>
+        <env>chrome</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    <profile>
-      <id>test</id>
-      <properties>
-        <env>test</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://turnkeye.com/</site.url>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>

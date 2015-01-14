@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.655 sec <<< FAILURE! - in TestSuite
-testUntitled2(home.JS_error$Email)  Time elapsed: 0.011 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.511 sec <<< FAILURE! - in TestSuite
+testUntitled2(home.JS_error$Email)  Time elapsed: 0.018 sec  <<< FAILURE!
 java.lang.IllegalArgumentException: No enum constant org.openqa.selenium.Platform.Windows 8.1
 	at java.lang.Enum.valueOf(Enum.java:238)
 	at org.openqa.selenium.Platform.valueOf(Platform.java:1)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:168)
-	at home.JS_error$Email.createDriver(JS_error.java:45)
-	at home.JS_error$Email.testUntitled2(JS_error.java:57)
+	at home.JS_error$Email.createDriver(JS_error.java:48)
+	at home.JS_error$Email.testUntitled2(JS_error.java:60)
 
