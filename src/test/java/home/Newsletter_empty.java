@@ -40,30 +40,15 @@ import java.util.logging.Logger;
 
 import static org.testng.Assert.assertEquals;
 
-@Listeners({SauceOnDemandTestListener.class})
+
 public class Newsletter_empty extends turnkeye.pages.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  public WebDriver createDriver(String browser, String version, String os) throws MalformedURLException {
+  
 
-      DesiredCapabilities capabilities = new DesiredCapabilities();
-      capabilities.setCapability(CapabilityType.BROWSER_NAME, browser);
-      if (version != null) {
-          capabilities.setCapability(CapabilityType.VERSION, version);
-      }
-      capabilities.setCapability(CapabilityType.PLATFORM, os);
-      capabilities.setCapability("name", "Only_firstname");
-      capabilities.setCapability("passed", "true");
-      webDriver.set(new RemoteWebDriver(
-              new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
-              capabilities));
-      sessionId.set(((RemoteWebDriver) getWebDriver()).getSessionId().toString());
-      return webDriver.get();
-  }
 
-  @Test(dataProvider = "hardCodedBrowsers")
-  public void testUntitled5(String browser, String version, String os) throws Exception {
-	WebDriver driver = createDriver(browser, version, os);
+  @Test
+  public void testUntitled5() throws Exception {
 	driver.get(baseUrl);
     driver.manage().window().maximize();    
     TimeUnit.SECONDS.sleep(5);

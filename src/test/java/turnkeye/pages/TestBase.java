@@ -93,36 +93,11 @@ public class TestBase {
 		
 		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
 				password);
-		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	}
-
-	public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("qatestingtestqa", "7d7d449c-27c0-45c7-9339-3aad563a5cc0");
-	public ThreadLocal<WebDriver> webDriver = new ThreadLocal<WebDriver>();
-	  public ThreadLocal<String> sessionId = new ThreadLocal<String>();
-	  @DataProvider(name = "hardCodedBrowsers", parallel = true)
-	  public static Object[][] sauceBrowserDataProvider(Method testMethod) {
-	      return new Object[][]{
-	             // new Object[]{"internet explorer", "11", "Windows 8.1"},
-	             // new Object[]{"safari", "6", "OSX 10.8"},
-	              new Object[]{"firefox", "30", "Windows 8.1"},
-	      };
-	  }
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}  
 	  
-	  
-	public WebDriver getWebDriver() {
-	      System.out.println("WebDriver" + webDriver.get());
-	      return webDriver.get();
-	  }
-	  
-	  public String getSessionId() {
-	      return sessionId.get();
-	  }
-	  
-	  
-	  public SauceOnDemandAuthentication getAuthentication() {
-	      return authentication;
-	  }
-	  
+	
+	
 	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
 		if (driver != null) {
