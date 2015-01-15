@@ -17,10 +17,11 @@ import org.openqa.selenium.support.ui.Select;
 public class Banner extends turnkeye.pages.TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
+
   
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void testUntitled4() throws Exception {    	
     driver.manage().window().maximize();
     driver.get(baseUrl);
 

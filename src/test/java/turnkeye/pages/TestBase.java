@@ -98,7 +98,7 @@ public class TestBase {
 	        capabillities.setCapability("version", "39.0");
 	        capabillities.setCapability("platform", Platform.WIN8);	        
 	        capabillities.setCapability("passed", "true");	 
-	        capabillities.setCapability("name", javax.naming.Name.class);
+	        capabillities.setCapability("name", "turnkeye");
 	        driver = new RemoteWebDriver(
 	                    new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
 	                    capabillities);
