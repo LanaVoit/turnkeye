@@ -45,6 +45,175 @@
 	    <artifactId>JSErrorCollector</artifactId>
 	    <version>0.5</version>	    	    
 	</dependency>	
+	
+	
+	
+	
+	
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests_suite" verbose="1" data-provider-thread-count="1" parallel="false">
+	<test name="home.Newsletter_empty">
+		<classes>
+			<class name="home.Newsletter_empty"/>
+		</classes>
+	</test>	
+	<test name="home.Newsletter_invalid">
+		<classes>
+			<class name="home.Newsletter_invalid"/>	
+		</classes>
+	</test>  	
+	<test name="home.Newsletter_valid">
+		<classes>
+			<class name="home.Newsletter_valid"/>
+		</classes>
+	</test>  	
+	<test name="home.JS_error">
+		<classes>
+			<class name="home.JS_error"/>
+		</classes>
+	</test>  
+	<test name="home.Banner">
+		<classes>
+			<class name="home.Banner"/>
+		</classes>
+	</test>  
+
+	<test name="about.Tabs">
+		<classes>			
+		    <class name="about.Tabs"/>
+	    </classes>
+    </test> 
+	<test name="about.Contact_us">
+		<classes>
+		    <class name="about.Contact_us"/>		    		    		   	
+		</classes>
+	</test> 
+	<test name="about.JS_error">
+		<classes>
+			<class name="about.JS_error"/>
+		</classes>
+	</test>  
+
+	<test name="clients.JS_error">
+		<classes>			
+		    <class name="clients.JS_error"/>
+	    </classes>
+    </test> 
+	<test name="clients.JS_error_detail">
+		<classes>
+		    <class name="clients.JS_error_detail"/>		    		    		   	
+		</classes>
+	</test> 
+	<test name="clients.Details">
+		<classes>
+			<class name="clients.Details"/>
+		</classes>
+	</test> 
+	<test name="clients.Details_elements">
+		<classes>
+			<class name="clients.Details_elements"/>
+		</classes>
+	</test> 
+	<test name="clients.Navigation">
+		<classes>
+			<class name="clients.Navigation"/>
+		</classes>
+	</test> 
+	<test name="clients.Website">
+		<classes>
+			<class name="clients.Website"/>
+		</classes>
+	</test> 
+
+	<test name="services.Page">
+		<classes>
+			<class name="services.Page"/>
+		</classes>
+	</test> 
+	<test name="services.JS_error">
+		<classes>
+			<class name="services.JS_error"/>
+		</classes>
+	</test> 
+
+	<test name="contact.Form_invalid">
+		<classes>			
+		    <class name="contact.Form_invalid"/>
+	    </classes>
+    </test> 
+	<test name="contact.Form_empty">
+		<classes>
+		    <class name="contact.Form_empty"/>		    		    		   	
+		</classes>
+	</test> 
+	<test name="contact.Form_valid">
+		<classes>
+			<class name="contact.Form_valid"/>
+		</classes>
+	</test> 
+	<test name="contact.Contact_email_change">
+		<classes>
+			<class name="contact.Contact_email_change"/>
+		</classes>
+	</test> 
+	<test name="contact.JS_error">
+		<classes>
+			<class name="contact.JS_error"/>
+		</classes>
+	</test>
+
+	<test name="blog.Captcha_empty">
+		<classes>			
+		    <class name="blog.Captcha_empty"/>
+	    </classes>
+    </test> 
+	<test name="blog.Captcha_invalid">
+		<classes>
+		    <class name="blog.Captcha_invalid"/>		    		    		   	
+		</classes>
+	</test> 
+	<test name="blog.Captcha_disable">
+		<classes>
+			<class name="blog.Captcha_disable"/>
+		</classes>
+	</test> 
+	<test name="blog.Comment">
+		<classes>
+			<class name="blog.Comment"/>
+		</classes>
+	</test> 
+	<test name="blog.Details_page">
+		<classes>
+			<class name="blog.Details_page"/>
+		</classes>
+	</test>
+	<test name="blog.Blog_page">
+		<classes>
+		    <class name="blog.Blog_page"/>		    		    		   	
+		</classes>
+	</test> 
+	<test name="blog.Search">
+		<classes>
+			<class name="blog.Search"/>
+		</classes>
+	</test> 
+	<test name="blog.JS_error_blog">
+		<classes>
+			<class name="blog.JS_error_blog"/>
+		</classes>
+	</test> 
+	<test name="blog.JS_error_post">
+		<classes>
+			<class name="blog.JS_error_post"/>
+		</classes>
+	</test>
+</suite>
+
+
+	
+	
 			
 			
 			
