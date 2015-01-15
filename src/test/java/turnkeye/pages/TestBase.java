@@ -55,7 +55,6 @@ import java.util.logging.Logger;
 import static org.testng.Assert.assertEquals;
 
 import com.saucelabs.common.SauceOnDemandAuthentication;
-import com.sun.xml.internal.bind.v2.runtime.Name;
 
 import turnkeye.util.PropertyLoader;
 import turnkeye.util.Browser;
@@ -98,6 +97,7 @@ public class TestBase {
 	        capabillities.setCapability("version", "39.0");
 	        capabillities.setCapability("platform", Platform.WIN8);	        
 	        capabillities.setCapability("passed", "true");	 
+	        capabillities.setCapability("name", "turnkeye.com");	 
 	        driver = new RemoteWebDriver(
 	                    new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
 	                    capabillities);
