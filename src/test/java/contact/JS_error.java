@@ -24,7 +24,9 @@ import org.openqa.selenium.logging.Logs;
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
 public class JS_error extends turnkeye.pages.TestBase {
-	
+	private boolean acceptNextAlert = true;
+	  private StringBuffer verificationErrors = new StringBuffer();
+	  
     @Test
   public void testUntitled4() throws Exception { 
     	driver.manage().window().maximize();
@@ -35,7 +37,7 @@ public class JS_error extends turnkeye.pages.TestBase {
         list.isEmpty();
         for (LogEntry entry: logsEntries) {        	
     		System.out.println(entry.getMessage());  
-    	//	driver.quit();
+    		//driver.quit();
         }
 		    assertEquals(list, logsEntries);
 		    driver.quit();
