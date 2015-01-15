@@ -95,7 +95,8 @@ public class TestBase {
 		
 		 DesiredCapabilities capabillities = DesiredCapabilities.chrome();
 	        capabillities.setCapability("version", "39.0");
-	        capabillities.setCapability("platform", Platform.WIN8);
+	        capabillities.setCapability("platform", Platform.WIN8);	        
+	        capabillities.setCapability("passed", "true");
 	        driver = new RemoteWebDriver(
 	                    new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
 	                    capabillities);
