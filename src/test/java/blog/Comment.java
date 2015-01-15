@@ -45,8 +45,7 @@ public class Comment extends turnkeye.pages.TestBase {
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());
-    driver.get(baseUrl + "blog");
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
+    driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     assertEquals("test comment", driver.findElement(By.cssSelector("div.comment-content")).getText());
     driver.get(baseUrl + "index.php/secretzone51/"); 
     TimeUnit.SECONDS.sleep(7);
@@ -63,8 +62,7 @@ public class Comment extends turnkeye.pages.TestBase {
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());
-    driver.get(baseUrl + "blog");
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
+    driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     assertEquals("2 comments", driver.findElement(By.cssSelector("div.comment-box > div.post-title")).getText());
     driver.quit();
   }

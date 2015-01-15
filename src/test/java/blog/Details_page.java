@@ -21,8 +21,7 @@ public class Details_page extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled() throws Exception {
     driver.manage().window().maximize();
-    driver.get(baseUrl + "blog/");
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
+    driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     assertEquals("MERRY CHRISTMAS AND HAPPY NEW YEAR 2014", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Merry Christmas and Happy New year 2014\"]")).getText());
     assertEquals("TAGS", driver.findElement(By.cssSelector("div.post-tags-title")).getText());

@@ -21,8 +21,7 @@ public class Captcha_empty extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled() throws Exception {
     driver.manage().window().maximize();
-    driver.get(baseUrl + "/blog");
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
+    driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     driver.findElement(By.id("user")).clear();
     driver.findElement(By.id("user")).sendKeys("test");
     driver.findElement(By.id("email")).clear();

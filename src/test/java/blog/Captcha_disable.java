@@ -40,8 +40,7 @@ public class Captcha_disable extends turnkeye.pages.TestBase {
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());
-    driver.get(baseUrl + "blog");
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
+    driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     driver.findElement(By.id("user")).clear();
     driver.findElement(By.id("user")).sendKeys("test");
     driver.findElement(By.id("email")).clear();
