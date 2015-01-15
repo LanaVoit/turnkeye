@@ -3,22 +3,7 @@
 <suite name="Tests_suite" verbose="1" data-provider-thread-count="1" parallel="false">
 	<test name="tests">
 		<classes>
-			<class name="home.Newsletter_empty"/>
-			<class name="home.Newsletter_invalid"/>				
-			<class name="home.Newsletter_valid"/>
-			<class name="home.JS_error"/>
-			<class name="home.Banner"/>
-			<class name="about.Tabs"/>
-		    <class name="about.Contact_us"/>		    		    		   	
-			<class name="about.JS_error"/>
-			<class name="clients.JS_error"/>
-		    <class name="clients.JS_error_detail"/>		    		    		   	
-			<class name="clients.Details"/>
-			<class name="clients.Details_elements"/>
-			<class name="clients.Navigation"/>
-			<class name="clients.Website"/>
-			<class name="services.Page"/>
-			<class name="services.JS_error"/>
+			
 			<class name="contact.Form_invalid"/>
 		    <class name="contact.Form_empty"/>		    		    		   	
 			<class name="contact.Form_valid"/>
