@@ -20,8 +20,7 @@ public class Details_page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "blog/");
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
     assertEquals("MERRY CHRISTMAS AND HAPPY NEW YEAR 2014", driver.findElement(By.cssSelector("h1")).getText());

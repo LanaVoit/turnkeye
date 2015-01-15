@@ -20,8 +20,7 @@ public class Newsletter_valid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled3() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl);
     driver.findElement(By.id("newsletter")).click();
     driver.findElement(By.id("newsletter")).clear();

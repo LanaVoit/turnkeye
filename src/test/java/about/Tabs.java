@@ -20,7 +20,6 @@ public class Tabs extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled5() throws Exception {
-    //final WebDriver driver = new ChromeDriver();
     driver.manage().window().maximize();
     driver.get(baseUrl + "/about");
     assertEquals("About Us", driver.findElement(By.cssSelector("h1")).getText());

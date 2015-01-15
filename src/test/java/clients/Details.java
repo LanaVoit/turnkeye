@@ -24,7 +24,7 @@ public class Details extends turnkeye.pages.TestBase {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "index.php/secretzone51");
-   driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");

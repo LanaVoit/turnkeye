@@ -20,8 +20,7 @@ public class Form_empty extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled4() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "/contact_us.html");
     driver.findElement(By.cssSelector("button.button")).click();
     assertEquals("Name can't be empty", driver.findElement(By.cssSelector("label.error")).getText());

@@ -27,7 +27,6 @@ public class JS_error extends turnkeye.pages.TestBase {
 	
     @Test
   public void testUntitled4() throws Exception { 
-   // 	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
     	driver.get(baseUrl + "/services/magento_site_from_scratch.html");
         Logs log = driver.manage().logs();

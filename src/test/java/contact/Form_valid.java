@@ -35,15 +35,14 @@ public class Form_valid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled6() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     Actions actions = new Actions(driver);
     driver.get(baseUrl + "index.php/secretzone51");
-    /*driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
-    driver.findElement(By.cssSelector("input.form-button")).click();*/
+    driver.findElement(By.cssSelector("input.form-button")).click();
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
     driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[15]/a/span")).click();
     driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li/dl/dd[6]/a/span")).click();

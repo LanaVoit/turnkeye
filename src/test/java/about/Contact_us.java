@@ -20,7 +20,6 @@ public class Contact_us extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled6() throws Exception {
-   // final WebDriver driver = new ChromeDriver();
     driver.manage().window().maximize();
     driver.get(baseUrl + "/about");
     assertEquals("CONTACT US", driver.findElement(By.cssSelector("a.see-more")).getText());

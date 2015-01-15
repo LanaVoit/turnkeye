@@ -20,8 +20,7 @@ public class Website extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled7() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "/clients/pinup-girl-clothing");
     assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());

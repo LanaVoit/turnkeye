@@ -27,7 +27,6 @@ public class JS_error_post extends turnkeye.pages.TestBase {
 	
     @Test
   public void testUntitled4() throws Exception { 
-    //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
     	driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
         Logs log = driver.manage().logs();

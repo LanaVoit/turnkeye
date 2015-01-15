@@ -27,7 +27,6 @@ public class JS_error_blog extends turnkeye.pages.TestBase {
 	
     @Test
   public void testUntitled4() throws Exception { 
-  //  	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
     	driver.get(baseUrl + "blog/");
         Logs log = driver.manage().logs();

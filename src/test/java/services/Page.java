@@ -20,8 +20,7 @@ public class Page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
-    	//final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "/services/magento_site_from_scratch.html");
     assertEquals("Magento Site from Scratch", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("MAGENTO SITE FROM SCRATCH", driver.findElement(By.cssSelector("li.active > span")).getText());

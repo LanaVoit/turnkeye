@@ -27,7 +27,6 @@ public class JS_error extends turnkeye.pages.TestBase {
 	
     @Test
   public void testUntitled4() throws Exception { 
-    //	final WebDriver driver = new ChromeDriver();
     	driver.manage().window().maximize();
     	driver.get(baseUrl + "/clients");
         Logs log = driver.manage().logs();

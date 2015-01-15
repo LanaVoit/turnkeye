@@ -20,8 +20,7 @@ public class Form_invalid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled3() throws Exception {
-    //	final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "/contact_us.html");
     driver.findElement(By.id("name")).clear();
     driver.findElement(By.id("name")).sendKeys("<script>alert();</script>");

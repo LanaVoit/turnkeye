@@ -20,8 +20,7 @@ public class Blog_page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
-    	//final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "blog/");
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());

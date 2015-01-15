@@ -20,8 +20,7 @@ public class Captcha_invalid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
-    	//final WebDriver driver = new ChromeDriver();
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
     driver.get(baseUrl + "/blog");
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
     driver.findElement(By.id("user")).clear();
