@@ -3,16 +3,7 @@
 <suite name="Tests_suite" verbose="1" data-provider-thread-count="1" parallel="false">
 	<test name="tests">
 		<classes>
-			
-			<class name="contact.Form_invalid"/>
-		    <class name="contact.Form_empty"/>		    		    		   	
-			<class name="contact.Form_valid"/>
-			<class name="contact.Contact_email_change"/>
-			<class name="contact.JS_error"/>
-			<class name="blog.Captcha_empty"/>
-		    <class name="blog.Captcha_invalid"/>		    		    		   	
-			<class name="blog.Captcha_disable"/>
-			<class name="blog.Comment"/>
+
 			<class name="blog.Details_page"/>
 			<class name="blog.Blog_page"/>		    		    		   	
 			<class name="blog.Search"/>
