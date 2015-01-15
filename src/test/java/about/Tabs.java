@@ -46,7 +46,7 @@ public class Tabs extends turnkeye.pages.TestBase {
     assertEquals("Our partners", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("MAGENTO EXTENSIONS & TOOLS", driver.findElement(By.cssSelector("h2")).getText());
     
-  //  driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

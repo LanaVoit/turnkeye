@@ -39,7 +39,7 @@ public class JS_error_detail extends turnkeye.pages.TestBase {
     		//driver.quit();
         }
 		    assertEquals(list, logsEntries);
-		    //driver.quit();
+		    driver.quit();
   	    }    
 }
 

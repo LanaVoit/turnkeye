@@ -38,7 +38,7 @@ public class Details_page extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
     assertEquals("Tags", driver.findElement(By.cssSelector("div.block-tags > div.block-title > span")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento developers\"]")).getText());
- //   driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

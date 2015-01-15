@@ -41,7 +41,7 @@ public class Page extends turnkeye.pages.TestBase {
     assertEquals("MAGENTO & SERVER OPTIMIZATION", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[7]")).getText());
     assertEquals("FURTHER SUPPORT", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[8]")).getText());
     
-   // driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

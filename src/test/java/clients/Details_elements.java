@@ -48,7 +48,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
     
     
-  //  driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

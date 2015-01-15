@@ -55,7 +55,7 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("newsletter")).getText());
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     assertEquals("", driver.findElement(By.className("error")).getText());
-  //  driver.quit();
+    driver.quit();
   }
 
 

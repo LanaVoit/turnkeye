@@ -28,7 +28,7 @@ public class Newsletter_invalid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("newsletter")).sendKeys("test");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     assertEquals("", driver.findElement(By.className("error")).getText());
-  //  driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

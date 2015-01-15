@@ -67,7 +67,7 @@ public class Comment extends turnkeye.pages.TestBase {
     driver.get(baseUrl + "blog");
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/blog/merry-christmas-and-happy-new-year-2014/\"]")).click();
     assertEquals("2 comments", driver.findElement(By.cssSelector("div.comment-box > div.post-title")).getText());
-   // driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

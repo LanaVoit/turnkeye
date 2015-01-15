@@ -33,7 +33,7 @@ public class Contact_us extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("comment")).getText());
     assertEquals("SEND MESSAGE", driver.findElement(By.cssSelector("button.button")).getText());
     
-  //  driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

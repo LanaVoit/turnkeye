@@ -120,7 +120,7 @@ public class Form_valid extends turnkeye.pages.TestBase {
 	        inbox.close(false);
 	        store.close(); 
 	        driver.get(baseUrl + "/contact_us.html");
-	     //   driver.quit();  
+	        driver.quit();  
   }
 
    private boolean isElementPresent(By by) {

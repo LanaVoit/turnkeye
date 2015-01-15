@@ -36,7 +36,7 @@ public class Search extends turnkeye.pages.TestBase {
     
     driver.findElement(By.cssSelector("div.gsc-results-close-btn.gsc-results-close-btn-visible")).click();
     assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());
-   // driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

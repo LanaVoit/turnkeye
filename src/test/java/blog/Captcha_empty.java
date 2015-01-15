@@ -33,7 +33,7 @@ public class Captcha_empty extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("input.button.form-button")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Your Recaptcha solution was incorrect, please try again", driver.findElement(By.cssSelector("li > span")).getText());
-//    driver.quit();
+    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

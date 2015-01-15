@@ -53,7 +53,7 @@ public class Navigation extends turnkeye.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     //assertFalse(isElementPresent(By.cssSelector("div.portfolio-item > img[alt=\"Pinup Girl Clothing\"]")));
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("div.isotope-hidden > img")).getAttribute("alt"));  
-  //  driver.quit(); 
+    driver.quit(); 
   }
 
    private boolean isElementPresent(By by) {

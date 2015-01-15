@@ -56,7 +56,7 @@ public class JS_error extends turnkeye.pages.TestBase {
     		//driver.quit();
         }
 		    assertEquals(list, logsEntries);
-		  //  driver.quit();
+		    driver.quit();
   	    }    
 
  }
