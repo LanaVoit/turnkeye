@@ -3,9 +3,10 @@
 <suite name="Tests_suite" verbose="1" data-provider-thread-count="1" parallel="false">
 	<test name="tests">
 		<classes>
-
 			<class name="blog.Details_page"/>
-			
+			<class name="blog.Blog_page"/>		    		    		   	
+			<class name="blog.Search"/>
+			<class name="blog.JS_error_blog"/>
 		</classes>
 	</test>
 </suite>

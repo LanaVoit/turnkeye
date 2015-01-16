@@ -20,7 +20,7 @@ public class Blog_page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
-    driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "blog/");
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());
