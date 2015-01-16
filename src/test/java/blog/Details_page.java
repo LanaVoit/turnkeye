@@ -28,6 +28,8 @@ public class Details_page extends turnkeye.pages.TestBase {
     assertEquals("TAGS", driver.findElement(By.cssSelector("div.post-tags-title")).getText());
     assertEquals("POSTED IN", driver.findElement(By.cssSelector("div.post-posted-title")).getText());
     assertEquals("Leave a Comment!", driver.findElement(By.cssSelector("div.legend")).getText());
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("input.button.form-button")));
     assertEquals("Post Comment", driver.findElement(By.cssSelector("input.button.form-button")).getAttribute("value"));
     assertEquals("", driver.findElement(By.id("user")).getAttribute("value"));
     assertEquals("", driver.findElement(By.id("email")).getAttribute("value"));
