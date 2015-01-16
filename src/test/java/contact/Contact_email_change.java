@@ -38,7 +38,7 @@ public class Contact_email_change extends turnkeye.pages.TestBase {
     driver.manage().window().maximize();
     Actions actions = new Actions(driver);
     driver.get(baseUrl + "contact_us.html");
-    String contact_email = driver.findElement(By.xpath("//*[@id='content']/h4/a")).toString();    
+    String contact_email = driver.findElement(By.xpath("//*[@id='content']/h4/a")).getText();    
     driver.get(baseUrl + "index.php/secretzone51");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
