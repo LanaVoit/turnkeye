@@ -99,7 +99,6 @@ public class TestBase {
 	        capabillities.setCapability("platform", Platform.WIN8);	        
 	        capabillities.setCapability("passed", "true");	 
 	        capabillities.setCapability("name", "turnkeye.com");	
-	        driver.manage().window().setSize(new Dimension(1100, 1050));
 	        driver = new RemoteWebDriver(
 	                    new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
 	                    capabillities);
