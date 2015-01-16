@@ -28,6 +28,7 @@
 			<class name="blog.Captcha_invalid"/>
 		    <class name="blog.Captcha_disable"/>
 		    <class name="blog.Comment"/>
+		    <class name="blog.Captcha_enable"/>
 		    <class name="blog.Details_page"/>
 			<class name="blog.Blog_page"/>	
 			<class name="blog.Search"/>	
