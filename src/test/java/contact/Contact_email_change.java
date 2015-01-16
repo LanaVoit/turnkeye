@@ -37,6 +37,8 @@ public class Contact_email_change extends turnkeye.pages.TestBase {
   public void testUntitled6() throws Exception {
     driver.manage().window().maximize();
     Actions actions = new Actions(driver);
+    driver.get(baseUrl + "contact_us.html");
+    String contact_email = driver.findElement(By.xpath("//*[@id='content']/h4/a")).toString();    
     driver.get(baseUrl + "index.php/secretzone51");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
@@ -47,7 +49,7 @@ public class Contact_email_change extends turnkeye.pages.TestBase {
     driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[15]/a/span")).click();
     driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li/dl/dd[6]/a/span")).click();
     driver.findElement(By.id("contacts_email_recipient_email")).clear();
-    driver.findElement(By.id("contacts_email_recipient_email")).sendKeys("info@turnkeye.com");
+    driver.findElement(By.id("contacts_email_recipient_email")).sendKeys(contact_email);
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     TimeUnit.SECONDS.sleep(3);
     assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
