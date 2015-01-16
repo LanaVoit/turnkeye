@@ -96,7 +96,8 @@ public class TestBase {
 		
 		 DesiredCapabilities capabillities = DesiredCapabilities.chrome();
 	        capabillities.setCapability("version", "39.0");
-	        capabillities.setCapability("platform", Platform.WIN8);	        
+	        capabillities.setCapability("platform", Platform.WIN8);	
+	        capabillities.setCapability("screen-resolution", "1280x1024");
 	        capabillities.setCapability("passed", "true");	 
 	        capabillities.setCapability("name", "turnkeye.com");	
 	        driver = new RemoteWebDriver(
