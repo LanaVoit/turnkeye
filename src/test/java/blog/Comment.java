@@ -51,8 +51,13 @@ public class Comment extends turnkeye.pages.TestBase {
     TimeUnit.SECONDS.sleep(7);
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[9]/a/span"))).build().perform();
     TimeUnit.SECONDS.sleep(3);
-    driver.findElement(By.xpath("//ul[@id='nav']/li[9]/ul/li[4]/a/span")).click();    
-    driver.findElement(By.cssSelector("td.a-left")).click();    
+    driver.findElement(By.xpath("//ul[@id='nav']/li[9]/ul/li[4]/a/span")).click(); 
+    driver.findElement(By.id("commentGrid_filter_comment")).clear();
+    driver.findElement(By.id("commentGrid_filter_comment")).sendKeys("test comment");
+    driver.findElement(By.cssSelector("button[title=\"Search\"]")).click();
+    TimeUnit.SECONDS.sleep(3);
+    driver.findElement(By.cssSelector("td.a-left")).click();        
+    assertEquals("test comment", driver.findElement(By.id("comment")).getText());
     driver.findElement(By.cssSelector("button[title=\"Delete Comment\"]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to do this[\\s\\S]$"));
