@@ -34,15 +34,36 @@ public class Details extends turnkeye.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("a[name=\"position\"] > span.sort-title")).click();
     TimeUnit.SECONDS.sleep(5);
-    String client = driver.findElement(By.xpath("//table[@id='portfolio_set_id_table']/tbody/tr/td[2]")).getText();
+    driver.findElement(By.xpath("//table[@id='portfolio_set_id_table']/tbody/tr/td[2]")).click();
+    String store = driver.findElement(By.cssSelector("select[title='Store View'] optgroup option[selected='selected']")).getText();
+    String client = null;
+	    if(store == "English Store View"){
+	    	driver.findElement(By.cssSelector("button[title='Back']")).click();
+	    	TimeUnit.SECONDS.sleep(5);
+	    	client = driver.findElement(By.xpath("//table[@id='portfolio_set_id_table']/tbody/tr/td[2]")).getText(); 	 
+	    	 
+	    }else{
+    		 driver.findElement(By.cssSelector("button[title='Back']")).click();
+	    	 TimeUnit.SECONDS.sleep(5);
+	    	 driver.findElement(By.xpath("//*[@id='portfolio_set_id_table']/tbody/tr[2]/td[2]")).click();
+	    	 TimeUnit.SECONDS.sleep(5);
+	    	 driver.findElement(By.cssSelector("button[title='Back']")).click();
+	    	 TimeUnit.SECONDS.sleep(5);
+	    	 client = driver.findElement(By.xpath("//*[@id='portfolio_set_id_table']/tbody/tr[2]/td[2]")).getText();
+	    	 
+    	 }
         
     driver.get(baseUrl + "clients");
     TimeUnit.SECONDS.sleep(5);
-    String client_test = driver.findElement(By.cssSelector("div.portfolio-item > img")).getAttribute("alt");
+    driver.findElement(By.cssSelector("div.portfolio-item")).click();
+    String client_test = driver.findElement(By.cssSelector("h1")).getText();
     assertEquals(client, client_test);
+    driver.get(baseUrl + "clients");
+    TimeUnit.SECONDS.sleep(5);
     actions.moveToElement(driver.findElement(By.cssSelector("div.portfolio-item  > img"))).build().perform();
     driver.findElement(By.linkText("Discover")).click();
     TimeUnit.SECONDS.sleep(5);
+
     driver.quit();
   }
 
