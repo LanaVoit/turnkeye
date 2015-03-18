@@ -21,6 +21,7 @@ public class Contact_us extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled6() throws Exception {
     driver.manage().window().maximize();
+    
     driver.get(baseUrl + "/about");
     assertEquals("CONTACT US", driver.findElement(By.cssSelector("a.see-more")).getText());
     
@@ -31,8 +32,6 @@ public class Contact_us extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("email")).getText());
     assertEquals("", driver.findElement(By.id("comment")).getText());
     assertEquals("SEND MESSAGE", driver.findElement(By.cssSelector("button.button")).getText());
-    
-    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

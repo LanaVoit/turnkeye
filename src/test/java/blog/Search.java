@@ -21,6 +21,7 @@ public class Search extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled3() throws Exception {
     driver.manage().window().maximize();
+    
     driver.get(baseUrl + "blog/");
     assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
     assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
@@ -33,8 +34,7 @@ public class Search extends turnkeye.pages.TestBase {
     assertEquals("Updated Instruction for 'Facebook Products Tab' Magento Extension", driver.findElement(By.linkText("Updated Instruction for 'Facebook Products Tab' Magento Extension")).getText());
     
     driver.findElement(By.cssSelector("div.gsc-results-close-btn.gsc-results-close-btn-visible")).click();
-    assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());
-    driver.quit();
+    assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());    
   }
 
    private boolean isElementPresent(By by) {

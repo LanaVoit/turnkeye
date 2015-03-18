@@ -49,13 +49,13 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
   
   @Test
   public void testUntitled5() throws Exception {
-	driver.get(baseUrl);
-    driver.manage().window().maximize();    
+	driver.manage().window().maximize();  
+	
+	driver.get(baseUrl);     
     TimeUnit.SECONDS.sleep(5);
     assertEquals("", driver.findElement(By.id("newsletter")).getText());
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-    assertEquals("", driver.findElement(By.className("error")).getText());
-    driver.quit();
+    assertEquals("", driver.findElement(By.className("error")).getText());    
   }
 
 

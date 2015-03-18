@@ -21,6 +21,7 @@ public class Captcha_invalid extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled2() throws Exception {
     driver.manage().window().maximize();
+    
     driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     driver.findElement(By.id("user")).clear();
     driver.findElement(By.id("user")).sendKeys("test");
@@ -32,8 +33,7 @@ public class Captcha_invalid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("recaptcha_response_field")).sendKeys("test");
     driver.findElement(By.cssSelector("input.button.form-button")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("Your Recaptcha solution was incorrect, please try again", driver.findElement(By.cssSelector("li > span")).getText());
-    driver.quit();
+    assertEquals("Your Recaptcha solution was incorrect, please try again", driver.findElement(By.cssSelector("li > span")).getText());   
   }
 
    private boolean isElementPresent(By by) {

@@ -37,8 +37,10 @@ public class Contact_email_change extends turnkeye.pages.TestBase {
   public void testUntitled6() throws Exception {
     driver.manage().window().maximize();
     Actions actions = new Actions(driver);
+    
     driver.get(baseUrl + "contact_us.html");
-    String contact_email = driver.findElement(By.xpath("//*[@id='content']/h4/a")).getText();    
+    String contact_email = driver.findElement(By.xpath("//*[@id='content']/h4/a")).getText(); 
+    
     driver.get(baseUrl + "index.php/secretzone51");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
@@ -60,8 +62,6 @@ public class Contact_email_change extends turnkeye.pages.TestBase {
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());
-    
-    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

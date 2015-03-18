@@ -79,7 +79,6 @@ public class TestBase {
 
 	protected Browser browser;
 	
-	 
 
 	@BeforeClass
 	public void init() throws MalformedURLException {
@@ -94,17 +93,22 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 		
-		 DesiredCapabilities capabillities = DesiredCapabilities.chrome();
-	        capabillities.setCapability("version", "39.0");
-	        capabillities.setCapability("platform", Platform.WIN8);	
+		DesiredCapabilities capabillities = DesiredCapabilities.chrome();
+	        //capabillities.setCapability("platform", Platform.LINUX);
 	        capabillities.setCapability("screen-resolution", "1280x1024");
 	        capabillities.setCapability("passed", "true");	 
-	        capabillities.setCapability("name", "turnkeye.com");	
+	        capabillities.setCapability("name", "turnkeye.ru");	
 	        driver = new RemoteWebDriver(
-	                    new URL("http://qatestingtestqa:7d7d449c-27c0-45c7-9339-3aad563a5cc0@ondemand.saucelabs.com:80/wd/hub"),
+	                    new URL("http://127.0.0.1:4444/wd/hub"),
 	                    capabillities);
+	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}  
+	  
+	@AfterMethod
+	public void stopDriver()throws Exception{
+	driver.quit();
+	}
 	  
 	
 	

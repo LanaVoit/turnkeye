@@ -37,6 +37,7 @@ public class Form_valid extends turnkeye.pages.TestBase {
   public void testUntitled6() throws Exception {
     driver.manage().window().maximize();
     Actions actions = new Actions(driver);
+    
     driver.get(baseUrl + "index.php/secretzone51");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
@@ -50,6 +51,7 @@ public class Form_valid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("contacts_email_recipient_email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
+    
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
     driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[11]/a/span")).click();
     driver.findElement(By.linkText("Select All")).click();
@@ -67,59 +69,58 @@ public class Form_valid extends turnkeye.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.", driver.findElement(By.cssSelector("li > span")).getText());
     TimeUnit.SECONDS.sleep(10);
-    	driver.get(baseUrl + "/contact_us.html");
-    	class MailAuthenticator extends Authenticator {
-   		 
-    	    public PasswordAuthentication getPasswordAuthentication() {
-    	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "parol123");
-    	    }
-    	}
-    	
-    	Properties props = new Properties();
-    	
-    	props.put("mail.smtp.user", "qatestingtestqa@gmail.com");
-    	props.put("mail.host", "pop.gmail.com");
-    	props.put("mail.store.protocol", "pop3s");
-        props.put("mail.pop3s.auth", "true");
-        props.put("mail.pop3s.port", 995);
-    	props.put("mail.smtp.starttls.enable","true");
-    	props.put("mail.smtp.debug", "true");
-    	props.put("mail.smtp.auth", "true");
-    	props.put("mail.smtp.socketFactory.port", 995);
-    	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-    	props.put("mail.smtp.socketFactory.fallback", "false");
-
-    	Session session = Session.getInstance(props, new MailAuthenticator());
-    	session.setDebug(true);
-	       	  
-    	
-
-    	
-	        Store store = session.getStore("pop3s");
-	        store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
+    
+    driver.get(baseUrl + "/contact_us.html");
+	class MailAuthenticator extends Authenticator {
 	 
-	        Folder inbox = store.getFolder("INBOX");
-	        inbox.open(Folder.READ_ONLY);
+	    public PasswordAuthentication getPasswordAuthentication() {
+	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "parol123");
+	    }
+	}
+	
+	Properties props = new Properties();
+	
+	props.put("mail.smtp.user", "qatestingtestqa@gmail.com");
+	props.put("mail.host", "pop.gmail.com");
+	props.put("mail.store.protocol", "pop3s");
+    props.put("mail.pop3s.auth", "true");
+    props.put("mail.pop3s.port", 995);
+	props.put("mail.smtp.starttls.enable","true");
+	props.put("mail.smtp.debug", "true");
+	props.put("mail.smtp.auth", "true");
+	props.put("mail.smtp.socketFactory.port", 995);
+	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+	props.put("mail.smtp.socketFactory.fallback", "false");
+
+	Session session = Session.getInstance(props, new MailAuthenticator());
+	session.setDebug(true);
+
+    Store store = session.getStore("pop3s");
+    store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
+ 
+        Folder inbox = store.getFolder("INBOX");
+    inbox.open(Folder.READ_ONLY);
+    
+    Message[] messages = inbox.getMessages();
+    
+       
+    GetMulti gmulti = new GetMulti();
+    String textMessage = gmulti.getText(messages[messages.length - 1]);
+    String regex = "Comment: test message";
+    Pattern p = Pattern.compile(regex);
+    Matcher m = p.matcher(textMessage);
+    if (m.find()) {
+    	    driver.get(baseUrl + "/contact_us.html");
+    	    driver.findElement(By.id("comment")).clear();
+    	    driver.findElement(By.id("comment")).sendKeys(m.group());
+    	TimeUnit.SECONDS.sleep(5);
+    	   
+    }
+    
+    inbox.close(false);
+    store.close(); 
+    driver.get(baseUrl + "/contact_us.html");
 	        
-	        Message[] messages = inbox.getMessages();
-	        
-	           
-	        GetMulti gmulti = new GetMulti();
-	        String textMessage = gmulti.getText(messages[messages.length - 1]);
-	        String regex = "Comment: test message";
-	        Pattern p = Pattern.compile(regex);
-	        Matcher m = p.matcher(textMessage);
-	        if (m.find()) {
-	        	    driver.get(baseUrl + "/contact_us.html");
-	        	    driver.findElement(By.id("comment")).clear();
-	        	    driver.findElement(By.id("comment")).sendKeys(m.group());
-	        	TimeUnit.SECONDS.sleep(5);
-	        	   
-	        }
-	        inbox.close(false);
-	        store.close(); 
-	        driver.get(baseUrl + "/contact_us.html");
-	        driver.quit();  
   }
 
    private boolean isElementPresent(By by) {

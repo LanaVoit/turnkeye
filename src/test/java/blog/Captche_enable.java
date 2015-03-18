@@ -23,6 +23,7 @@ public class Captche_enable extends turnkeye.pages.TestBase {
   public void testUntitled3() throws Exception {
     driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
+	
     driver.get(baseUrl + "index.php/secretzone51");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
@@ -40,6 +41,7 @@ public class Captche_enable extends turnkeye.pages.TestBase {
     driver.findElement(By.linkText("Select All")).click();
     driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
     assertEquals("7 cache type(s) refreshed.", driver.findElement(By.cssSelector("li > span")).getText());
+    
     driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     driver.findElement(By.id("user")).clear();
     driver.findElement(By.id("user")).sendKeys("test");
@@ -49,8 +51,7 @@ public class Captche_enable extends turnkeye.pages.TestBase {
     driver.findElement(By.id("comment")).sendKeys("test comment");
     driver.findElement(By.cssSelector("input.button.form-button")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("Your Recaptcha solution was incorrect, please try again", driver.findElement(By.cssSelector("li > span")).getText());
-    driver.quit();
+    assertEquals("Your Recaptcha solution was incorrect, please try again", driver.findElement(By.cssSelector("li > span")).getText());    
   }
 
    private boolean isElementPresent(By by) {

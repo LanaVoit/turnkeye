@@ -2,24 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="19344" started-at="2015-01-14T16:14:38Z" finished-at="2015-01-14T16:14:58Z">
+  <suite name="Tests_suite" duration-ms="59593" started-at="2015-03-18T12:28:06Z" finished-at="2015-03-18T12:29:05Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="19344" started-at="2015-01-14T16:14:38Z" finished-at="2015-01-14T16:14:58Z">
-      <class name="home.Newsletter_empty">
-        <test-method status="PASS" signature="init()[pri:0, instance:home.Newsletter_empty@42d3bd8b]" name="init" is-config="true" duration-ms="8407" started-at="2015-01-14T20:14:38Z" finished-at="2015-01-14T20:14:47Z">
+    <test name="tests" duration-ms="59593" started-at="2015-03-18T12:28:06Z" finished-at="2015-03-18T12:29:05Z">
+      <class name="clients.Details">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.Details@38082d64]" name="init" is-config="true" duration-ms="2272" started-at="2015-03-18T16:28:06Z" finished-at="2015-03-18T16:28:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled5()[pri:0, instance:home.Newsletter_empty@42d3bd8b]" name="testUntitled5" duration-ms="10918" started-at="2015-01-14T20:14:47Z" finished-at="2015-01-14T20:14:58Z">
+        <test-method status="PASS" signature="testUntitled8()[pri:0, instance:clients.Details@38082d64]" name="testUntitled8" duration-ms="55749" started-at="2015-03-18T16:28:08Z" finished-at="2015-03-18T16:29:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled5 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:home.Newsletter_empty@42d3bd8b]" name="tearDown" is-config="true" duration-ms="503" started-at="2015-01-14T20:14:58Z" finished-at="2015-01-14T20:14:58Z">
+        </test-method> <!-- testUntitled8 -->
+        <test-method status="PASS" signature="stopDriver()[pri:0, instance:clients.Details@38082d64]" name="stopDriver" is-config="true" duration-ms="1566" started-at="2015-03-18T16:29:04Z" finished-at="2015-03-18T16:29:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDriver -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:clients.Details@38082d64]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-03-18T16:29:05Z" finished-at="2015-03-18T16:29:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- home.Newsletter_empty -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Tests -->
+      </class> <!-- clients.Details -->
+    </test> <!-- tests -->
+  </suite> <!-- Tests_suite -->
 </testng-results>

@@ -36,28 +36,26 @@ import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
 @Listeners({SauceOnDemandTestListener.class})
 public class JS_error extends turnkeye.pages.TestBase {	
-	  private boolean acceptNextAlert = true;
-	  private StringBuffer verificationErrors = new StringBuffer();
-	  
-
-
-	  @Test
-	  public void testUntitled2() throws Exception {
-		
-
-    	driver.manage().window().maximize();
-        driver.get(baseUrl);
-        Logs log = driver.manage().logs();
-        List<LogEntry> logsEntries = log.get("browser").getAll();    
-        List<String> list = new ArrayList<String>();
-        list.isEmpty();
-        for (LogEntry entry: logsEntries) {        	
-    		System.out.println(entry.getMessage());  
-    		//driver.quit();
-        }
-		    assertEquals(list, logsEntries);
-		    driver.quit();
-  	    }    
+		  private boolean acceptNextAlert = true;
+		  private StringBuffer verificationErrors = new StringBuffer();
+		  
+		  @Test
+	public void testUntitled2() throws Exception {
+	    	driver.manage().window().maximize();
+	    	
+	        driver.get(baseUrl);
+	        
+	        Logs log = driver.manage().logs();
+	        List<LogEntry> logsEntries = log.get("browser").getAll();    
+	        List<String> list = new ArrayList<String>();
+	        list.isEmpty();
+	        
+	        for (LogEntry entry: logsEntries) {        	
+	    		System.out.println(entry.getMessage());  
+	        }
+	        
+			assertEquals(list, logsEntries);    
+	  }    
 
  }
 

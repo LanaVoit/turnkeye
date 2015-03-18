@@ -21,13 +21,13 @@ public class Newsletter_invalid extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled2() throws Exception {
     driver.manage().window().maximize();
+    
     driver.get(baseUrl);
     driver.findElement(By.id("container")).click();
     driver.findElement(By.id("newsletter")).clear();
     driver.findElement(By.id("newsletter")).sendKeys("test");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-    assertEquals("", driver.findElement(By.className("error")).getText());
-    driver.quit();
+    assertEquals("", driver.findElement(By.className("error")).getText());    
   }
 
    private boolean isElementPresent(By by) {

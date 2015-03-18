@@ -28,17 +28,19 @@ public class JS_error extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled4() throws Exception { 
     	driver.manage().window().maximize();
+    	
     	driver.get(baseUrl + "/services/magento_site_from_scratch.html");
+    	
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();    
         List<String> list = new ArrayList<String>();
         list.isEmpty();
+        
         for (LogEntry entry: logsEntries) {        	
     		System.out.println(entry.getMessage());  
-    	//	driver.quit();
         }
-		    assertEquals(list, logsEntries);
-		    driver.quit();
-  	    }    
+        
+		assertEquals(list, logsEntries);
+  }    
 }
 

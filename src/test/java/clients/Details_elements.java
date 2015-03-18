@@ -21,10 +21,11 @@ public class Details_elements extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled9() throws Exception {
     driver.manage().window().maximize();
+    
     driver.get(baseUrl + "/clients/pinup-girl-clothing");
     assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("http://turnkeye.com/media/wysiwyg/portfolio/PinupClothing/xtop-banner.jpg.pagespeed.ic.aR8LmQqed2.webp", driver.findElement(By.cssSelector("img.shadows-image")).getAttribute("src"));
+    assertEquals("http://turnkeye.com/media/wysiwyg/portfolio/PinupClothing/xtop-banner.jpg.pagespeed.ic.aR8LmQqed2.webp", driver.findElement(By.cssSelector("#content > div.turnkeye-portfolio > div.block-portfolio-banner > img.shadows-image")).getAttribute("src"));
     assertEquals("http://turnkeye.com/media/wysiwyg/portfolio/PinupClothing/xtop-mobile.png.pagespeed.ic.xUAJzyVDP3.png", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/img[2]")).getAttribute("src"));
     assertEquals("Project review", driver.findElement(By.cssSelector("h3")).getText());
     assertEquals("About the Pinup Girl Clothing project", driver.findElement(By.cssSelector("div.block-about-project > h3")).getText());
@@ -44,10 +45,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("span.icon-right-open")).click();
     assertEquals("Personalised Gifts Shop", driver.findElement(By.cssSelector("h1")).getText());    
     driver.findElement(By.cssSelector("span.icon-left-open")).click();
-    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
-    
-    
-    driver.quit();
+    assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());   
   }
 
    private boolean isElementPresent(By by) {

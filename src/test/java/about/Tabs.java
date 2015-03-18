@@ -21,6 +21,7 @@ public class Tabs extends turnkeye.pages.TestBase {
     @Test
   public void testUntitled5() throws Exception {
     driver.manage().window().maximize();
+    
     driver.get(baseUrl + "/about");
     assertEquals("About Us", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Five reasons to choose our Magento development services.", driver.findElement(By.cssSelector("h4")).getText());
@@ -44,8 +45,6 @@ public class Tabs extends turnkeye.pages.TestBase {
     assertEquals("Partners", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Our partners", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("MAGENTO EXTENSIONS & TOOLS", driver.findElement(By.cssSelector("h2")).getText());
-    
-    driver.quit();
   }
 
    private boolean isElementPresent(By by) {

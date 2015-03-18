@@ -20,8 +20,8 @@ public class Details_page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled() throws Exception {
-    //driver.manage().window().maximize();
     driver.manage().window().setSize(new Dimension(1366, 1050));
+    
     driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
     assertEquals("MERRY CHRISTMAS AND HAPPY NEW YEAR 2014", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Merry Christmas and Happy New year 2014\"]")).getText());
@@ -39,7 +39,7 @@ public class Details_page extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
     assertEquals("Tags", driver.findElement(By.cssSelector("div.block-tags > div.block-title > span")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento developers\"]")).getText());
-    driver.quit();
+ 
   }
 
    private boolean isElementPresent(By by) {
