@@ -24,7 +24,6 @@ public class Page extends turnkeye.pages.TestBase {
     
     driver.get(baseUrl + "/services/magento_site_from_scratch.html");
     assertEquals("Magento Site from Scratch", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("MAGENTO SITE FROM SCRATCH", driver.findElement(By.xpath("(//a[contains(text(),'Magento Site from Scratch')])[2]")).getText());
     assertEquals("MAGENTO DESIGN", driver.findElement(By.xpath("(//a[contains(text(),'Magento Design')])[2]")).getText());
     assertEquals("PSD TO MAGENTO", driver.findElement(By.xpath("(//a[contains(text(),'PSD to Magento')])[2]")).getText());
     assertEquals("MAGENTO DEVELOPMENT", driver.findElement(By.xpath("(//a[contains(text(),'Magento Development')])[2]")).getText());
