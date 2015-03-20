@@ -20,10 +20,11 @@ public class Page extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
-    driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     
     driver.get(baseUrl + "/services/magento_site_from_scratch.html");
     assertEquals("Magento Site from Scratch", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("MAGENTO SITE FROM SCRATCH", driver.findElement(By.cssSelector("li.active > span")).getText());
     assertEquals("MAGENTO DESIGN", driver.findElement(By.xpath("(//a[contains(text(),'Magento Design')])[2]")).getText());
     assertEquals("PSD TO MAGENTO", driver.findElement(By.xpath("(//a[contains(text(),'PSD to Magento')])[2]")).getText());
     assertEquals("MAGENTO DEVELOPMENT", driver.findElement(By.xpath("(//a[contains(text(),'Magento Development')])[2]")).getText());
