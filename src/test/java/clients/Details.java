@@ -58,11 +58,7 @@ public class Details extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("div.portfolio-item")).click();
     String client_test = driver.findElement(By.cssSelector("h1")).getText();
     assertEquals(client, client_test);
-    driver.get(baseUrl + "clients");
-    TimeUnit.SECONDS.sleep(5);
-    actions.moveToElement(driver.findElement(By.cssSelector("div.portfolio-item  > img"))).build().perform();
-    driver.findElement(By.linkText("Discover")).click();
-    TimeUnit.SECONDS.sleep(5);  
+    
   }
 
    private boolean isElementPresent(By by) {

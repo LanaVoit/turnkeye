@@ -19,13 +19,12 @@ public class Search extends turnkeye.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled3() throws Exception {
-    driver.manage().window().maximize();
+  public void testUntitled3() throws Exception {   
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     
     driver.get(baseUrl + "blog/");
     assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
     assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
-    
     driver.findElement(By.id("gsc-i-id1")).clear();
     driver.findElement(By.id("gsc-i-id1")).sendKeys("magento");
     driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).click();
