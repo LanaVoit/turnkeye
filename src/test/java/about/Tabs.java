@@ -31,7 +31,7 @@ public class Tabs extends turnkeye.pages.TestBase {
     assertEquals("CONTACT US", driver.findElement(By.cssSelector("a.see-more")).getText());
     
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/about/meet_the_team.html\"]")).click();
-    assertEquals("We are the team of true Magento professionals", driver.findElement(By.cssSelector("h4")).getText());
+    assertEquals("Turnkey Ecommerce Solutions (TurnkeyE.com) is the full service Internet solution agency and custom development company with strong team of IT eCommerce professionals.", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("Meet the Team", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Vyacheslav Fedorenko", driver.findElement(By.cssSelector("div.t-col-2 > h4")).getText());
     
