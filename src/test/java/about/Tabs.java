@@ -37,8 +37,8 @@ public class Tabs extends turnkeye.pages.TestBase {
     
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/about/testimonials.html\"]")).click();
     assertEquals("Testimonials", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("We would like to share some of comments of our clients", driver.findElement(By.cssSelector("h4")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"magento partners\"]")).getText());
+    //assertEquals("We would like to share some of comments of our clients", driver.findElement(By.cssSelector("h4")).getText());
+   // assertEquals("", driver.findElement(By.cssSelector("img[alt=\"magento partners\"]")).getText());
     assertEquals("Professionalism, commitment, deep understanding of the project's scope and requirements as well as attention to detail make them stand out and a pleasure to work with.", driver.findElement(By.cssSelector("span.big-text")).getText());
     
     driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/about/partners.html\"]")).click();
