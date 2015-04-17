@@ -79,6 +79,7 @@ public class TestBase {
 
 	protected Browser browser;
 	
+	 
 
 	@BeforeClass
 	public void init() throws MalformedURLException {
@@ -93,13 +94,16 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 		
+		
+		
 		DesiredCapabilities capabillities = DesiredCapabilities.chrome();
 	        //capabillities.setCapability("platform", Platform.LINUX);
-	        capabillities.setCapability("screen-resolution", "1280x1024");
-	        capabillities.setCapability("passed", "true");	 
-	        capabillities.setCapability("name", "turnkeye.ru");	
+	        //capabillities.setCapability("screen-resolution", "1280x1024");
+	        capabillities.setBrowserName("chrome");
+	        capabillities.setPlatform(org.openqa.selenium.Platform.LINUX);
+		    System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 	        driver = new RemoteWebDriver(
-	                    new URL("http://127.0.0.1:4444/wd/hub"),
+	                    new URL("http://148.251.21.174:4444/wd/hub"),
 	                    capabillities);
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -109,10 +113,8 @@ public class TestBase {
 	public void stopDriver()throws Exception{
 	driver.quit();
 	}
-	  
 	
-	
-	@AfterSuite(alwaysRun = true)
+	@AfterSuite
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
