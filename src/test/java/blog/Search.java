@@ -26,11 +26,9 @@ public class Search extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
     assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
     driver.findElement(By.id("gsc-i-id1")).clear();
-    driver.findElement(By.id("gsc-i-id1")).sendKeys("magento");
+    driver.findElement(By.id("gsc-i-id1")).sendKeys("QA");
     driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).click();
-    assertEquals("Magento upgrade guide", driver.findElement(By.linkText("Magento upgrade guide")).getText());
-    assertEquals("Magento Tips: Disable Magento compiler from Linux command shell", driver.findElement(By.linkText("Magento Tips: Disable Magento compiler from Linux command shell")).getText());
-    assertEquals("Updated Instruction for 'Facebook Products Tab' Magento Extension", driver.findElement(By.linkText("Updated Instruction for 'Facebook Products Tab' Magento Extension")).getText());
+    assertEquals("Migration to the Magento platform", driver.findElement(By.linkText("Migration to the Magento platform")).getText());
     
     driver.findElement(By.cssSelector("div.gsc-results-close-btn.gsc-results-close-btn-visible")).click();
     assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());    
