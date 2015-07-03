@@ -30,18 +30,18 @@ public class Tabs extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento back end and front end developers\"]")).getText());
     assertEquals("CONTACT US", driver.findElement(By.cssSelector("a.see-more")).getText());
     
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/about/meet_the_team.html\"]")).click();
+    driver.findElement(By.cssSelector("a[href=\"http://astrio.net/about/meet_the_team.html\"]")).click();
     assertEquals("Turnkey Ecommerce Solutions (TurnkeyE.com) is the full service Internet solution agency and custom development company with strong team of IT eCommerce professionals.", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("Meet the Team", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Vyacheslav Fedorenko", driver.findElement(By.cssSelector("div.t-col-2 > h4")).getText());
     
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/about/testimonials.html\"]")).click();
+    driver.findElement(By.cssSelector("a[href=\"http://astrio.net/about/testimonials.html\"]")).click();
     assertEquals("Testimonials", driver.findElement(By.cssSelector("h1")).getText());
     //assertEquals("We would like to share some of comments of our clients", driver.findElement(By.cssSelector("h4")).getText());
    // assertEquals("", driver.findElement(By.cssSelector("img[alt=\"magento partners\"]")).getText());
     //assertEquals("Professionalism, commitment, deep understanding of the project's scope and requirements as well as attention to detail make them stand out and a pleasure to work with.", driver.findElement(By.cssSelector("span.big-text")).getText());
     
-    driver.findElement(By.cssSelector("a[href=\"http://turnkeye.com/about/partners.html\"]")).click();
+    driver.findElement(By.cssSelector("a[href=\"http://astrio.net/about/partners.html\"]")).click();
     assertEquals("Partners", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Our partners", driver.findElement(By.cssSelector("h4")).getText());
     //assertEquals("MAGENTO EXTENSIONS & TOOLS", driver.findElement(By.cssSelector("h2")).getText());
