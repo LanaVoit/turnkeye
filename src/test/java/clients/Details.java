@@ -41,7 +41,7 @@ public class Details extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("a[name=\"position\"] > span.sort-title")).click();
     TimeUnit.SECONDS.sleep(5);
     String client = null;
-    Integer n = 1;
+    /*Integer n = 1;
     Integer m;
     
     for (m=0;m<n;m++){	
@@ -51,7 +51,14 @@ public class Details extends turnkeye.pages.TestBase {
         driver.findElement(By.cssSelector("button[title='Back']")).click();
 	   	TimeUnit.SECONDS.sleep(5);
 	   	n++;
-    }
+    }*/
+    
+    driver.findElement(By.cssSelector("#portfolio_set_id_filter_position")).sendKeys("1010");
+    driver.findElement(By.cssSelector("button[title='Search']")).click();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.cssSelector("#portfolio_set_id_table > tbody > tr > td:nth-child(2)")).click();
+    
+    
     client = driver.findElement(By.cssSelector("#base_name")).getAttribute("value");
     driver.get(baseUrl + "clients");
     TimeUnit.SECONDS.sleep(5);

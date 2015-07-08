@@ -25,13 +25,13 @@ public class Tabs extends turnkeye.pages.TestBase {
     driver.get(baseUrl + "/about");
     assertEquals("About Us", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Five reasons to choose our Magento development services.", driver.findElement(By.cssSelector("h4")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento Silver partner\"]")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"PayPal Gold partner\"]")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento back end and front end developers\"]")).getText());
+    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento Partner Company\"]")).getText());
+    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"PayPal Gold Partner Company\"]")).getText());
+    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento Certified Developers\"]")).getText());
     assertEquals("CONTACT US", driver.findElement(By.cssSelector("a.see-more")).getText());
     
     driver.findElement(By.cssSelector("a[href=\"http://astrio.net/about/meet_the_team.html\"]")).click();
-    assertEquals("Turnkey Ecommerce Solutions (TurnkeyE.com) is the full service Internet solution agency and custom development company with strong team of IT eCommerce professionals.", driver.findElement(By.cssSelector("h4")).getText());
+    assertEquals("ASTRIO (astrio.net) is the full service Internet solution agency and custom development company with strong team of IT eCommerce professionals.", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("Meet the Team", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("Vyacheslav Fedorenko", driver.findElement(By.cssSelector("div.t-col-2 > h4")).getText());
     

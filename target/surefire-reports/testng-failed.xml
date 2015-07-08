@@ -1,16 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Tests_suite]" data-provider-thread-count="1">
-  <test name="tests(failed)">
+<suite verbose="0" name="Failed suite [Smoke test]" data-provider-thread-count="1">
+  <parameter name="path" value="/"/>
+  <test name="Clients page(failed)">
+    <parameter name="path" value="/"/>
     <classes>
+      <class name="contact.Form_valid">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- contact.Form_valid -->
+      <class name="blog.JS_error_post">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.JS_error_post -->
+      <class name="blog.Captcha_disable">
+        <methods>
+          <include name="init"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- blog.Captcha_disable -->
+      <class name="about.Contact_us">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- about.Contact_us -->
+      <class name="blog.Search">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Search -->
+      <class name="services.Page">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- services.Page -->
+      <class name="contact.Form_empty">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- contact.Form_empty -->
+      <class name="blog.JS_error_blog">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.JS_error_blog -->
+      <class name="about.Tabs">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- about.Tabs -->
+      <class name="contact.Form_invalid">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- contact.Form_invalid -->
+      <class name="clients.Details_elements">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- clients.Details_elements -->
       <class name="clients.Details">
         <methods>
           <include name="init"/>
-          <include name="stopDriver"/>
-          <include name="testUntitled8"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- clients.Details -->
+      <class name="services.JS_error">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- services.JS_error -->
+      <class name="blog.Captcha_empty">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Captcha_empty -->
+      <class name="blog.Comment">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Comment -->
+      <class name="home.Newsletter_invalid">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.Newsletter_invalid -->
+      <class name="clients.Website">
+        <methods>
+          <include name="testUntitled7"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- clients.Website -->
+      <class name="clients.Navigation">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- clients.Navigation -->
+      <class name="home.Banner">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.Banner -->
+      <class name="home.Newsletter_empty">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.Newsletter_empty -->
+      <class name="home.JS_error">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.JS_error -->
+      <class name="contact.Contact_email_change">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- contact.Contact_email_change -->
+      <class name="blog.Captcha_invalid">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Captcha_invalid -->
+      <class name="contact.JS_error">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- contact.JS_error -->
+      <class name="blog.Captche_enable">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Captche_enable -->
+      <class name="home.Newsletter_valid">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.Newsletter_valid -->
+      <class name="blog.Details_page">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Details_page -->
+      <class name="blog.Blog_page">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Blog_page -->
+      <class name="clients.JS_error">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- clients.JS_error -->
+      <class name="about.JS_error">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- about.JS_error -->
     </classes>
-  </test> <!-- tests(failed) -->
-</suite> <!-- Failed suite [Tests_suite] -->
+  </test> <!-- Clients page(failed) -->
+</suite> <!-- Failed suite [Smoke test] -->

@@ -27,7 +27,7 @@ public class Contact_us extends turnkeye.pages.TestBase {
     
     driver.findElement(By.cssSelector("a.see-more")).click();
     assertEquals("Contact Us", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("If you have any pre-sales questions or want to contact us, please use the form below. You can also submit your questions to hello@turnkeye.com.", driver.findElement(By.cssSelector("h4")).getText());
+    assertEquals("If you have any pre-sales questions or want to contact us, please use the form below. You can also submit your questions to hello@astrio.net.", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("", driver.findElement(By.id("name")).getText());
     assertEquals("", driver.findElement(By.id("email")).getText());
     assertEquals("", driver.findElement(By.id("comment")).getText());

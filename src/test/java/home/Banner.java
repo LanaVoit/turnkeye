@@ -26,18 +26,18 @@ public class Banner extends turnkeye.pages.TestBase {
     
     driver.get(baseUrl);
 
-    String img1 = "http://cdn.turnkeye.com/skin/frontend/default/turnkeye/images/main-banner/large/slide1.jpg";
-    assertEquals("", img1, driver.findElement(By.cssSelector("img[src=\"http://cdn.turnkeye.com/skin/frontend/default/turnkeye/images/main-banner/large/slide1.jpg\"]")).getAttribute("src"));  
+    String img1 = "http://cdn.astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide1.jpg";
+    assertEquals("", img1, driver.findElement(By.cssSelector("img[src=\"http://cdn.astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide1.jpg\"]")).getAttribute("src"));  
 
     
     driver.findElement(By.cssSelector("img[alt=\"Pinup Clothing\"]")).click();
-    String img2 = "http://cdn.turnkeye.com/skin/frontend/default/turnkeye/images/main-banner/large/slide2.jpg";
-    assertEquals("", img2, driver.findElement(By.cssSelector("img[src=\"http://cdn.turnkeye.com/skin/frontend/default/turnkeye/images/main-banner/large/slide2.jpg\"]")).getAttribute("src")); 
+    String img2 = "http://cdn.astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide2.jpg";
+    assertEquals("", img2, driver.findElement(By.cssSelector("img[src=\"http://cdn.astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide2.jpg\"]")).getAttribute("src")); 
     
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("img[alt=\"Autostyle\"]")).click();
-    String img4 = "http://cdn.turnkeye.com/skin/frontend/default/turnkeye/images/main-banner/large/slide5.jpg";
-    assertEquals("", img4, driver.findElement(By.cssSelector("img[src=\"http://cdn.turnkeye.com/skin/frontend/default/turnkeye/images/main-banner/large/slide5.jpg\"]")).getAttribute("src"));     
+    String img4 = "http://cdn.astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide5.jpg";
+    assertEquals("", img4, driver.findElement(By.cssSelector("img[src=\"http://cdn.astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide5.jpg\"]")).getAttribute("src"));     
   }
 
    private boolean isElementPresent(By by) {
