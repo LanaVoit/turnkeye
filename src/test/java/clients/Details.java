@@ -34,9 +34,9 @@ public class Details extends turnkeye.pages.TestBase {
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
     driver.findElement(By.cssSelector("input.form-button")).click();
     TimeUnit.SECONDS.sleep(3);
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[8]/a/span"))).build().perform();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[9]/a/span"))).build().perform();
     TimeUnit.SECONDS.sleep(3);
-    driver.findElement(By.xpath("//ul[@id='nav']/li[8]/ul/li/a/span")).click();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[9]/ul/li/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("a[name=\"position\"] > span.sort-title")).click();
     TimeUnit.SECONDS.sleep(5);
@@ -56,13 +56,13 @@ public class Details extends turnkeye.pages.TestBase {
     driver.findElement(By.cssSelector("#portfolio_set_id_filter_position")).sendKeys("1010");
     driver.findElement(By.cssSelector("button[title='Search']")).click();
     TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.cssSelector("#portfolio_set_id_table > tbody > tr > td:nth-child(2)")).click();
-    
-    
+    driver.findElement(By.cssSelector("#portfolio_set_id_table > tbody > tr:nth-child(1) > td:nth-child(2)")).click(); 
     client = driver.findElement(By.cssSelector("#base_name")).getAttribute("value");
+    
     driver.get(baseUrl + "clients");
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("div.portfolio-item")).click();
+    TimeUnit.SECONDS.sleep(7);
     String client_test = driver.findElement(By.cssSelector("h1")).getText();
     assertEquals(client, client_test);
     

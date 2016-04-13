@@ -20,13 +20,13 @@ public class Details_elements extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled9() throws Exception {
-    driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     
     driver.get(baseUrl + "/clients/pinup-girl-clothing");
     assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("http://cdn.astrio.net/media/wysiwyg/portfolio/PinupClothing/top-banner.jpg", driver.findElement(By.cssSelector("#content > div.turnkeye-portfolio > div.block-portfolio-banner > img.shadows-image")).getAttribute("src"));
-    assertEquals("http://cdn.astrio.net/media/wysiwyg/portfolio/PinupClothing/top-mobile.png", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/img[2]")).getAttribute("src"));
+    assertEquals("http://astrio.net/media/wysiwyg/portfolio/PinupClothing/xtop-banner.jpg.pagespeed.ic.1EMUFl8R3K.webp", driver.findElement(By.cssSelector("#content > div.turnkeye-portfolio > div.block-portfolio-banner > img.shadows-image")).getAttribute("src"));
+    assertEquals("http://astrio.net/media/wysiwyg/portfolio/PinupClothing/xtop-mobile.png.pagespeed.ic.1GhF7nD-_1.webp", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/img[2]")).getAttribute("src"));
     assertEquals("Project review", driver.findElement(By.cssSelector("h3")).getText());
     assertEquals("About the Pinup Girl Clothing project", driver.findElement(By.cssSelector("div.block-about-project > h3")).getText());
     assertEquals("Examples of implementation", driver.findElement(By.cssSelector("div.block-have-done > h3")).getText());
@@ -43,8 +43,10 @@ public class Details_elements extends turnkeye.pages.TestBase {
     assertEquals("EMAIL US", driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[9]/div/a[2]")).getText());
     assertEquals("Skype", driver.findElement(By.cssSelector("a.block-skype > span")).getText());
     driver.findElement(By.cssSelector("span.icon-right-open")).click();
+    TimeUnit.SECONDS.sleep(5);
     assertEquals("Personalised Gifts Shop", driver.findElement(By.cssSelector("h1")).getText());    
     driver.findElement(By.cssSelector("span.icon-left-open")).click();
+    TimeUnit.SECONDS.sleep(5);
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());   
   }
 

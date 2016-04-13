@@ -24,6 +24,8 @@ import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
 
 
 
+
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -49,7 +51,7 @@ public class Newsletter_empty extends turnkeye.pages.TestBase {
   
   @Test
   public void testUntitled5() throws Exception {
-	driver.manage().window().maximize();  
+	driver.manage().window().setSize(new Dimension(1366, 1050));  
 	
 	driver.get(baseUrl);     
     TimeUnit.SECONDS.sleep(5);

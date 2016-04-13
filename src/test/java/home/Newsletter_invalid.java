@@ -20,7 +20,7 @@ public class Newsletter_invalid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled2() throws Exception {
-    driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     
     driver.get(baseUrl);
     driver.findElement(By.id("container")).click();

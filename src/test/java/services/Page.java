@@ -27,19 +27,17 @@ public class Page extends turnkeye.pages.TestBase {
     assertEquals("MAGENTO SITE FROM SCRATCH", driver.findElement(By.cssSelector("li.active > span")).getText());
     assertEquals("MAGENTO DESIGN", driver.findElement(By.xpath("(//a[contains(text(),'Magento Design')])[2]")).getText());
     assertEquals("PSD TO MAGENTO", driver.findElement(By.xpath("(//a[contains(text(),'PSD to Magento')])[2]")).getText());
-    assertEquals("MAGENTO DEVELOPMENT", driver.findElement(By.xpath("(//a[contains(text(),'Magento Development')])[2]")).getText());
-    assertEquals("MIGRATION TO MAGENTO", driver.findElement(By.xpath("(//a[contains(text(),'Migration to Magento')])[2]")).getText());
-    assertEquals("MAGENTO SUPPORT", driver.findElement(By.xpath("(//a[contains(text(),'Magento Support')])[2]")).getText());
-    assertEquals("MAGENTO UPGRADE", driver.findElement(By.xpath("(//a[contains(text(),'Magento Upgrade')])[2]")).getText());
-    assertEquals("MAGENTO ENTERPRISE", driver.findElement(By.xpath("(//a[contains(text(),'Magento Enterprise')])[2]")).getText());
-    assertEquals("OUR PROCESS", driver.findElement(By.cssSelector("h2")).getText());
-    assertEquals("DESIGN CREATION", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[2]")).getText());
-    assertEquals("MAGENTO THEME DEVELOPMENT", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[3]")).getText());
-    assertEquals("FUNCTIONALITY DEVELOPMENT", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[4]")).getText());
-    assertEquals("DATA TRANSFERS", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[5]")).getText());
-    assertEquals("MOBILE SUPPORT", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[6]")).getText());
-    assertEquals("MAGENTO & SERVER OPTIMIZATION", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[7]")).getText());
-    assertEquals("FURTHER SUPPORT", driver.findElement(By.xpath("//div[@id='content']/div[2]/div/section/h2[8]")).getText());  
+    assertEquals("MAGENTO DEVELOPMENT", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(4) > a")).getText());
+    assertEquals("MIGRATION TO MAGENTO", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(5) > a")).getText());
+    assertEquals("MIGRATION TO MAGENTO 2", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(6) > a")).getText());
+    assertEquals("RESPONSIVE MOBILE DEVELOPMENT", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(7) > a")).getText());
+    assertEquals("MAGENTO PERFORMANCE OPTIMIZATION", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(8) > a")).getText());
+    assertEquals("MAGENTO AUDIT SERVICES AND IMPROVEMENTS", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(9) > a")).getText());    
+    assertEquals("MAGENTO SUPPORT", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(10) > a")).getText());
+    assertEquals("MAGENTO UPGRADE", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(11) > a")).getText());
+    assertEquals("MAGENTO FOR SMALL BUSINESS", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(12) > a")).getText());    
+    assertEquals("MAGENTO ENTERPRISE", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(13) > a")).getText());
+    assertEquals("MAGENTO OUTSOURCING", driver.findElement(By.cssSelector("#content > div.std > div.main_with-right > aside > nav > ul > li:nth-child(14) > a")).getText());
   }
 
    private boolean isElementPresent(By by) {

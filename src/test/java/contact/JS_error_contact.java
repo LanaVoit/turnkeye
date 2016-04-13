@@ -1,4 +1,4 @@
-package blog;
+package contact;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,14 +26,15 @@ import org.openqa.selenium.logging.Logs;
 
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
-public class JS_error_post extends turnkeye.pages.TestBase {
-	
+public class JS_error_contact extends turnkeye.pages.TestBase {
+
+	  
     @Test
   public void testUntitled4() throws Exception { 
-    	driver.manage().window().maximize();
+    	driver.manage().window().maximize();    	
     	LoggingPreferences logPrefs = new LoggingPreferences();
 		logPrefs.enable(LogType.BROWSER, Level.SEVERE);
-		driver.get(baseUrl + "blog/merry-christmas-and-happy-new-year-2014/");
+		driver.get(baseUrl + "/contact_us.html");
 		TimeUnit.SECONDS.sleep(5);
 		Logs log = driver.manage().logs();
 		List<LogEntry> logsEntries =  driver.manage().logs().get("browser").filter(Level.SEVERE);
@@ -47,4 +48,5 @@ public class JS_error_post extends turnkeye.pages.TestBase {
 		assertEquals(list, logsEntries);		
 	}    		       
 }
+
 
