@@ -20,7 +20,7 @@ public class Form_invalid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled3() throws Exception {
-    driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     
     driver.get(baseUrl + "/contact_us.html");
     driver.findElement(By.id("name")).clear();

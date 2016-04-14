@@ -279,7 +279,6 @@
 		<parameter name="path" value="/"/>
 		<classes>    			    
 		    <class name="blog.Captcha_empty"/>
-			<class name="blog.Captcha_invalid"/>
 		    <class name="blog.Captcha_disable"/>
 		    <class name="blog.Comment"/>
 		    <class name="blog.Captche_enable"/>

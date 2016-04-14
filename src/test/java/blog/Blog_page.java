@@ -25,13 +25,14 @@ public class Blog_page extends turnkeye.pages.TestBase {
     driver.get(baseUrl + "blog/");
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
-    assertEquals("Categories", driver.findElement(By.cssSelector("div.block-title > span")).getText());
-    assertEquals("Archives", driver.findElement(By.cssSelector("div.block-archives > div.block-title > span")).getText());
-    assertEquals("Tags", driver.findElement(By.cssSelector("div.block-tags > div.block-title > span")).getText());
-    assertEquals("Blog Authors", driver.findElement(By.cssSelector("div.block-blog-authors > div.block-title")).getText());
+    assertEquals("", driver.findElement(By.id("blog-search")).getText());
+    assertEquals("", driver.findElement(By.cssSelector("#blog_search_mini_form > div > button")).getText());
+    assertEquals("Categories", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-categories > div > span")).getText());
+    assertEquals("Archives", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-archives > div > span")).getText());
+    assertEquals("Tags", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-tags > div > span")).getText());
+    assertEquals("Blog Authors", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-left > div.block-blog-authors > div")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento developers\"]")).getText());  
+
   }
 
    private boolean isElementPresent(By by) {

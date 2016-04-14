@@ -19,19 +19,18 @@ public class Search extends turnkeye.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled3() throws Exception {   
+  public void testUntitled3() throws Exception {       
     driver.manage().window().setSize(new Dimension(1366, 1050));
     
     driver.get(baseUrl + "blog/");
-    assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
-    driver.findElement(By.id("gsc-i-id1")).clear();
-    driver.findElement(By.id("gsc-i-id1")).sendKeys("QA");
-    driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).click();
-    assertEquals("Migration to the Magento platform", driver.findElement(By.linkText("Migration to the Magento platform")).getText());
-    
-    driver.findElement(By.cssSelector("div.gsc-results-close-btn.gsc-results-close-btn-visible")).click();
-    assertEquals("Blog", driver.findElement(By.cssSelector("h1")).getText());    
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("", driver.findElement(By.id("blog-search")).getText());
+    assertEquals("", driver.findElement(By.xpath("//*[@id='blog_search_mini_form']/div/button")).getText());
+    driver.findElement(By.id("blog-search")).clear();
+    driver.findElement(By.id("blog-search")).sendKeys("Merry Christmas");
+    driver.findElement(By.xpath("//*[@id='blog_search_mini_form']/div/button")).click();
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("Merry Christmas", driver.findElement(By.cssSelector("h1")).getText());
   }
 
    private boolean isElementPresent(By by) {

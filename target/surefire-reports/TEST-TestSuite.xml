@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="7.419" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="508.395" tests="30" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_45\jre\bin"/>
@@ -60,5 +60,34 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testUntitled2" classname="services.Page" time="7.419"/>
+  <testcase name="testUntitled2" classname="home.JS_error_home" time="12.329"/>
+  <testcase name="testUntitled4" classname="about.JS_error_about" time="6.394"/>
+  <testcase name="testUntitled4" classname="clients.JS_error_clients" time="17.428"/>
+  <testcase name="testUntitled4" classname="clients.JS_error_detail_clients" time="10.276"/>
+  <testcase name="testUntitled4" classname="services.JS_error__services" time="5.587"/>
+  <testcase name="testUntitled4" classname="contact.JS_error_contact" time="6.591"/>
+  <testcase name="testUntitled4" classname="blog.JS_error_blog" time="6.389"/>
+  <testcase name="testUntitled4" classname="blog.JS_error_post" time="6.398"/>
+  <testcase name="testUntitled5" classname="home.Newsletter_empty" time="6.157"/>
+  <testcase name="testUntitled2" classname="home.Newsletter_invalid" time="1.313"/>
+  <testcase name="testUntitled3" classname="home.Newsletter_valid" time="8.149"/>
+  <testcase name="testUntitled4" classname="home.Banner" time="16.182"/>
+  <testcase name="testUntitled5" classname="about.Tabs" time="16.601"/>
+  <testcase name="testUntitled6" classname="about.Contact_us" time="6.158"/>
+  <testcase name="testUntitled8" classname="clients.Details" time="39.008"/>
+  <testcase name="testUntitled9" classname="clients.Details_elements" time="16.536"/>
+  <testcase name="testUntitled10" classname="clients.Navigation" time="42.569"/>
+  <testcase name="testUntitled7" classname="clients.Website" time="21.062"/>
+  <testcase name="testUntitled2" classname="services.Page" time="1.534"/>
+  <testcase name="testUntitled3" classname="contact.Form_invalid" time="2.174"/>
+  <testcase name="testUntitled4" classname="contact.Form_empty" time="1.309"/>
+  <testcase name="testUntitled6" classname="contact.Form_valid" time="43.37"/>
+  <testcase name="testUntitled6" classname="contact.Contact_email_change" time="37.171"/>
+  <testcase name="testUntitled" classname="blog.Captcha_empty" time="11.589"/>
+  <testcase name="testUntitled3" classname="blog.Captcha_disable" time="40.504"/>
+  <testcase name="testUntitled4" classname="blog.Comment" time="74.143"/>
+  <testcase name="testUntitled3" classname="blog.Captche_enable" time="31.014"/>
+  <testcase name="testUntitled" classname="blog.Details_page" time="2.804"/>
+  <testcase name="testUntitled2" classname="blog.Blog_page" time="6.396"/>
+  <testcase name="testUntitled3" classname="blog.Search" time="11.26"/>
 </testsuite>

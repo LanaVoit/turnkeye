@@ -1,25 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="30" passed="30">
   <reporter-output>
   </reporter-output>
-  <suite name="Smoke test" duration-ms="9429" started-at="2016-04-13T13:55:32Z" finished-at="2016-04-13T13:55:41Z">
+  <suite name="Smoke test" duration-ms="510843" started-at="2016-04-14T06:41:30Z" finished-at="2016-04-14T06:50:01Z">
     <groups>
     </groups>
-    <test name="Services page" duration-ms="9429" started-at="2016-04-13T13:55:32Z" finished-at="2016-04-13T13:55:41Z">
-      <class name="services.Page">
-        <test-method status="PASS" signature="init()[pri:0, instance:services.Page@380fb434]" name="init" is-config="true" duration-ms="1959" started-at="2016-04-13T17:55:32Z" finished-at="2016-04-13T17:55:34Z">
+    <test name="JS Errors" duration-ms="73501" started-at="2016-04-14T06:41:30Z" finished-at="2016-04-14T06:42:43Z">
+      <class name="contact.JS_error_contact">
+        <test-method status="PASS" signature="init()[pri:0, instance:contact.JS_error_contact@17550481]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:42:24Z" finished-at="2016-04-14T10:42:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:services.Page@380fb434]" name="testUntitled2" duration-ms="7424" started-at="2016-04-13T17:55:34Z" finished-at="2016-04-13T17:55:41Z">
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:contact.JS_error_contact@17550481]" name="testUntitled4" duration-ms="6589" started-at="2016-04-14T10:42:24Z" finished-at="2016-04-14T10:42:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- contact.JS_error_contact -->
+      <class name="services.JS_error__services">
+        <test-method status="PASS" signature="init()[pri:0, instance:services.JS_error__services@6aaa5eb0]" name="init" is-config="true" duration-ms="6" started-at="2016-04-14T10:42:18Z" finished-at="2016-04-14T10:42:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:services.JS_error__services@6aaa5eb0]" name="testUntitled4" duration-ms="5589" started-at="2016-04-14T10:42:18Z" finished-at="2016-04-14T10:42:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- services.JS_error__services -->
+      <class name="clients.JS_error_clients">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.JS_error_clients@3b81a1bc]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:41:51Z" finished-at="2016-04-14T10:41:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:clients.JS_error_clients@3b81a1bc]" name="testUntitled4" duration-ms="17429" started-at="2016-04-14T10:41:51Z" finished-at="2016-04-14T10:42:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- clients.JS_error_clients -->
+      <class name="home.JS_error_home">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.JS_error_home@64616ca2]" name="init" is-config="true" duration-ms="2038" started-at="2016-04-14T10:41:30Z" finished-at="2016-04-14T10:41:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:home.JS_error_home@64616ca2]" name="testUntitled2" duration-ms="12327" started-at="2016-04-14T10:41:32Z" finished-at="2016-04-14T10:41:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled2 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:services.Page@380fb434]" name="tearDown" is-config="true" duration-ms="1391" started-at="2016-04-13T17:55:41Z" finished-at="2016-04-13T17:55:43Z">
+      </class> <!-- home.JS_error_home -->
+      <class name="clients.JS_error_detail_clients">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.JS_error_detail_clients@5f2050f6]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:42:08Z" finished-at="2016-04-14T10:42:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:clients.JS_error_detail_clients@5f2050f6]" name="testUntitled4" duration-ms="10275" started-at="2016-04-14T10:42:08Z" finished-at="2016-04-14T10:42:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- clients.JS_error_detail_clients -->
+      <class name="about.JS_error_about">
+        <test-method status="PASS" signature="init()[pri:0, instance:about.JS_error_about@13fee20c]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:41:44Z" finished-at="2016-04-14T10:41:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:about.JS_error_about@13fee20c]" name="testUntitled4" duration-ms="6401" started-at="2016-04-14T10:41:44Z" finished-at="2016-04-14T10:41:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- about.JS_error_about -->
+      <class name="blog.JS_error_blog">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.JS_error_blog@42d3bd8b]" name="init" is-config="true" duration-ms="8" started-at="2016-04-14T10:42:31Z" finished-at="2016-04-14T10:42:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:blog.JS_error_blog@42d3bd8b]" name="testUntitled4" duration-ms="6385" started-at="2016-04-14T10:42:31Z" finished-at="2016-04-14T10:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- blog.JS_error_blog -->
+      <class name="blog.JS_error_post">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.JS_error_post@26ba2a48]" name="init" is-config="true" duration-ms="10" started-at="2016-04-14T10:42:37Z" finished-at="2016-04-14T10:42:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:blog.JS_error_post@26ba2a48]" name="testUntitled4" duration-ms="6394" started-at="2016-04-14T10:42:37Z" finished-at="2016-04-14T10:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- blog.JS_error_post -->
+    </test> <!-- JS Errors -->
+    <test name="Homepage" duration-ms="31837" started-at="2016-04-14T06:42:43Z" finished-at="2016-04-14T06:43:15Z">
+      <class name="home.Newsletter_invalid">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.Newsletter_invalid@531be3c5]" name="init" is-config="true" duration-ms="14" started-at="2016-04-14T10:42:50Z" finished-at="2016-04-14T10:42:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:home.Newsletter_invalid@531be3c5]" name="testUntitled2" duration-ms="1318" started-at="2016-04-14T10:42:50Z" finished-at="2016-04-14T10:42:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled2 -->
+      </class> <!-- home.Newsletter_invalid -->
+      <class name="home.Newsletter_valid">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.Newsletter_valid@36f6e879]" name="init" is-config="true" duration-ms="5" started-at="2016-04-14T10:42:51Z" finished-at="2016-04-14T10:42:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:home.Newsletter_valid@36f6e879]" name="testUntitled3" duration-ms="8148" started-at="2016-04-14T10:42:51Z" finished-at="2016-04-14T10:42:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled3 -->
+      </class> <!-- home.Newsletter_valid -->
+      <class name="home.Banner">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.Banner@3551a94]" name="init" is-config="true" duration-ms="5" started-at="2016-04-14T10:42:59Z" finished-at="2016-04-14T10:42:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:home.Banner@3551a94]" name="testUntitled4" duration-ms="16181" started-at="2016-04-14T10:42:59Z" finished-at="2016-04-14T10:43:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- home.Banner -->
+      <class name="home.Newsletter_empty">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.Newsletter_empty@5a61f5df]" name="init" is-config="true" duration-ms="12" started-at="2016-04-14T10:42:43Z" finished-at="2016-04-14T10:42:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled5()[pri:0, instance:home.Newsletter_empty@5a61f5df]" name="testUntitled5" duration-ms="6151" started-at="2016-04-14T10:42:43Z" finished-at="2016-04-14T10:42:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled5 -->
+      </class> <!-- home.Newsletter_empty -->
+    </test> <!-- Homepage -->
+    <test name="About page" duration-ms="22773" started-at="2016-04-14T06:43:15Z" finished-at="2016-04-14T06:43:38Z">
+      <class name="about.Contact_us">
+        <test-method status="PASS" signature="init()[pri:0, instance:about.Contact_us@61dc03ce]" name="init" is-config="true" duration-ms="5" started-at="2016-04-14T10:43:32Z" finished-at="2016-04-14T10:43:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled6()[pri:0, instance:about.Contact_us@61dc03ce]" name="testUntitled6" duration-ms="6159" started-at="2016-04-14T10:43:32Z" finished-at="2016-04-14T10:43:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled6 -->
+      </class> <!-- about.Contact_us -->
+      <class name="about.Tabs">
+        <test-method status="PASS" signature="init()[pri:0, instance:about.Tabs@50f8360d]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:43:15Z" finished-at="2016-04-14T10:43:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled5()[pri:0, instance:about.Tabs@50f8360d]" name="testUntitled5" duration-ms="16602" started-at="2016-04-14T10:43:15Z" finished-at="2016-04-14T10:43:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled5 -->
+      </class> <!-- about.Tabs -->
+    </test> <!-- About page -->
+    <test name="Clients page" duration-ms="119214" started-at="2016-04-14T06:43:38Z" finished-at="2016-04-14T06:45:37Z">
+      <class name="clients.Website">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.Website@59e84876]" name="init" is-config="true" duration-ms="5" started-at="2016-04-14T10:45:16Z" finished-at="2016-04-14T10:45:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled7()[pri:0, instance:clients.Website@59e84876]" name="testUntitled7" duration-ms="21061" started-at="2016-04-14T10:45:16Z" finished-at="2016-04-14T10:45:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled7 -->
+      </class> <!-- clients.Website -->
+      <class name="clients.Navigation">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.Navigation@337d0578]" name="init" is-config="true" duration-ms="25" started-at="2016-04-14T10:44:34Z" finished-at="2016-04-14T10:44:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled10()[pri:0, instance:clients.Navigation@337d0578]" name="testUntitled10" duration-ms="42571" started-at="2016-04-14T10:44:34Z" finished-at="2016-04-14T10:45:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled10 -->
+      </class> <!-- clients.Navigation -->
+      <class name="clients.Details_elements">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.Details_elements@7ca48474]" name="init" is-config="true" duration-ms="6" started-at="2016-04-14T10:44:17Z" finished-at="2016-04-14T10:44:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled9()[pri:0, instance:clients.Details_elements@7ca48474]" name="testUntitled9" duration-ms="16533" started-at="2016-04-14T10:44:17Z" finished-at="2016-04-14T10:44:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled9 -->
+      </class> <!-- clients.Details_elements -->
+      <class name="clients.Details">
+        <test-method status="PASS" signature="init()[pri:0, instance:clients.Details@13a57a3b]" name="init" is-config="true" duration-ms="4" started-at="2016-04-14T10:43:38Z" finished-at="2016-04-14T10:43:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled8()[pri:0, instance:clients.Details@13a57a3b]" name="testUntitled8" duration-ms="39009" started-at="2016-04-14T10:43:38Z" finished-at="2016-04-14T10:44:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled8 -->
+      </class> <!-- clients.Details -->
+    </test> <!-- Clients page -->
+    <test name="Services page" duration-ms="1545" started-at="2016-04-14T06:45:37Z" finished-at="2016-04-14T06:45:39Z">
+      <class name="services.Page">
+        <test-method status="PASS" signature="init()[pri:0, instance:services.Page@b97c004]" name="init" is-config="true" duration-ms="11" started-at="2016-04-14T10:45:37Z" finished-at="2016-04-14T10:45:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:services.Page@b97c004]" name="testUntitled2" duration-ms="1534" started-at="2016-04-14T10:45:37Z" finished-at="2016-04-14T10:45:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled2 -->
+      </class> <!-- services.Page -->
+    </test> <!-- Services page -->
+    <test name="Contact page" duration-ms="84043" started-at="2016-04-14T06:45:39Z" finished-at="2016-04-14T06:47:03Z">
+      <class name="contact.Form_invalid">
+        <test-method status="PASS" signature="init()[pri:0, instance:contact.Form_invalid@573f2bb1]" name="init" is-config="true" duration-ms="4" started-at="2016-04-14T10:45:39Z" finished-at="2016-04-14T10:45:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:contact.Form_invalid@573f2bb1]" name="testUntitled3" duration-ms="2174" started-at="2016-04-14T10:45:39Z" finished-at="2016-04-14T10:45:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled3 -->
+      </class> <!-- contact.Form_invalid -->
+      <class name="contact.Form_valid">
+        <test-method status="PASS" signature="init()[pri:0, instance:contact.Form_valid@5ae9a829]" name="init" is-config="true" duration-ms="3" started-at="2016-04-14T10:45:42Z" finished-at="2016-04-14T10:45:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled6()[pri:0, instance:contact.Form_valid@5ae9a829]" name="testUntitled6" duration-ms="43368" started-at="2016-04-14T10:45:42Z" finished-at="2016-04-14T10:46:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled6 -->
+      </class> <!-- contact.Form_valid -->
+      <class name="contact.Form_empty">
+        <test-method status="PASS" signature="init()[pri:0, instance:contact.Form_empty@548b7f67]" name="init" is-config="true" duration-ms="4" started-at="2016-04-14T10:45:41Z" finished-at="2016-04-14T10:45:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:contact.Form_empty@548b7f67]" name="testUntitled4" duration-ms="1311" started-at="2016-04-14T10:45:41Z" finished-at="2016-04-14T10:45:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- contact.Form_empty -->
+      <class name="contact.Contact_email_change">
+        <test-method status="PASS" signature="init()[pri:0, instance:contact.Contact_email_change@6d8a00e3]" name="init" is-config="true" duration-ms="4" started-at="2016-04-14T10:46:26Z" finished-at="2016-04-14T10:46:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled6()[pri:0, instance:contact.Contact_email_change@6d8a00e3]" name="testUntitled6" duration-ms="37172" started-at="2016-04-14T10:46:26Z" finished-at="2016-04-14T10:47:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled6 -->
+      </class> <!-- contact.Contact_email_change -->
+    </test> <!-- Contact page -->
+    <test name="Blog page" duration-ms="177752" started-at="2016-04-14T06:47:03Z" finished-at="2016-04-14T06:50:01Z">
+      <class name="blog.Comment">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Comment@643b1d11]" name="init" is-config="true" duration-ms="8" started-at="2016-04-14T10:47:55Z" finished-at="2016-04-14T10:47:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:blog.Comment@643b1d11]" name="testUntitled4" duration-ms="74143" started-at="2016-04-14T10:47:55Z" finished-at="2016-04-14T10:49:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled4 -->
+      </class> <!-- blog.Comment -->
+      <class name="blog.Captche_enable">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Captche_enable@3a82f6ef]" name="init" is-config="true" duration-ms="4" started-at="2016-04-14T10:49:09Z" finished-at="2016-04-14T10:49:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:blog.Captche_enable@3a82f6ef]" name="testUntitled3" duration-ms="31016" started-at="2016-04-14T10:49:09Z" finished-at="2016-04-14T10:49:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled3 -->
+      </class> <!-- blog.Captche_enable -->
+      <class name="blog.Captcha_empty">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Captcha_empty@2ef5e5e3]" name="init" is-config="true" duration-ms="5" started-at="2016-04-14T10:47:03Z" finished-at="2016-04-14T10:47:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:blog.Captcha_empty@2ef5e5e3]" name="testUntitled" duration-ms="11589" started-at="2016-04-14T10:47:03Z" finished-at="2016-04-14T10:47:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+      </class> <!-- blog.Captcha_empty -->
+      <class name="blog.Blog_page">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Blog_page@100fc185]" name="init" is-config="true" duration-ms="4" started-at="2016-04-14T10:49:43Z" finished-at="2016-04-14T10:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:blog.Blog_page@100fc185]" name="testUntitled2" duration-ms="6398" started-at="2016-04-14T10:49:43Z" finished-at="2016-04-14T10:49:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled2 -->
+      </class> <!-- blog.Blog_page -->
+      <class name="blog.Captcha_disable">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Captcha_disable@6cc4c815]" name="init" is-config="true" duration-ms="5" started-at="2016-04-14T10:47:14Z" finished-at="2016-04-14T10:47:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:blog.Captcha_disable@6cc4c815]" name="testUntitled3" duration-ms="40499" started-at="2016-04-14T10:47:14Z" finished-at="2016-04-14T10:47:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled3 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:blog.Captcha_disable@6cc4c815]" name="tearDown" is-config="true" duration-ms="1547" started-at="2016-04-14T10:50:01Z" finished-at="2016-04-14T10:50:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- services.Page -->
-    </test> <!-- Services page -->
+      </class> <!-- blog.Captcha_disable -->
+      <class name="blog.Details_page">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Details_page@36d4b5c]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:49:40Z" finished-at="2016-04-14T10:49:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:blog.Details_page@36d4b5c]" name="testUntitled" duration-ms="2804" started-at="2016-04-14T10:49:40Z" finished-at="2016-04-14T10:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled -->
+      </class> <!-- blog.Details_page -->
+      <class name="blog.Search">
+        <test-method status="PASS" signature="init()[pri:0, instance:blog.Search@6d00a15d]" name="init" is-config="true" duration-ms="7" started-at="2016-04-14T10:49:49Z" finished-at="2016-04-14T10:49:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:blog.Search@6d00a15d]" name="testUntitled3" duration-ms="11260" started-at="2016-04-14T10:49:49Z" finished-at="2016-04-14T10:50:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUntitled3 -->
+      </class> <!-- blog.Search -->
+    </test> <!-- Blog page -->
   </suite> <!-- Smoke test -->
 </testng-results>

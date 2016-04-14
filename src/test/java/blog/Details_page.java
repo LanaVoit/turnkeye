@@ -34,11 +34,11 @@ public class Details_page extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("user")).getAttribute("value"));
     assertEquals("", driver.findElement(By.id("email")).getAttribute("value"));
     assertEquals("", driver.findElement(By.id("comment")).getText());
-    assertEquals("Categories", driver.findElement(By.cssSelector("div.block-title > span")).getText());
-    assertEquals("", driver.findElement(By.id("gsc-i-id1")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("input.gsc-search-button.gsc-search-button-v2")).getText());
-    assertEquals("Tags", driver.findElement(By.cssSelector("div.block-tags > div.block-title > span")).getText());
-    assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento developers\"]")).getText());
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("h1")));
+    assertEquals("Categories", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div > div > span")).getText());
+    assertEquals("", driver.findElement(By.id("blog-search")).getText());
+    assertEquals("", driver.findElement(By.cssSelector("#blog_search_mini_form > div > button")).getText());
  
   }
 

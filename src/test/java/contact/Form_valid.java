@@ -9,9 +9,15 @@ import javax.mail.internet.*;
 
 import java.io.IOException;
 
+import javax.mail.Authenticator;
+import javax.mail.Folder;
+import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.Part;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Store;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,23 +41,33 @@ public class Form_valid extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled6() throws Exception {
-    driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     Actions actions = new Actions(driver);
     
     driver.get(baseUrl + "index.php/secretzone51");
-    /*driver.findElement(By.id("username")).clear();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("gbpljrhzxrf1530");
-    driver.findElement(By.cssSelector("input.form-button")).click();*/
+    driver.findElement(By.cssSelector("input.form-button")).click();
+    TimeUnit.SECONDS.sleep(5);
+    
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
     driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[15]/a/span")).click();
-    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li/dl/dd[6]/a/span")).click();
+    TimeUnit.SECONDS.sleep(5);
+    
+    WebElement mySelectElm = driver.findElement(By.cssSelector("#store_switcher")); 
+    Select mySelect= new Select(mySelectElm);
+    mySelect.selectByValue("store_default");
+    TimeUnit.SECONDS.sleep(5);
+    
+    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[1]/dl/dd[6]/a/span")).click(); 
     driver.findElement(By.id("contacts_email_recipient_email")).clear();
     driver.findElement(By.id("contacts_email_recipient_email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
-    assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
     
+    assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[11]/a/span"))).build().perform();    
     driver.findElement(By.xpath("//ul[@id='nav']/li[11]/ul/li[11]/a/span")).click();
     driver.findElement(By.linkText("Select All")).click();
@@ -64,7 +80,7 @@ public class Form_valid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("email")).clear();
     driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.id("comment")).clear();
-    driver.findElement(By.id("comment")).sendKeys("test message");
+    driver.findElement(By.id("comment")).sendKeys("test message2");
     driver.findElement(By.cssSelector("button.button")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.", driver.findElement(By.cssSelector("li > span")).getText());
@@ -72,9 +88,9 @@ public class Form_valid extends turnkeye.pages.TestBase {
     
     driver.get(baseUrl + "/contact_us.html");
 	class MailAuthenticator extends Authenticator {
-	 
+		 
 	    public PasswordAuthentication getPasswordAuthentication() {
-	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "parol123");
+	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "uaPha8tuAvo160302fr");
 	    }
 	}
 	
@@ -87,41 +103,49 @@ public class Form_valid extends turnkeye.pages.TestBase {
     props.put("mail.pop3s.port", 995);
 	props.put("mail.smtp.starttls.enable","true");
 	props.put("mail.smtp.debug", "true");
+	
 	props.put("mail.smtp.auth", "true");
-	props.put("mail.smtp.socketFactory.port", 995);
+	props.put("mail.smtp.starttls.enable", "true");
+	props.put("mail.smtp.host", "smtp.gmail.com");
+	props.put("mail.smtp.port", 465);
+	props.put("mail.smtp.socketFactory.port", 465);
 	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 	props.put("mail.smtp.socketFactory.fallback", "false");
 
 	Session session = Session.getInstance(props, new MailAuthenticator());
 	session.setDebug(true);
+	
+        Store store = session.getStore("pop3s");
+        store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "uaPha8tuAvo160302fr");
 
-    Store store = session.getStore("pop3s");
-    store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
- 
         Folder inbox = store.getFolder("INBOX");
-    inbox.open(Folder.READ_ONLY);
-    
-    Message[] messages = inbox.getMessages();
-    
-       
-    GetMulti gmulti = new GetMulti();
-    String textMessage = gmulti.getText(messages[messages.length - 1]);
-    String regex = "Comment: test message";
-    Pattern p = Pattern.compile(regex);
-    Matcher m = p.matcher(textMessage);
-    if (m.find()) {
-    	    driver.get(baseUrl + "/contact_us.html");
-    	    driver.findElement(By.id("comment")).clear();
-    	    driver.findElement(By.id("comment")).sendKeys(m.group());
-    	TimeUnit.SECONDS.sleep(5);
-    	   
-    }
-    
-    inbox.close(false);
-    store.close(); 
-    driver.get(baseUrl + "/contact_us.html");
-	        
-  }
+		
+		if (inbox == null) {
+			System.out.println("No INBOX");
+			System.exit(1);
+		}
+
+		inbox.open(Folder.READ_ONLY);
+		Message message = inbox.getMessage(inbox.getMessageCount());
+
+
+		    				  			
+			String content = message.getContent().toString();
+			System.out.println(content);
+			GetMulti gmulti = new GetMulti();
+	        String textMessage = gmulti.getText(message);
+			String regex = "Comment: test message2";
+	        Pattern p = Pattern.compile(regex);
+	        Matcher m = p.matcher(textMessage);
+	        m.find();
+	        System.out.println(m.group());
+        
+
+		
+		inbox.close(false);
+        store.close();
+        driver.get(baseUrl + "/contact_us.html");
+    }  	     
 
    private boolean isElementPresent(By by) {
     try {

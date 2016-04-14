@@ -81,53 +81,54 @@ public class TestBase {
 	
 	 
 
-	/*@BeforeClass
+	@BeforeClass
 	public void init() throws MalformedURLException {
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
-		browser = new Browser();
-		browser.setName(PropertyLoader.loadProperty("browser.name"));
-		browser.setVersion(PropertyLoader.loadProperty("browser.version"));
-		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
+//		browser = new Browser();
+//		browser.setName(PropertyLoader.loadProperty("browser.name"));
+//		browser.setVersion(PropertyLoader.loadProperty("browser.version"));
+//		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
 
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
+
 		
 		
-		
-		DesiredCapabilities capabillities = DesiredCapabilities.chrome();
-	        //capabillities.setCapability("platform", Platform.LINUX);
-	        //capabillities.setCapability("screen-resolution", "1280x1024");
-	        capabillities.setBrowserName("chrome");
-	        capabillities.setPlatform(org.openqa.selenium.Platform.LINUX);
-		    System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
+		DesiredCapabilities caps = DesiredCapabilities.chrome();
+		caps.setCapability("screenResolution", "1680x1050");
+		caps.setCapability("version", "49.0");
+		caps.setCapability("passed", "true");
+		caps.setCapability("failed", "false");
+		caps.setCapability("name", getClass().getSimpleName());
+		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 	        driver = new RemoteWebDriver(
-	                    new URL("http://148.251.21.174:4444/wd/hub"),
-	                    capabillities);
+	                    new URL("http://qatest_open:18ae629f-0e7f-4a44-8d23-9de3f8c92bbc@ondemand.saucelabs.com:80/wd/hub"),
+	                    caps);
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-	}*/  
+	}  
 	
-	@BeforeClass
-	public void init() {
-		baseUrl = PropertyLoader.loadProperty("site.url");
-		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
-
-		browser = new Browser();
-		browser.setName(PropertyLoader.loadProperty("browser.name"));
-		browser.setVersion(PropertyLoader.loadProperty("browser.version"));
-		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
-
-		String username = PropertyLoader.loadProperty("user.username");
-		String password = PropertyLoader.loadProperty("user.password");
-		
-		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
-				password);
-
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	}
-	
+//	@BeforeClass
+//	public void init() {
+//		baseUrl = PropertyLoader.loadProperty("site.url");
+//		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
+//
+//		browser = new Browser();
+//		browser.setName(PropertyLoader.loadProperty("browser.name"));
+//		browser.setVersion(PropertyLoader.loadProperty("browser.version"));
+//		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
+//
+//		String username = PropertyLoader.loadProperty("user.username");
+//		String password = PropertyLoader.loadProperty("user.password");
+//		
+//		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
+//				password);
+//
+//		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//	}
+//	
 	  
 	/*@AfterMethod
 	public void stopDriver()throws Exception{

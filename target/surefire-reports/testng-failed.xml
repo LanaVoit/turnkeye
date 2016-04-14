@@ -2,16 +2,46 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Smoke test]" data-provider-thread-count="1">
   <parameter name="path" value="/"/>
-  <test name="Services page(failed)">
+  <test name="Blog page(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="services.Page">
+      <class name="blog.Details_page">
         <methods>
           <include name="init"/>
-          <include name="testUntitled2"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- services.Page -->
+      </class> <!-- blog.Details_page -->
+      <class name="blog.Search">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Search -->
+      <class name="blog.Captche_enable">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Captche_enable -->
+      <class name="blog.Comment">
+        <methods>
+          <include name="init"/>
+          <include name="testUntitled4"/>
+        </methods>
+      </class> <!-- blog.Comment -->
+      <class name="blog.Captcha_empty">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Captcha_empty -->
+      <class name="blog.Captcha_disable">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Captcha_disable -->
+      <class name="blog.Blog_page">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- blog.Blog_page -->
     </classes>
-  </test> <!-- Services page(failed) -->
+  </test> <!-- Blog page(failed) -->
 </suite> <!-- Failed suite [Smoke test] -->
