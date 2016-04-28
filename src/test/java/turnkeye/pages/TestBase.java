@@ -131,25 +131,19 @@ public class TestBase {
 //	}
 //	
 	  
-	/*@AfterMethod
+	@AfterMethod
 	public void stopDriver()throws Exception{
 	driver.quit();
-	}*/
-	
-	
-	@AfterSuite(alwaysRun = true)
-	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
 	}
 	
-	/*@AfterSuite
-	public void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}*/
+	
+//	@AfterSuite(alwaysRun = true)
+//	public void tearDown() {
+//		if (driver != null) {
+//			driver.quit();
+//		}
+//	}
+	
 
 //	@AfterMethod
 //	public void setScreenshot(ITestResult result) {
