@@ -97,12 +97,12 @@ public class TestBase {
 		
 		
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
-		caps.setCapability("browsername", "chrome");
+		caps.setBrowserName("chrome");
 		caps.setCapability("screenResolution", "1680x1050");
 		caps.setCapability("version", "49.0");
 		caps.setCapability("passed", "true");
 		//caps.setCapability("failed", "false");
-		caps.setCapability("platform", "Windows 8.1");
+		caps.setPlatform(Platform.WIN8_1);
 		caps.setCapability("name", getClass().getSimpleName());
 		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 	        driver = new RemoteWebDriver(
