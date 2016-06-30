@@ -97,6 +97,7 @@ public class TestBase {
 		
 		
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
+		caps.setCapability("browsername", "chrome");
 		caps.setCapability("screenResolution", "1680x1050");
 		caps.setCapability("version", "49.0");
 		caps.setCapability("passed", "true");
