@@ -26,11 +26,11 @@ import org.openqa.selenium.logging.Logs;
 
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
-public class ___JS_error_detail_clients extends turnkeye.pages.TestBase {
+public class JS_error_detail_clients extends turnkeye.pages.TestBase {
 	
     @Test
   public void testUntitled4() throws Exception { 
-    	/*driver.manage().window().maximize();
+    	driver.manage().window().maximize();
     	LoggingPreferences logPrefs = new LoggingPreferences();
 		logPrefs.enable(LogType.BROWSER, Level.SEVERE);
 		driver.get(baseUrl + "/clients/pinup-girl-clothing");
@@ -44,7 +44,7 @@ public class ___JS_error_detail_clients extends turnkeye.pages.TestBase {
 			System.out.println(entry.getMessage());  
 		}
 		
-		assertEquals(list, logsEntries);	*/	
+		assertEquals(list, logsEntries);		
 	}    		       
 }
 
