@@ -28,7 +28,6 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.logging.Logs;
-import org.openqa.selenium.Platform;;
 
 import com.saucelabs.testng.SauceOnDemandTestListener;
 import com.saucelabs.common.SauceOnDemandAuthentication;

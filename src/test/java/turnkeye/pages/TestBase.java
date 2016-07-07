@@ -93,7 +93,6 @@ public class TestBase {
 
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
-		System.out.println(PropertyLoader.loadProperty("browser.platform"));
 
 		
 		
