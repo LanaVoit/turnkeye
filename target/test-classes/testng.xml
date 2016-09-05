@@ -39,6 +39,7 @@
 		    <class name="clients.Details_elements"/>
 		    <class name="clients.Navigation"/>
 		    <class name="clients.Website"/>	
+		    <class name="clients.Link_visit_website"/>
 		</classes>
 	</test>
 	
