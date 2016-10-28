@@ -26,21 +26,20 @@ public class Banner extends turnkeye.pages.TestBase {
     
     driver.get(baseUrl);
 
-    String img1 = "https://astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/[slide1.jpg";
+    String img1 = "https://astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/xslide1.jpg.pagespeed.ic.pckirPrEJy.webp";
     assertEquals("", img1, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li:nth-child(1) > img")).getAttribute("src"));  
-
     
    
     driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.wrap > div > div > ul > li:nth-child(4)")).click();
 
     TimeUnit.SECONDS.sleep(5);
-    String img2 = "https://astrio.net/media/wysiwyg/main-banner/home-original/slide-pinup.jpg";
+    String img2 = "https://astrio.net/media/wysiwyg/main-banner/home-original/xslide-pinup.jpg.pagespeed.ic.ILINJD-fx3.webp";
     assertEquals("", img2, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li.active > img")).getAttribute("src")); 
     
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.wrap > div > div > ul > li:nth-child(4)")).click();
     TimeUnit.SECONDS.sleep(5);
-    String img4 = "https://astrio.net/media/wysiwyg/main-banner/home-original/slide-backcountry.jpg";
+    String img4 = "https://astrio.net/media/wysiwyg/main-banner/home-original/xslide-backcountry.jpg.pagespeed.ic._xcIKOecS-.webp";
     assertEquals("", img4, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li.active > img")).getAttribute("src"));     
   }
 
