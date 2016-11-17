@@ -20,8 +20,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
 
     @Test
   public void testUntitled9() throws Exception {
-    driver.manage().window().setSize(new Dimension(1366, 1050));
-    
+    driver.manage().window().setSize(new Dimension(1366, 1050));    
     driver.get(baseUrl + "/clients/pinup-girl-clothing");
     assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
