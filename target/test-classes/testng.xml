@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="2.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke test" verbose="1" data-provider-thread-count="1" parallel="false">
 	<test name="JS Errors">
@@ -34,9 +34,9 @@
 	
 	<test name="Clients page">
 		<parameter name="path" value="/"/>
-		<classes>   			
-		    <class name="clients.Details"/>
-		    <class name="clients.Details_elements"/>
+		<classes>   
+			<class name="clients.Details_elements"/>			
+		    <class name="clients.Details"/>		    
 		    <class name="clients.Navigation"/>
 		    <class name="clients.Website"/>	
 		    <class name="clients.Link_visit_website"/>
