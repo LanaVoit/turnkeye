@@ -22,7 +22,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
   public void testUntitled9() throws Exception {
     driver.manage().window().setSize(new Dimension(1366, 1050));    
     driver.get(baseUrl + "/clients/pinup-girl-clothing");
-    assertEquals("Our clients - Pinup Girl Clothing", driver.getTitle());
+    assertEquals("Our clients - Pinup Girl Clothing | ASTRIO", driver.getTitle());
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("https://astrio.net/media/wysiwyg/portfolio/PinupClothing/top-banner.jpg", driver.findElement(By.cssSelector("#content > div.turnkeye-portfolio > div.block-portfolio-banner > img.shadows-image")).getAttribute("src"));
     assertEquals("https://astrio.net/media/wysiwyg/portfolio/PinupClothing/top-mobile.png", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/img[2]")).getAttribute("src"));
