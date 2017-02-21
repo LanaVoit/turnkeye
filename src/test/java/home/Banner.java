@@ -26,21 +26,25 @@ public class Banner extends turnkeye.pages.TestBase {
     
     driver.get(baseUrl);
 
-    String img1 = "https://astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide1.jpg";
-    assertEquals("", img1, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li:nth-child(1) > img")).getAttribute("src"));  
+    //String img1 = "https://astrio.net/skin/frontend/default/turnkeye/images/main-banner/large/slide1.jpg";
+    String img1="1";
+    assertEquals("", img1, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li:nth-child(1)")).getAttribute("data-init-position")); 
     
    
     driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.wrap > div > div > ul > li:nth-child(4)")).click();
 
     TimeUnit.SECONDS.sleep(5);
-    String img2 = "https://astrio.net/media/wysiwyg/main-banner/home-original/slide-pinup.jpg";
-    assertEquals("", img2, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li.active > img")).getAttribute("src")); 
+    //String img2 = "https://astrio.net/media/wysiwyg/main-banner/home-original/slide-pinup.jpg";
+    String img2="2";
+    assertEquals("", img2, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li.active")).getAttribute("data-init-position")); 
     
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.wrap > div > div > ul > li:nth-child(4)")).click();
     TimeUnit.SECONDS.sleep(5);
-    String img4 = "https://astrio.net/media/wysiwyg/main-banner/home-original/slide-backcountry.jpg";
-    assertEquals("", img4, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li.active > img")).getAttribute("src"));     
+    
+    //String img4 = "https://astrio.net/media/wysiwyg/main-banner/home-original/slide-backcountry.jpg";
+    String img3="3";
+    assertEquals("", img3, driver.findElement(By.cssSelector("#container > div.block-main-banner > header > div.carousel-wrapper > div > ul > li.active")).getAttribute("data-init-position"));     
   }
 
    private boolean isElementPresent(By by) {
