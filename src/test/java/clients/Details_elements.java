@@ -26,9 +26,9 @@ public class Details_elements extends turnkeye.pages.TestBase {
     assertEquals("Pinup Girl Clothing", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("https://astrio.net/media/wysiwyg/portfolio/PinupClothing/top-banner.jpg", driver.findElement(By.cssSelector("#content > div.turnkeye-portfolio > div.block-portfolio-banner > img.shadows-image")).getAttribute("src"));
     assertEquals("https://astrio.net/media/wysiwyg/portfolio/PinupClothing/top-mobile.png", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[3]/img[2]")).getAttribute("src"));
-    assertEquals("PROJECT REVIEW", driver.findElement(By.cssSelector("h3")).getText());
-    assertEquals("ABOUT THE PINUP GIRL CLOTHING PROJECT", driver.findElement(By.cssSelector("div.block-about-project > h3")).getText());
-    assertEquals("EXAMPLES OF IMPLEMENTATION", driver.findElement(By.cssSelector("div.block-have-done > h3")).getText());
+    assertEquals("Project review", driver.findElement(By.cssSelector("h3")).getText());
+    assertEquals("About the Pinup Girl Clothing project", driver.findElement(By.cssSelector("div.block-about-project > h3")).getText());
+    assertEquals("Examples of implementation", driver.findElement(By.cssSelector("div.block-have-done > h3")).getText());
     assertEquals("Responsive design", driver.findElement(By.cssSelector("h4")).getText());
     assertEquals("Social login", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[2]/div/div/h4")).getText());
     assertEquals("Social activity block", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[6]/div[3]/div/div/h4")).getText());
@@ -39,7 +39,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
     assertEquals("CUSTOMER FEEDBACK", driver.findElement(By.cssSelector("h3 > span")).getText());
     assertEquals("ABOUT OUR WORK:", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[7]/h3/span[2]/span")).getText());
     assertEquals("Contacts Us", driver.findElement(By.linkText("Contacts Us")).getText());
-    assertEquals("Email Us", driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[9]/div/a[2]")).getText());
+    assertEquals("EMAIL US", driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[9]/div/a[2]")).getText());
     assertEquals("Skype", driver.findElement(By.cssSelector("a.block-skype > span")).getText());
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("h1")));
