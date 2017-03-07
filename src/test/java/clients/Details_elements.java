@@ -39,7 +39,7 @@ public class Details_elements extends turnkeye.pages.TestBase {
     assertEquals("CUSTOMER FEEDBACK", driver.findElement(By.cssSelector("h3 > span")).getText());
     assertEquals("ABOUT OUR WORK:", driver.findElement(By.xpath("//div[@id='content']/div[2]/div[7]/h3/span[2]/span")).getText());
     assertEquals("Contacts Us", driver.findElement(By.linkText("Contacts Us")).getText());
-    assertEquals("EMAIL US", driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[9]/div/a[2]")).getText());
+    assertEquals("Email Us", driver.findElement(By.xpath("/html/body/div/section/div/div/div[2]/div[9]/div/a[2]")).getText());
     assertEquals("Skype", driver.findElement(By.cssSelector("a.block-skype > span")).getText());
     driver.findElement(By.cssSelector("span.icon-right-open")).click();
     TimeUnit.SECONDS.sleep(5);

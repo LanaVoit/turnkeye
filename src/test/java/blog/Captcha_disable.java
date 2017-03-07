@@ -61,7 +61,7 @@ public class Captcha_disable extends turnkeye.pages.TestBase {
     driver.findElement(By.id("comment")).sendKeys("test comment2");
     driver.findElement(By.cssSelector("input.button.form-button")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("Your comment has been submitted and is awaiting approval.", driver.findElement(By.cssSelector("li > span")).getText());
+    assertEquals("Your comment has been submitted and is awaiting approval.", driver.findElement(By.cssSelector("#noty_top_layout_container >li > div > div > span > ul > li > ul > li > span")).getText());
     
   }
 

@@ -82,8 +82,8 @@ public class Form_valid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("comment")).clear();
     driver.findElement(By.id("comment")).sendKeys("test message2");
     driver.findElement(By.cssSelector("button.button")).click();
-    TimeUnit.SECONDS.sleep(5);
-    assertEquals("Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.", driver.findElement(By.cssSelector("li > span")).getText());
+    TimeUnit.SECONDS.sleep(7);
+    assertEquals("Your inquiry was submitted and will be responded to as soon as possible. Thank you for contacting us.", driver.findElement(By.cssSelector("#noty_top_layout_container > li > div > div > span > ul > li > ul > li > span")).getText());
     TimeUnit.SECONDS.sleep(10);
     
     driver.get(baseUrl + "/contact_us.html");

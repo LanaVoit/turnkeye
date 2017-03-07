@@ -28,7 +28,7 @@ public class Newsletter_valid extends turnkeye.pages.TestBase {
     driver.findElement(By.id("newsletter")).sendKeys("testqa@test.com");
     driver.findElement(By.cssSelector("button[title=\"Subscribe\"]")).click();
     TimeUnit.SECONDS.sleep(7);
-    assertEquals("Confirmation request has been sent.", driver.findElement(By.cssSelector("li > span")).getText());   
+    assertEquals("Confirmation request has been sent.", driver.findElement(By.cssSelector("#noty_top_layout_container > li > div > div > span > ul > li > ul > li:nth-child(1) > span")).getText());   
   }
 
    private boolean isElementPresent(By by) {
