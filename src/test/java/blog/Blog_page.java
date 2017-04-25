@@ -28,8 +28,8 @@ public class Blog_page extends turnkeye.pages.TestBase {
     assertEquals("", driver.findElement(By.id("blog-search")).getText());
     assertEquals("", driver.findElement(By.cssSelector("#blog_search_mini_form > div > button")).getText());
     assertEquals("Categories", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-categories > div > span")).getText());
-    assertEquals("Archives", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-archives > div > span")).getText());
-    //assertEquals("Tags", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-tags > div > span")).getText());
+    //assertEquals("Archives", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-archives > div > span")).getText());
+    assertEquals("Tags", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-right > div.block-tags > div > span")).getText());
     //assertEquals("Blog Authors", driver.findElement(By.cssSelector("#sideRight > div > div.block-blog-left > div.block-blog-authors > div")).getText());
     assertEquals("", driver.findElement(By.cssSelector("img[alt=\"Magento developers\"]")).getText());  
 
