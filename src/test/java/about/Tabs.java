@@ -38,7 +38,7 @@ public class Tabs extends turnkeye.pages.TestBase {
     assertEquals("Meet the Team", driver.findElement(By.cssSelector("h1")).getText());
     actions.moveToElement(driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/ul/li[4]"))).build().perform();
     //assertEquals("Svetlana Baranova\nQA Specialist", driver.findElement(By.cssSelector("#content > div.std > ul > li:nth-child(5) > div > div > div > div > h4")).getText());
-    assertEquals("Svetlana Baranova\nQA Specialist", driver.findElement(By.cssSelector("#content > div.std > ul > li:nth-child(4) > div > div > div > div > h4")).getText());
+    assertEquals("Svetlana\nQA Specialist", driver.findElement(By.cssSelector("#content > div.std > ul > li:nth-child(4) > div > div > div > div > h4")).getText());
     
     driver.findElement(By.cssSelector("a[href=\"https://astrio.net/about/testimonials.html\"]")).click();
     TimeUnit.SECONDS.sleep(5);
