@@ -28,20 +28,22 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 	private boolean acceptNextAlert = true;
 	  private StringBuffer verificationErrors = new StringBuffer();
 	  private static int statusCode;
-	  
-	  
+
+
 	    @Test
 	  public void testUntitled8() throws Exception {
-	    	
+
 	    boolean ok = true;
-	    	
-		driver.manage().window().maximize();
+
+		// driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1366, 1050));
 		Actions actions = new Actions(driver);
+		TimeUnit.SECONDS.sleep(5);
 		driver.get(baseUrl + "clients");
 		List<WebElement> links   = driver.findElements(By.cssSelector("a.link-visit"));
 		for(WebElement e : links) {
 		System.out.println(e.getAttribute("href"));
-		
+
 		}
 			for(int i = 0; i < links.size(); i++){
 		        if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
@@ -52,7 +54,7 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 		                	ok = false;
 		                	}
 		            	}
-		            
+
 		        	}
 				}
 			assertEquals(true,ok);
@@ -66,11 +68,11 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 		        huc.connect();
 		        return huc.getResponseCode();
 	    	} catch (Exception e) {
-	    		
+
 	    	}
-	    	
+
 	    	return 500;
-	        
+
 	    }
 
 	   private boolean isElementPresent(By by) {
@@ -82,7 +84,7 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 	    }
 	  }
 
-	  
+
 	  private String closeAlertAndGetItsText() {
 	    try {
 	      Alert alert = driver.switchTo().alert();

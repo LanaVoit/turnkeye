@@ -63,7 +63,7 @@ import turnkeye.webdriver.WebDriverFactory;
 
 /*
  * Base class for all the test classes
- * 
+ *
  * @author Sebastiano Armeli-Battana
  */
 
@@ -78,8 +78,8 @@ public class TestBase {
 	protected String baseUrl;
 
 	protected Browser browser;
-	
-	 
+
+
 
 	@BeforeClass
 	public void init() throws MalformedURLException {
@@ -94,14 +94,14 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 
-		
-		
+
+
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
-		caps.setCapability("platform", "Windows 7");
-		caps.setCapability("version", "51.0");
+		caps.setCapability("platform", "Windows 10");
+		caps.setCapability("version", "66.0");
 		caps.setCapability("screenResolution", "1680x1050");
 		caps.setCapability("passed", "true");
-		//caps.setCapability("failed", "false");		
+		//caps.setCapability("failed", "false");
 		caps.setCapability("name", getClass().getSimpleName());
 		//System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 	        driver = new RemoteWebDriver(
@@ -109,8 +109,8 @@ public class TestBase {
 	                    caps);
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-	}  
-	
+	}
+
 //	@BeforeClass
 //	public void init() {
 //		baseUrl = PropertyLoader.loadProperty("site.url");
@@ -123,27 +123,27 @@ public class TestBase {
 //
 //		String username = PropertyLoader.loadProperty("user.username");
 //		String password = PropertyLoader.loadProperty("user.password");
-//		
+//
 //		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
 //				password);
 //
 //		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //	}
-//	
-	  
+//
+
 	@AfterMethod
 	public void stopDriver()throws Exception{
 	driver.quit();
 	}
-	
-	
+
+
 //	@AfterSuite(alwaysRun = true)
 //	public void tearDown() {
 //		if (driver != null) {
 //			driver.quit();
 //		}
 //	}
-	
+
 
 //	@AfterMethod
 //	public void setScreenshot(ITestResult result) {
@@ -165,5 +165,5 @@ public class TestBase {
 //			}
 //		}
 //	}
-	
+
 }
