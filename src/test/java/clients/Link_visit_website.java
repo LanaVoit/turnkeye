@@ -35,10 +35,8 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 
 	    boolean ok = true;
 
-		// driver.manage().window().maximize();
-		driver.manage().window().setSize(new Dimension(1366, 1050));
+		driver.manage().window().maximize();
 		Actions actions = new Actions(driver);
-		TimeUnit.SECONDS.sleep(5);
 		driver.get(baseUrl + "clients");
 		List<WebElement> links   = driver.findElements(By.cssSelector("a.link-visit"));
 		for(WebElement e : links) {

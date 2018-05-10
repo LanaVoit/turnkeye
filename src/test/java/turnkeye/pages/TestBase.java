@@ -97,8 +97,8 @@ public class TestBase {
 
 
 		DesiredCapabilities caps = DesiredCapabilities.chrome();
-		caps.setCapability("platform", "Windows 10");
-		caps.setCapability("version", "66.0");
+		caps.setCapability("platform", "Windows 7");
+		caps.setCapability("version", "51.0");
 		caps.setCapability("screenResolution", "1680x1050");
 		caps.setCapability("passed", "true");
 		//caps.setCapability("failed", "false");
