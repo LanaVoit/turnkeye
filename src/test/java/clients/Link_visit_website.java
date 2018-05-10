@@ -43,7 +43,9 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 		// System.out.println(e.getAttribute("href"));
 		//
 		// }
+		TimeUnit.SECONDS.sleep(5);
 			for(int i = 0; i < links.size(); i++){
+				TimeUnit.SECONDS.sleep(1);
 		        if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
 		            if(links.get(i).getAttribute("href").contains("http")){
 		                statusCode= getResponseCode(links.get(i).getAttribute("href").trim());
