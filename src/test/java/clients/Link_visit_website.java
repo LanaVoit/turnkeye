@@ -38,10 +38,7 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 		Actions actions = new Actions(driver);
 		driver.get(baseUrl + "clients");
 		List<WebElement> links   = driver.findElements(By.cssSelector("a.link-visit"));
-		for(WebElement e : links) {
-			System.out.println(e.getAttribute("href"));
-		}
-		console.log(getResponseCode());
+
 		for(int i = 0; i < links.size(); i++){
 	        if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
 	            if(links.get(i).getAttribute("href").contains("http")){
@@ -54,6 +51,9 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 	        	}
 		}
 		assertEquals(true,ok);
+		for(WebElement e : links) {
+			System.out.println(e.getAttribute("href"));
+		}
 	    }
 		public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
 			try {
