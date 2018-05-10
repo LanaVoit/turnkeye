@@ -28,6 +28,22 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 	private boolean acceptNextAlert = true;
 	  private StringBuffer verificationErrors = new StringBuffer();
 	  private static int statusCode;
+		
+		public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
+			try {
+				URL url = new URL(urlString);
+					HttpURLConnection huc = (HttpURLConnection)url.openConnection();
+					huc.setRequestMethod("GET");
+					huc.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36");
+					huc.connect();
+					return huc.getResponseCode();
+			} catch (Exception e) {
+
+			}
+
+			return 500;
+
+		}
 
 
 	    @Test
@@ -56,21 +72,6 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 		        	}
 				}
 			assertEquals(true,ok);
-	    }
-	    public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
-	    	try {
-	    		URL url = new URL(urlString);
-		        HttpURLConnection huc = (HttpURLConnection)url.openConnection();
-		        huc.setRequestMethod("GET");
-		        huc.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36");
-		        huc.connect();
-		        return huc.getResponseCode();
-	    	} catch (Exception e) {
-
-	    	}
-
-	    	return 500;
-
 	    }
 
 	   private boolean isElementPresent(By by) {
