@@ -34,42 +34,44 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 
 	    boolean ok = true;
 
-		driver.manage().window().maximize();
+		// driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1366, 1050));
 		Actions actions = new Actions(driver);
 		driver.get(baseUrl + "clients");
 		List<WebElement> links   = driver.findElements(By.cssSelector("a.link-visit"));
+		// for(WebElement e : links) {
+		// System.out.println(e.getAttribute("href"));
+		//
+		// }
+			for(int i = 0; i < links.size(); i++){
+		        if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
+		            if(links.get(i).getAttribute("href").contains("http")){
+		                statusCode= getResponseCode(links.get(i).getAttribute("href").trim());
+		                if(statusCode != 200 && statusCode != 301 && statusCode != 302){
+		                	System.out.println("HTTP Error " + statusCode + " # " + i + " " + links.get(i).getAttribute("href"));
+		                	ok = false;
+		                	}
+		            	}
 
-		for(int i = 0; i < links.size(); i++){
-	        if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
-	            if(links.get(i).getAttribute("href").contains("http")){
-	                statusCode = getResponseCode(links.get(i).getAttribute("href").trim());
-	                if(statusCode != 200 && statusCode != 301 && statusCode != 302){
-	                	System.out.println("HTTP Error " + statusCode + " # " + i + " " + links.get(i).getAttribute("href"));
-	                	ok = false;
-	                	}
-	            	}
-	        	}
-		}
-		assertEquals(true,ok);
-		for(WebElement e : links) {
-			System.out.println(e.getAttribute("href"));
-		}
+		        	}
+				}
+			assertEquals(true,ok);
 	    }
-		public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
-			try {
-				URL url = new URL(urlString);
-					HttpURLConnection huc = (HttpURLConnection)url.openConnection();
-					huc.setRequestMethod("GET");
-					huc.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36");
-					huc.connect();
-					return huc.getResponseCode();
-			} catch (Exception e) {
+			public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
+				try {
+					URL url = new URL(urlString);
+						HttpURLConnection huc = (HttpURLConnection)url.openConnection();
+						huc.setRequestMethod("GET");
+						huc.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36");
+						huc.connect();
+						return huc.getResponseCode();
+				} catch (Exception e) {
+
+				}
+
+				return 500;
 
 			}
-
-			return 500;
-
-		}
 
 	   private boolean isElementPresent(By by) {
 	    try {
