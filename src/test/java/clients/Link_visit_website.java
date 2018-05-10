@@ -39,24 +39,22 @@ public class Link_visit_website extends turnkeye.pages.TestBase{
 		Actions actions = new Actions(driver);
 		driver.get(baseUrl + "clients");
 		List<WebElement> links   = driver.findElements(By.cssSelector("a.link-visit"));
-		// for(WebElement e : links) {
-		// System.out.println(e.getAttribute("href"));
-		//
-		// }
-		TimeUnit.SECONDS.sleep(5);
-			for(int i = 0; i < links.size(); i++){
-				TimeUnit.SECONDS.sleep(1);
-		        if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
-		            if(links.get(i).getAttribute("href").contains("http")){
-		                statusCode= getResponseCode(links.get(i).getAttribute("href").trim());
-		                if(statusCode != 200 && statusCode != 301 && statusCode != 302){
-		                	System.out.println("HTTP Error " + statusCode + " # " + i + " " + links.get(i).getAttribute("href"));
-		                	ok = false;
-		                	}
-		            	}
+		for(WebElement e : links) {
+		System.out.println(e.getAttribute("href"));
 
-		        	}
-				}
+		}
+			// for(int i = 0; i < links.size(); i++){
+		  //       if(!(links.get(i).getAttribute("href") == null) && !(links.get(i).getAttribute("href").equals(""))){
+		  //           if(links.get(i).getAttribute("href").contains("http")){
+		  //               statusCode= getResponseCode(links.get(i).getAttribute("href").trim());
+		  //               if(statusCode != 200 && statusCode != 301 && statusCode != 302){
+		  //               	System.out.println("HTTP Error " + statusCode + " # " + i + " " + links.get(i).getAttribute("href"));
+		  //               	ok = false;
+		  //               	}
+		  //           	}
+			//
+		  //       	}
+			// 	}
 			assertEquals(true,ok);
 	    }
 			public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
