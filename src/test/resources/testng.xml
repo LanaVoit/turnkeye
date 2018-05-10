@@ -5,15 +5,15 @@
 	<test name="Clients page">
 		<parameter name="path" value="/"/>
 		<classes>
-			<!-- <class name="clients.Details_elements"/>			 -->
-		    <!-- <class name="clients.Details"/>
+			<class name="clients.Details_elements"/>
+		    <class name="clients.Details"/>
 		    <class name="clients.Navigation"/>
-		    <class name="clients.Website"/>	 -->
+		    <class name="clients.Website"/>
 		    <class name="clients.Link_visit_website"/>
 		</classes>
 	</test>
 
-	<!-- <test name="JS Errors">
+	<test name="JS Errors">
 		<parameter name="path" value="/"/>
 		<classes>
 			<class name="home.JS_error_home"/>
@@ -73,6 +73,6 @@
 			<class name="blog.Blog_page"/>
 			<class name="blog.Search"/>
 		</classes>
-	</test> -->
+	</test>
 
 </suite>
